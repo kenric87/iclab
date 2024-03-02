@@ -1,6 +1,0 @@
-$DATA1 SOURCE='HSPICE' VERSION='J-2014.09-2 64-BIT'
-.TITLE '4-input nor'
- delayn           pw               pdp              temper          
- alter#          
-  4.856e-11        4.346e-06        2.110e-16         25.0000       
- 1               
