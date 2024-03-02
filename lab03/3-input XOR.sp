@@ -53,4 +53,4 @@ cl	out gnd k
 
 
 .tran		0.1n		3000n	(sweep	k 	0.05u  0.5u   0.05u)
-.end
+.end $我是傻逼
