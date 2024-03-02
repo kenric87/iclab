@@ -1,0 +1,26 @@
+* "simulator" "HSPICE" 
+* "version" "J-2014.09-2 64-BIT"
+* "format" "HSP"
+* "rundate" "15:25:44 03/02/2024 "
+* "netlist" "6-input nor.sp "
+* "runtitle" "6-input nor"
+* time =    0.            
+* temperature =   25.0000        
+*** BEGIN: Saved Operating Point ***                     
+.option 
++ gmindc=   1.0000p       
+.nodeset
++ a =   1.8000        
++ b =   0.            
++ c =   0.            
++ d =   0.            
++ e =   0.            
++ f =   0.            
++ out =  11.4443n       
++ vdd =   1.8000        
++ xnor.1 = 473.0395m       
++ xnor.2 = 468.3787m       
++ xnor.3 = 461.2322m       
++ xnor.4 = 449.5617m       
++ xnor.5 = 426.1610m       
+***   END: Saved Operating Point ***                     

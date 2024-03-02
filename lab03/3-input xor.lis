@@ -1,0 +1,218 @@
+ ****** HSPICE -- J-2014.09-2 64-BIT (Oct 22 2014) win64 ******                 
+  Copyright (C) 2014 Synopsys, Inc. All Rights Reserved.                        
+  Unpublished-rights reserved under US copyright laws.
+  This program is protected by law and is subject to the
+  terms and conditions of the license agreement from Synopsys.
+  Use of this program is your acceptance to be bound by the
+  license agreement. HSPICE is the trademark of Synopsys, Inc.
+  Input File: 3-input xor.sp                                                    
+  Command line options: -i 3-input xor.sp -o 3-input xor.lis
+  lic:  
+  lic: FLEXlm: v10.9.8 
+  lic: USER:   user                 HOSTNAME: DESKTOP-R7JFS8H 
+  lic: HOSTID: "6c02e072be80 8c554af4ae15 005056c00001 005056c00008 8c554af4ae11
+  8c554af4ae12 8e554af
+  lic: Using FLEXlm license file: 
+  lic: 27000@DESKTOP-R7JFS8H 
+  lic: Checkout 1 hspice 
+  lic: License/Maintenance for hspice will expire on 30-dec-2030/2029.2029 
+  lic: 1(in_use)/99(total) FLOATING license(s) on SERVER 27000@DESKTOP-R7JFS8H 
+  lic:   
+ Init: read install configuration file: C:\synopsys\Hspice_J-2014.09-2\meta.cfg
+  **warning** (3-input xor.sp:11) Global net name, "vdd", in subckt pin list. The pin will be connected to the local net. Recommend to not use global net names in subckt pin lists.
+1****** HSPICE -- J-2014.09-2 64-BIT (Oct 22 2014) win64 ******                 
+ ******  
+ 3-input xor
+
+ ****** circuit name directory
+ circuit number to circuit name directory
+   number circuitname                     definition         multiplier
+        0 main circuit
+        1 xinva.                          inv                1.00 
+        2 xinvb.                          inv                1.00 
+        3 xinvc.                          inv                1.00 
+        4 xp1.                            bigpmos            1.00 
+        5 xp2.                            bigpmos            1.00 
+        6 xp3.                            bigpmos            1.00 
+        7 xp4.                            bigpmos            1.00 
+        8 xn1.                            bignmos            1.00 
+        9 xn2.                            bignmos            1.00 
+       10 xn3.                            bignmos            1.00 
+       11 xn4.                            bignmos            1.00 
+  **info** (3-input xor.sp:28) DC voltage reset to initial transient source value              in source        0:va                  new dc=  0.1800D+01
+  **warning** (3-input xor.sp:8) Both nodes of element vgnd are connected together; Line ignored.
+ 
+
+  **warning** (3-input xor.sp:47) Unable to find referenced node out1; Output variable ignored. Specify a valid node.
+  
+      
+ **info** set option symb=1 internally to help for convergence.
+ *****************************************************************
+ ******  option summary
+ ******
+ runlvl  = 3         bypass  = 2         
+  Opening plot unit= 79
+ file=3-input xor.pa0
+
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter k =    5.000E-08 ***
+
+ ******  
+ 3-input xor
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+  **warning** (3-input xor.sp:47) .MEASURE  delayn never reached the trigger value, Measurement failed!
+  **warning** (3-input xor.sp:47) .MEASURE  delayn never reached the target value, Measurement failed!
+  **warning** (3-input xor.sp:47) Target event is undefined. Please specify a valid event. Measure failed.
+   delayn= failed                          trig= not found
+ pw=   9.0800   from=   0.          to=   3.0000u
+
+          ***** job concluded
+ ******  
+ 3-input xor
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+
+   *** parameter k =  100.0000n       ***
+
+   delayn= failed                          trig= not found
+ pw=   9.0800   from=   0.          to=   3.0000u
+
+          ***** job concluded
+ ******  
+ 3-input xor
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+
+   *** parameter k =  150.0000n       ***
+
+   delayn= failed                          trig= not found
+ pw=   9.0800   from=   0.          to=   3.0000u
+
+          ***** job concluded
+ ******  
+ 3-input xor
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+
+   *** parameter k =  200.0000n       ***
+
+   delayn= failed                          trig= not found
+ pw=   9.0800   from=   0.          to=   3.0000u
+
+          ***** job concluded
+ ******  
+ 3-input xor
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+
+   *** parameter k =  250.0000n       ***
+
+   delayn= failed                          trig= not found
+ pw=   9.0800   from=   0.          to=   3.0000u
+
+          ***** job concluded
+ ******  
+ 3-input xor
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+
+   *** parameter k =  300.0000n       ***
+
+   delayn= failed                          trig= not found
+ pw=   9.0800   from=   0.          to=   3.0000u
+
+          ***** job concluded
+ ******  
+ 3-input xor
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+
+   *** parameter k =  350.0000n       ***
+
+   delayn= failed                          trig= not found
+ pw=   9.0800   from=   0.          to=   3.0000u
+
+          ***** job concluded
+ ******  
+ 3-input xor
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+
+   *** parameter k =  400.0000n       ***
+
+   delayn= failed                          trig= not found
+ pw=   9.0800   from=   0.          to=   3.0000u
+
+          ***** job concluded
+ ******  
+ 3-input xor
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+
+   *** parameter k =  450.0000n       ***
+
+   delayn= failed                          trig= not found
+ pw=   9.0800   from=   0.          to=   3.0000u
+
+          ***** job concluded
+ ******  
+ 3-input xor
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+
+   *** parameter k =  500.0000n       ***
+
+   delayn= failed                          trig= not found
+ pw=   9.0800   from=   0.          to=   3.0000u
+
+          ***** job concluded
+1****** HSPICE -- J-2014.09-2 64-BIT (Oct 22 2014) win64 ******                 
+ ******  
+ 3-input xor
+
+ ****** job statistics summary tnom=  25.000 temp=  25.000 ******
+
+  ******  HSPICE Threads Information  ******
+
+  Command Line Threads Count :     1
+  Available CPU Count        :     8
+  Actual Threads Count       :     1
+
+
+  ****** Statistics of Ignored Elements ******
+  Voltage Sources :       1
+
+  ******  Circuit Statistics  ******
+  # nodes       =      85 # elements   =      35
+  # resistors   =       0 # capacitors =       1 # inductors   =       0
+  # mutual_inds =       0 # vccs       =       0 # vcvs        =       0
+  # cccs        =       0 # ccvs       =       0 # volt_srcs   =       4
+  # curr_srcs   =       0 # diodes     =       0 # bjts        =       0
+  # jfets       =       0 # mosfets    =      30 # U elements  =       0
+  # T elements  =       0 # W elements =       0 # B elements  =       0
+  # S elements  =       0 # P elements =       0 # va device   =       0
+  # vector_srcs =       0 # N elements =       0
+
+
+  ******  Runtime Statistics (seconds)  ******
+
+  analysis           time    # points   tot. iter  conv.iter
+  op point           0.00           1          24
+  transient          1.63      300010       63173       18904 rev=      1450
+  readin             0.01
+  errchk             0.00
+  setup              0.00
+  output             0.00
+
+
+           peak memory used         44.16 megabytes
+           total cpu time            1.66 seconds
+           total elapsed time        1.67 seconds
+           job started at     16:45:37 03/02/2024
+           job ended   at     16:45:38 03/02/2024
+
+
+  lic: Release hspice token(s) 
+ lic: total license checkout elapse time:        0.02(s)

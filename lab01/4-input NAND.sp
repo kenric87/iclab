@@ -1,0 +1,42 @@
+4-input NAND (loading c=0.01p)
+.option post=2
+.prot 
+.lib  'cic018.l' tt
+.unprot
+.global vdd gnd
+vvdd vdd 0 1.8
+vgnd gnd 0  0
+
+
+
+.subckt nand a b c d out vdd gnd
+mp0 out a vdd vdd p_18 l=0.18u w='0.5*k'
+mp1 out b vdd vdd p_18 l=0.18u w='0.5*k'
+mp2 out c vdd vdd p_18 l=0.18u w='0.5*k'
+mp3 out d vdd vdd p_18 l=0.18u w='0.5*k'
+mn0 out a net1 0 n_18 l=0.18u w=k
+mn1 net1 b net2 0 n_18 l=0.18u w=k
+mn2 net2 c net3 0 n_18 l=0.18u w=k
+mn3 net3 d 0 0 n_18 l=0.18u w=k
+.ends
+
+*xinv in out inv
+xnand a b c d out vdd gnd nand
+c1 out gnd 0.01p
+
+
+va a 0 pulse(1.8 0 0.1n 0.1n 0.1n 4.9n 10n)
+vb b 0 pulse(1.8 0 0.1n 0.1n 0.1n 9.9n 20n)
+vc c 0 pulse(1.8 0 0.1n 0.1n 0.1n 19.9n 40n)
+vd d 0 pulse(1.8 0 0.1n 0.1n 0.1n 39.9n 80n)
+*.tran 0.1n 160n
+
+.meas	tran	delayN	trig	v(d)	val=0.9	fall=2
++						targ	v(out)	val=0.9	rise=2
+.meas tran pw avg power
+
+.meas tran pdp=param('pw*delayN')
+
+
+.tran 0.1n 100n (sweep 	k 	0.6u  10u   0.2u)
+.end
