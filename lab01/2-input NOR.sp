@@ -36,3 +36,4 @@ vb b 0 pulse(1.8 0 0.1n 0.1n 0.1n 9.9n 20n)
 
 .tran 0.1n 100n (sweep 	k 	0.25u  2.5u   0.05u)
 .end
+**我是傻逼
