@@ -101,7 +101,7 @@ mn0	out	in	0	0	n_18	l=0.18u	w=1u    m=16
 .ends
 
 
-va	a	0	pulse(1.8 0	0.1n	0.1n	0.1n	19.9n	40n) 
+va	a	0	pulse(1.8 0	0.1n	0.1n	0.1n	4.9n	10n) 
 
 *主電路
 xinv1       a       a1      vdd     gnd     inv1
