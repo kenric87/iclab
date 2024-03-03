@@ -51,7 +51,7 @@ vgnd gnd 0  0
 * mn0	out	in	0	0	n_18	l=0.18u	w=1u    m=16
 * .ends
 
-*五顆
+*5顆
 .subckt  inv1  in  out  vdd  gnd
 mp0	out	in	vdd	vdd	p_18	l=0.18u	w=0.6u
 mn0	out	in	0	0	n_18	l=0.18u	w=0.25u
@@ -80,7 +80,7 @@ va	a	0	pulse(1.8 0	0.1n	0.1n	0.1n	19.9n	40n)
 xinv1       a       a1      vdd     gnd     inv1
 xinv2       a1      a2      vdd     gnd     inv2
 xinv3       a2      a3      vdd     gnd     inv3
-xinv4       a3      a4     vdd     gnd     inv4
+xinv4       a3      a4      vdd     gnd     inv4
 xinv5       a4      out     vdd     gnd     inv5
 cl	out gnd k
 
