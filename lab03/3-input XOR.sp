@@ -51,26 +51,26 @@ cl	out gnd k
 
 .meas tran pdp=param('pw*delayN')
 
-.tran		0.1n		640n	$(sweep	k 	0.05p  0.5p   0.05p)
+.tran		0.1n		640n	(sweep	k 	0.05p  0.5p   0.05p)
 
-.alter  
-va	a	0	pulse(1.8 0	0.1n	0.1n	0.1n	19.9n	40n)
-vb	b	0	pulse(1.8 0	0.1n	0.1n	0.1n	39.9n	80n)
-vc	c	0	pulse(1.8 0	0.1n	0.1n	0.1n	79.9n	160n)
+* .alter  
+* va	a	0	pulse(1.8 0	0.1n	0.1n	0.1n	19.9n	40n)
+* vb	b	0	pulse(1.8 0	0.1n	0.1n	0.1n	39.9n	80n)
+* vc	c	0	pulse(1.8 0	0.1n	0.1n	0.1n	79.9n	160n)
 
-.alter 
-va	a	0	pulse(1.8 0	0.1n	0.1n	0.1n	9.9n	20n)
-vb	b	0	pulse(1.8 0	0.1n	0.1n	0.1n	19.9n	40n)
-vc	c	0	pulse(1.8 0	0.1n	0.1n	0.1n	39.9n	80n)
+* .alter 
+* va	a	0	pulse(1.8 0	0.1n	0.1n	0.1n	9.9n	20n)
+* vb	b	0	pulse(1.8 0	0.1n	0.1n	0.1n	19.9n	40n)
+* vc	c	0	pulse(1.8 0	0.1n	0.1n	0.1n	39.9n	80n)
 
-.alter 
-va	a	0	pulse(1.8 0	0.1n	0.1n	0.1n	4.9n	10n)
-vb	b	0	pulse(1.8 0	0.1n	0.1n	0.1n	9.9n	20n)
-vc	c	0	pulse(1.8 0	0.1n	0.1n	0.1n	19.9n	40n)
+* .alter 
+* va	a	0	pulse(1.8 0	0.1n	0.1n	0.1n	4.9n	10n)
+* vb	b	0	pulse(1.8 0	0.1n	0.1n	0.1n	9.9n	20n)
+* vc	c	0	pulse(1.8 0	0.1n	0.1n	0.1n	19.9n	40n)
 
-.alter 
-va	a	0	pulse(1.8 0	0.1n	0.1n	0.1n	2.4n	5n)
-vb	b	0	pulse(1.8 0	0.1n	0.1n	0.1n	4.9n	10n)
-vc	c	0	pulse(1.8 0	0.1n	0.1n	0.1n	9.9n	20n)
+* .alter 
+* va	a	0	pulse(1.8 0	0.1n	0.1n	0.1n	2.4n	5n)
+* vb	b	0	pulse(1.8 0	0.1n	0.1n	0.1n	4.9n	10n)
+* vc	c	0	pulse(1.8 0	0.1n	0.1n	0.1n	9.9n	20n)
 
 .end
