@@ -37,8 +37,8 @@ mp1 out gnd vdd vdd p_18 l=0.18u w=0.5u
 cl	out gnd k
 
 
-.meas	tran	delayN	trig	v(c)	val=0.9	fall=2
-+						targ	v(out)	val=0.9	fall=4
+.meas	tran	delayN	trig	v(a)	val=0.9	fall=3
++						targ	v(out)	val=0.8	rise=2
 
 .meas tran pw avg power
 

@@ -9,10 +9,9 @@ vgnd gnd 0  0
 .param k=0.05p
 
 
-.subckt bignmos a b c out vdd gnd
-mn0	out	a	1	gnd	n_18 l=0.18u w=3u
-mn1 1	b	2	gnd n_18 l=0.18u w=3u
-mn2 2	c	gnd	gnd n_18 l=0.18u w=3u
+.subckt ouou a b c d out vdd gnd
+mn0	a	b	out	gnd	n_18 l=0.18u w=1u
+mn1 c	d	out	gnd n_18 l=0.18u w=1u
 .ends
 
 .subckt  inv  in  out  vdd  gnd
@@ -28,12 +27,10 @@ vc	c	0	pulse(1.8 0	0.1n	0.1n	0.1n	159.9n	320n)
 xinva a  a1  vdd  gnd inv
 xinvb b  b1  vdd  gnd inv
 xinvc c  c1  vdd  gnd inv
+xinvy y  y1  vdd  gnd inv
 
-xn1	a1	b	c	out	vdd	gnd bignmos
-xn2	a1	b1	c1	out	vdd	gnd bignmos
-xn3	a	b	c1	out	vdd	gnd bignmos
-xn4	a	b1	c	out	vdd	gnd bignmos
-mp1 out gnd vdd vdd p_18 l=0.18u w=0.5u
+xouou1 a b1 a1 b y   vdd gnd ouou
+xouou2 c y1 c1 y out vdd gnd ouou
 cl	out gnd k
 
 
@@ -44,26 +41,26 @@ cl	out gnd k
 
 .meas tran pdp=param('pw*delayN')
 
-.tran		0.1n		640n	$(sweep	k 	0.05p  0.5p   0.05p)
+.tran		0.1n		640n	(sweep	k 	0.05p  0.5p   0.05p)
 
-.alter  $232
-va	a	0	pulse(1.8 0	0.1n	0.1n	0.1n	19.9n	40n)  
-vb	b	0	pulse(1.8 0	0.1n	0.1n	0.1n	39.9n	80n)
-vc	c	0	pulse(1.8 0	0.1n	0.1n	0.1n	79.9n	160n)
+* .alter 
+* va	a	0	pulse(1.8 0	0.1n	0.1n	0.1n	19.9n	40n)  
+* vb	b	0	pulse(1.8 0	0.1n	0.1n	0.1n	39.9n	80n)
+* vc	c	0	pulse(1.8 0	0.1n	0.1n	0.1n	79.9n	160n)
 
-.alter 
-va	a	0	pulse(1.8 0	0.1n	0.1n	0.1n	9.9n	20n)
-vb	b	0	pulse(1.8 0	0.1n	0.1n	0.1n	19.9n	40n)
-vc	c	0	pulse(1.8 0	0.1n	0.1n	0.1n	39.9n	80n)
+* .alter 
+* va	a	0	pulse(1.8 0	0.1n	0.1n	0.1n	9.9n	20n)
+* vb	b	0	pulse(1.8 0	0.1n	0.1n	0.1n	19.9n	40n)
+* vc	c	0	pulse(1.8 0	0.1n	0.1n	0.1n	39.9n	80n)
 
-.alter 
-va	a	0	pulse(1.8 0	0.1n	0.1n	0.1n	4.9n	10n)
-vb	b	0	pulse(1.8 0	0.1n	0.1n	0.1n	9.9n	20n)
-vc	c	0	pulse(1.8 0	0.1n	0.1n	0.1n	19.9n	40n)
+* .alter 
+* va	a	0	pulse(1.8 0	0.1n	0.1n	0.1n	4.9n	10n)
+* vb	b	0	pulse(1.8 0	0.1n	0.1n	0.1n	9.9n	20n)
+* vc	c	0	pulse(1.8 0	0.1n	0.1n	0.1n	19.9n	40n)
 
-.alter 
-va	a	0	pulse(1.8 0	0.1n	0.1n	0.1n	2.4n	5n)
-vb	b	0	pulse(1.8 0	0.1n	0.1n	0.1n	4.9n	10n)
-vc	c	0	pulse(1.8 0	0.1n	0.1n	0.1n	9.9n	20n)
+* .alter 
+* va	a	0	pulse(1.8 0	0.1n	0.1n	0.1n	2.4n	5n)
+* vb	b	0	pulse(1.8 0	0.1n	0.1n	0.1n	4.9n	10n)
+* vc	c	0	pulse(1.8 0	0.1n	0.1n	0.1n	9.9n	20n)
 
 .end
