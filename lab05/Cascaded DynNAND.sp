@@ -1,4 +1,4 @@
-*LAB5-2Cascaded Dynamic NAND (Loading=0.1p)
+*LAB5-2 Cascaded Dynamic NAND (Loading=0.1p)(no buffer)
 .option post=2
 .prot 
 .lib  'cic018.l' tt
@@ -8,11 +8,11 @@ vvdd vdd 0 1.8
 vgnd gnd 0  0
 .param k=0.1p
 
-.subckt nand a b out vdd gnd
-mp0     out a vdd   vdd p_18 l=0.18u w=1u
-mp1     out b vdd   vdd p_18 l=0.18u w=1u
-mn0     out a net   0   n_18 l=0.18u w=1u
-mn1     net b 0     0   n_18 l=0.18u w=1u
+.subckt nand a b CK out vdd gnd
+mp0     out CK vdd   vdd p_18 l=0.18u w=2u
+mn0     out a 1   gnd   n_18 l=0.18u w=3u
+mn1     1 b 2     gnd   n_18 l=0.18u w=3u
+mn2     2 CK gnd     gnd   n_18 l=0.18u w=3u
 .ends
 
 .subckt buf in out vdd gnd
@@ -35,10 +35,10 @@ VCK	CK  0	pulse(0     1.8     2.1n    0.1n    0.1n    1.9n    4n)
 
 
 *主電路
-xnand1 a b      out1 vdd gnd nand
-xnand2 c out1   out2 vdd gnd nand
-xnand3 d out2   out3 vdd gnd nand
-xnand4 e out3   out4 vdd gnd nand
+xnand1 a b      CK out1 vdd gnd nand
+xnand2 c out1   CK out2 vdd gnd nand
+xnand3 d out2   CK out3 vdd gnd nand
+xnand4 e out3   CK out4 vdd gnd nand
 c1 out1 gnd 0.1p
 c2 out2 gnd 0.1p
 c3 out3 gnd 0.1p
@@ -54,7 +54,7 @@ c4 out4 gnd 0.1p
 
 .meas tran pdp=param('pw*delayN')
 
-.tran		0.1n		40n	 $(sweep	k 	0.05p  1p   0.05p)
+.tran		0.1n		100n	 $(sweep	k 	0.05p  1p   0.05p)
 
 * *2倍
 * .alter
