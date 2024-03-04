@@ -48,7 +48,7 @@ cl	out gnd k
 
 .meas tran pdp=param('pw*delayN')
 
-.tran		0.1n		40n	(sweep	k 	0.05p  1p   0.05p)
+.tran		0.1n		40n	 $(sweep	k 	0.05p  1p   0.05p)
 
 *2倍
 .alter
