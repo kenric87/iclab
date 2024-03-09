@@ -1,4 +1,5 @@
-*LAB5-2 Cascaded Dynamic AND (Loading=0.1p)(no buffer & buffer)
+*LAB5-2 Cascaded Dynamic AND (Loading=0.1p)
+**domino logic
 .option post=2
 .prot 
 .lib  'cic018.l' tt
@@ -8,12 +9,23 @@ vvdd vdd 0 1.8
 vgnd gnd 0  0
 .param k=0.1p
 
-.subckt nand a b CK out vdd gnd
+.subckt nand1 a b CK out vdd gnd
 mp0     out CK vdd   vdd p_18 l=0.18u w=2u
 mn0     out a 1   gnd   n_18 l=0.18u w=3u
 mn1     1 b 2     gnd   n_18 l=0.18u w=3u
 mn2     2 CK gnd     gnd   n_18 l=0.18u w=3u
 .ends
+
+**domino logic
+.subckt nand2 a b CK out1 vdd gnd
+mp0     out CK vdd   vdd p_18 l=0.18u w=2u
+mp1     out out1 vdd   vdd p_18 l=0.18u w=2u
+mn0     out a 1   gnd   n_18 l=0.18u w=3u
+mn1     1 b 2     gnd   n_18 l=0.18u w=3u
+mn2     2 CK gnd     gnd   n_18 l=0.18u w=3u
+xinv1  out   out1   vdd  gnd inv
+.ends
+
 
 .subckt buf in out vdd gnd
 xinv1  in   1       vdd  gnd inv
@@ -34,11 +46,11 @@ VCK	CK  0	pulse(0     1.8     2.1n    0.1n    0.1n    1.9n    4n)
 *.tran	0.1n		40n	
 
 
-*主電路 no buffer
-xnand1 a b      CK out1 vdd gnd nand
-xnand2 c out1   CK out2 vdd gnd nand
-xnand3 d out2   CK out3 vdd gnd nand
-xnand4 e out3   CK out4 vdd gnd nand
+*主電路
+xnand1 a b      CK out1 vdd gnd nand2
+xnand2 c out1   CK out2 vdd gnd nand2
+xnand3 d out2   CK out3 vdd gnd nand2
+xnand4 e out3   CK out4 vdd gnd nand2
 c1 out1 gnd 0.1p
 c2 out2 gnd 0.1p
 c3 out3 gnd 0.1p
@@ -54,17 +66,5 @@ c4 out4 gnd 0.1p
 
 .meas tran pdp=param('pw*delayN')
 
-.tran		0.1n		100n	 $(sweep	k 	0.05p  1p   0.05p)
-.alter $have buffer
-xnand1 a b      CK out1 vdd gnd nand
-xnand2 c out11   CK out2 vdd gnd nand
-xnand3 d out21   CK out3 vdd gnd nand
-xnand4 e out31   CK out4 vdd gnd nand
-xbuf1 out1 out11 vdd gnd buf
-xbuf2 out2 out21 vdd gnd buf
-xbuf3 out3 out31 vdd gnd buf
-c1 out1 gnd 0.1p
-c2 out2 gnd 0.1p
-c3 out3 gnd 0.1p
-c4 out4 gnd 0.1p
+.tran		0.1n		50n	 $(sweep	k 	0.05p  1p   0.05p)
 .end
