@@ -6,7 +6,7 @@
 .global vdd gnd
 vvdd vdd 0 1.8
 vgnd gnd 0  0
-
+.param k=0.5u
 
 
 .subckt NOR a b c d out vdd gnd
