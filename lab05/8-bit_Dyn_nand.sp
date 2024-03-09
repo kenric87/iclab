@@ -86,14 +86,23 @@ xand5  a5  b5  g5  vdd  gnd and
 xand6  a6  b6  g6  vdd  gnd and
 xand7  a7  b7  g7  vdd  gnd and
 
-xblock0 p0 g0 clk ci c0 vdd gnd helfadder
-xblock1 p1 g1 clk c0 c1 vdd gnd helfadder
-xblock2 p2 g2 clk c1 c2 vdd gnd helfadder
-xblock3 p3 g3 clk c2 c3 vdd gnd helfadder
-xblock4 p4 g4 clk c3 c4 vdd gnd helfadder
-xblock5 p5 g5 clk c4 c5 vdd gnd helfadder
-xblock6 p6 g6 clk c5 c6 vdd gnd helfadder
-xblock7 p7 g7 clk c6 c7 vdd gnd helfadder
+xinv0  c0  c01  vdd  gnd inv
+xinv1  c1  c11  vdd  gnd inv
+xinv2  c2  c21  vdd  gnd inv
+xinv3  c3  c31  vdd  gnd inv
+xinv4  c4  c41  vdd  gnd inv
+xinv5  c5  c51  vdd  gnd inv
+xinv6  c6  c61  vdd  gnd inv
+xinv7  c7  c71  vdd  gnd inv
+
+xblock0 p0 g0 clk ci  c0 vdd gnd helfadder
+xblock1 p1 g1 clk c01 c1 vdd gnd helfadder
+xblock2 p2 g2 clk c11 c2 vdd gnd helfadder
+xblock3 p3 g3 clk c21 c3 vdd gnd helfadder
+xblock4 p4 g4 clk c31 c4 vdd gnd helfadder
+xblock5 p5 g5 clk c41 c5 vdd gnd helfadder
+xblock6 p6 g6 clk c51 c6 vdd gnd helfadder
+xblock7 p7 g7 clk c61 c7 vdd gnd helfadder
 
 cl0 c0 gnd 0.05p
 cl1 c1 gnd 0.05p
