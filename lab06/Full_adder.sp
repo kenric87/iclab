@@ -20,8 +20,39 @@ mn0	out	in	0	0	n_18	l=0.18u	w=1u
 .ends
 
 .subckt  fulladder  a b ci co s
-mp0	out	in	vdd	vdd	p_18	l=0.18u	w=2u
-mn0	out	in	0	0	n_18	l=0.18u	w=1u
+mp0     1	a	vdd	vdd p_18	l=0.18u	w=6u
+mp1     2       b       1	vdd p_18	l=0.18u	w=6u
+mp2     net1    a       2	vdd p_18	l=0.18u	w=6u
+mp3     1       b       vdd 	vdd p_18	l=0.18u	w=6u
+mp4     net1	ci      1 	vdd p_18	l=0.18u	w=6u
+mn0     net1	ci      3	gnd	n_18	l=0.18u	w=3u
+mn1     3       a       gnd	gnd	n_18	l=0.18u	w=1.5u
+mn2     3       b       gnd	gnd	n_18	l=0.18u	w=1.5u
+mn3     net1    a       4	gnd	n_18	l=0.18u	w=3u
+mn4     4       b       gnd	gnd	n_18	l=0.18u	w=3u
+
+mp5     co      net1    vdd 	vdd p_18	l=0.18u	w=6u
+mn5	co      net1    gnd	gnd	n_18	l=0.18u	w=3u
+
+mp6     5       ci	vdd 	vdd p_18	l=0.18u	w=2u
+mp7     5       a       vdd vdd p_18	l=0.18u	w=2u
+mp8     5       b       vdd vdd p_18	l=0.18u	w=2u
+mp9     net2    net1    5 vdd p_18	l=0.18u	w=6u
+mp10    6       a       5 vdd p_18	l=0.18u	w=6u
+mp11    7       b       6 vdd p_18	l=0.18u	w=6u
+mp12    net2    ci      7 vdd p_18	l=0.18u	w=6u
+
+mn6     net2    net1    8	gnd	n_18	l=0.18u	w=3u
+mn7     8       a	gnd	gnd	n_18	l=0.18u	w=1u
+mn8     8       b	gnd	gnd	n_18	l=0.18u	w=1u
+mn9     8       ci	gnd	gnd	n_18	l=0.18u	w=1u
+
+mn10	net2    ci	9	gnd	n_18	l=0.18u	w=3u
+mn11	9       a	10	gnd	n_18	l=0.18u	w=3u
+mn12	10      b	gnd	gnd	n_18	l=0.18u	w=3u
+
+mp13    s	net2    vdd     vdd p_18	l=0.18u	w=6u
+mn13	s	net2	gnd 	gnd	n_18	l=0.18u	w=3u
 .ends
 
 
@@ -43,27 +74,24 @@ V12	b4	0	0
 V13	b5	0	0
 V14	b6	0	0
 V15	b7	0	0
-
-
 Vc	ci	0	pulse(1.8	0  1n  0.1n  0.1n  9.9n    20n)
 
 
 
 *主電路
-xnand1 a b      CK out1 vdd gnd nand2
-xnand2 c out1   CK out2 vdd gnd nand2
-xnand3 d out2   CK out3 vdd gnd nand2
-xnand4 e out3   CK out4 vdd gnd nand2
-c1 out1 gnd 0.1p
-c2 out2 gnd 0.1p
-c3 out3 gnd 0.1p
-c4 out4 gnd 0.1p
+xfulladder0	a0	b0	ci	c0	s0	fulladder
+xfulladder1	a1	b1	c0	c1	s1	fulladder
+xfulladder2	a2	b2	c1	c2	s2	fulladder
+xfulladder3	a3	b3	c2	c3	s3	fulladder
+xfulladder4	a4	b4	c3	c4	s4	fulladder
+xfulladder5	a5	b5	c4	c5	s5	fulladder
+xfulladder6	a6	b6	c5	c6	s6	fulladder
+xfulladder7	a7	b7	c6	c7	s7	fulladder
 
 
 
-
-.meas	tran	delayN	trig	v(a)	val=0.9	rise=2
-+						targ	v(out)	val=0.9	fall=2
+.meas	tran	delayN	trig	v(ci)	val=0.9	fall=2
++		targ	v(c7)	val=0.9	fall=2
 
 .meas tran pw avg power
 
