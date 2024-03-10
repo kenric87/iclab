@@ -60,12 +60,15 @@ xc5	7	2	9	nand
 xd4	5	6	8	or
 xd5	4	8	11	nand
 xe1	9	11	10	nor
+cl1	9	gnd	0.1p
+cl2	10	gnd	0.1p
+cl3	11	gnd	0.1p
 
 
 
 
-.meas	tran	delayN	trig	v(a)	val=0.9	rise=2
-+		targ	v(out)	val=0.9	fall=2
+.meas	tran	delayN	trig	v(a0)	val=0.9	rise=2
++			targ	v(10)	val=0.9	rise=1
 
 .meas tran pw avg power
 
