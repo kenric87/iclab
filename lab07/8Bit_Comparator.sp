@@ -47,7 +47,14 @@ Va2	a2	0	pulse(1.8	0  1n  0.1n  0.1n  2.4n   5n)
 Vb2	b2	0	pulse(1.8	0  1n  0.1n  0.1n  9.9n  20n)
 Va3	a3	0	pulse(1.8	0  1n  0.1n  0.1n  9.9n  20n)
 Vb3	b3	0	pulse(1.8	0  1n  0.1n  0.1n  9.9n  20n)
-
+Va4	a4	0	1.8
+Vb4	b4	0	1.8
+Va5	a5	0	1.8
+Vb5	b5	0	1.8
+Va6	a6	0	1.8
+Vb6	b6	0	1.8
+Va7	a7	0	1.8
+Vb7	b7	0	1.8
 
 .subckt	com2b	a1	a0	b1	b0	9	10	11
 xinv1	a1	a1_	inv
@@ -67,9 +74,20 @@ xd5	4	8	11	nand
 xe1	9	11	10	nor
 .ends
 
-*main
+.subckt	com4b	a3 a2 b3 b2 a1 a0 b1 b0 out1 out2 out3
 xcom2b1	a1	a0	b1	b0	4	5	6	com2b
 xcom2b2	a3	a2	b3	b2	1	2	3	com2b
+xf1	2	4	7	and
+xf2	2	6	8	and
+xf3	1	7	out1	or
+xf4	2	5	out2	and
+xf5	3	8	out3	or
+.ends
+
+
+*main
+xcom4b1	a7 a6 b7 b6 a5 a4 b5 b4 1 2 3 com4b
+xcom4b2	a3 a2 b3 b2 a1 a0 b1 b0 4 5 6 com4b
 xf1	2	4	7	and
 xf2	2	6	8	and
 xf3	1	7	out1	or
@@ -81,7 +99,6 @@ cl3	out3	gnd	0.1p
 
 
 
-
 .meas	tran	delayN	trig	v(b0)		val=0.9	rise=3
 +			targ	v(out1)	val=0.9	rise=4
 
@@ -89,5 +106,5 @@ cl3	out3	gnd	0.1p
 
 .meas tran pdp=param('pw*delayN')
 
-.tran	0.1n	40n	$(swee	k 	0.05p  1p   0.05p)
+.tran	0.1n	60n	$(swee	k 	0.05p  1p   0.05p)
 .end
