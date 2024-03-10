@@ -43,6 +43,9 @@ xinv2	b	b_	inv
 xand1	a_	b	out1	and
 xand2	a	b_	out3	and
 xnor	out1	out3	out2	nor
+cl1	out1	gnd	0.1p
+cl2	out2	gnd	0.1p
+cl3	out3	gnd	0.1p
 
 .meas	tran	delayN	trig	v(a)	val=0.9	rise=2
 +		targ	v(out)	val=0.9	fall=2
