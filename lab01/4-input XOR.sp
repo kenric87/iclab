@@ -26,8 +26,8 @@ mn4 out e 1 gnd n_18 l=0.18u w=k
 .ends
 
 .subckt  inv  in  out  vdd  gnd
-mp0	out	in	vdd	vdd	p_18	l=0.18u	w=1u
-mn0	out	in	0	0	n_18	l=0.18u	w=0.5u
+mp0	out	in	vdd	vdd	p_18	l=0.18u	w='2*k'
+mn0	out	in	0	0	n_18	l=0.18u	w=k
 .ends
 
 
@@ -64,5 +64,5 @@ vd d 0 pulse(1.8 0 0.1n 0.1n 0.1n 39.9n 80n)
 .meas tran pdp=param('pw*delayN')
 
 
-.tran 0.1n 100n (sweep 	k 	0.3u  5u   0.1u)
+.tran 0.1n 50n (sweep 	k 	0.3u  5u   0.1u)
 .end

@@ -34,5 +34,5 @@ vb b 0 pulse(1.8 0 0.1n 0.1n 0.1n 9.9n 20n)
 .meas tran pdp=param('pw*delayN')
 
 
-.tran 0.1n 50n (sweep 	k 	0.3u  5u   0.1u)
+.tran 0.1n 50n $(sweep 	k 	0.3u  5u   0.1u)
 .end
