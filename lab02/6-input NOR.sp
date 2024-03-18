@@ -29,18 +29,18 @@ VC C 0 0
 VD D 0 0
 VE E 0 0
 VF F 0 0
-*.tran 0.1n 160n
+
 
 *主電路
 xnor a b c d e f out vdd gnd nor
-c1 out gnd 0.01p
+c1 out gnd 0.05p
 
-.meas	tran	delayN	trig	v(a)	val=0.9	rise=1
-+						targ	v(out)	val=0.9	fall=1
+.meas	tran	delayN	trig	v(a)	val=0.9	fall=2
++						targ	v(out)	val=0.9	rise=2
 .meas tran pw avg power
 
 .meas tran pdp=param('pw*delayN')
 
 
-.tran 0.1n 50n
+.tran 0.1n 80n
 .end

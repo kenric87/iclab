@@ -6,7 +6,7 @@
 .global vdd gnd
 vvdd vdd 0 1.8
 vgnd gnd 0  0
-
+.param k=0.05p
 
 .subckt nor a b c d out vdd gnd
 mp0	1	a	vdd	vdd	p_18	l=0.18u	w=1u
@@ -23,18 +23,17 @@ VA A 0 pulse(1.8 0 0.1n 0.1n 0.1n 9.9n 20n)
 VB B 0 0
 VC C 0 0
 VD D 0 0
-*.tran 0.1n 160n
 
 *主電路
 xnor a b c d out vdd gnd nor
-c1 out gnd 0.01p
+c1 out gnd k
 
-.meas	tran	delayN	trig	v(a)	val=0.9	rise=1
-+						targ	v(out)	val=0.9	fall=1
+.meas	tran	delayN	trig	v(a)	val=0.9	fall=2
++						targ	v(out)	val=0.9	rise=2
 .meas tran pw avg power
 
 .meas tran pdp=param('pw*delayN')
 
 
-.tran 0.1n 50n
+.tran 0.1n 80n (sweep 	k 	0.02p  0.3p   0.04p)
 .end
