@@ -16,8 +16,8 @@ mn1 net b 0 0 n_18 l=0.18u w=1u
 .ends
 
 va	a	0	pulse(1.8 0	0.1n	0.1n	0.1n	39.9n	80n)
-vb	b	0	pulse(1.8 0	0.1n	0.1n	0.1n	79.9n	160n)
-vc	c	0	pulse(1.8 0	0.1n	0.1n	0.1n	159.9n	320n)
+VB B 0 1.8
+VC C 0 1.8
 VD D 0 1.8
 VE E 0 1.8
 

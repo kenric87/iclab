@@ -8,7 +8,7 @@ vvdd vdd 0 1.8
 vgnd gnd 0  0
 
 
-.subckt nand a b c d  e f out
+.subckt nand a b c d e f out
 mp0 out a vdd vdd p_18 l=0.18u w=1u
 mp1 out b vdd vdd p_18 l=0.18u w=1u
 mp2 out c vdd vdd p_18 l=0.18u w=1u
@@ -29,16 +29,13 @@ VC C 0 1.8
 VD D 0 1.8
 VE E 0 1.8
 VF F 0 1.8
-VG G 0 1.8
-VH H 0 1.8
-
 
 *主電路
 xnand a b c d e f out nand
-c1 out gnd 0.01p
+c1 out gnd 0.05p
 
-.meas	tran	delayN	trig	v(a)	val=0.9	rise=2
-+						targ	v(out)	val=0.9	fall=2
+.meas	tran	delayN	trig	v(a)	val=0.9	rise=1
++						targ	v(out)	val=0.9	fall=1
 .meas tran pw avg power
 
 .meas tran pdp=param('pw*delayN')

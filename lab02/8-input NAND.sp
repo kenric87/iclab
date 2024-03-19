@@ -38,7 +38,7 @@ VH H 0 1.8
 
 *主電路
 xnand a b c d e f g h out nand
-c1 out gnd 0.01p
+c1 out gnd 0.05p
 
 .meas	tran	delayN	trig	v(a)	val=0.9	rise=2
 +						targ	v(out)	val=0.9	fall=2
