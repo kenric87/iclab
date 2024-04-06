@@ -23,7 +23,6 @@ VA  A   0	pulse(1.8   0       0.1n    0.1n    0.1n    3.9n    8n)
 VB  B   0	pulse(1.8   0       0.1n    0.1n    0.1n    7.9n    16n)
 VC  C   0	pulse(1.8   0       0.1n    0.1n    0.1n    15.9n   32n)
 VCK	CK  0	pulse(0     1.8     2.1n    0.1n    0.1n    1.9n    4n)
-*.tran	0.1n		40n	
 
 
 *主電路
@@ -40,14 +39,10 @@ mp0 out     CK  vdd     vdd     p_18    l=0.18u     w=2u
 mn0 net1    CK  gnd     gnd     n_18    l=0.18u     w=4u
 cl	out gnd k
 
-
-.meas	tran	delayN	trig	v(a)	val=0.9	rise=2
-+						targ	v(out)	val=0.9	fall=2
-
+.meas	tran	delayN	trig	v(CK)	val=0.9	fall=4
++						targ	v(out)	val=0.9	rise=2
 .meas tran pw avg power
-
 .meas tran pdp=param('pw*delayN')
-
 .tran		0.1n		40n	 $(sweep	k 	0.05p  1p   0.05p)
 
 *2倍
@@ -56,19 +51,28 @@ VA  A   0	pulse(1.8   0       0.1n    0.1n    0.1n    1.9n    4n)
 VB  B   0	pulse(1.8   0       0.1n    0.1n    0.1n    3.9n    8n)
 VC  C   0	pulse(1.8   0       0.1n    0.1n    0.1n    7.9n   16n)
 VCK	CK  0	pulse(0     1.8     2.1n    0.1n    0.1n    0.9n    2n)
-
+.meas	tran	delayN	trig	v(CK)	val=0.9	fall=3
++						targ	v(out)	val=0.9	rise=1
+.meas tran pw avg power
+.meas tran pdp=param('pw*delayN')
 *4倍
 .alter
 VA  A   0	pulse(1.8   0       0.1n    0.1n    0.1n    0.9n    2n)
 VB  B   0	pulse(1.8   0       0.1n    0.1n    0.1n    1.9n    4n)
 VC  C   0	pulse(1.8   0       0.1n    0.1n    0.1n    3.9n    8n)
 VCK	CK  0	pulse(0     1.8     2.1n    0.1n    0.1n    0.4n    1n)
-
+.meas	tran	delayN	trig	v(CK)	val=0.9	fall=2
++						targ	v(out)	val=0.9	rise=1
+.meas tran pw avg power
+.meas tran pdp=param('pw*delayN')
 *8倍
 .alter
 VA  A   0	pulse(1.8   0       0.1n    0.1n    0.1n    0.4n    1n)
 VB  B   0	pulse(1.8   0       0.1n    0.1n    0.1n    0.9n    2n)
 VC  C   0	pulse(1.8   0       0.1n    0.1n    0.1n    1.9n    4n)
-VCK	CK  0	pulse(0     1.8     2.1n    0.1n    0.1n    0.15n    0.5n)
-
+VCK	CK  0	pulse(0     1.8     2.1n    0.1n    0.1n    0.15n   0.5n)
+.meas	tran	delayN	trig	v(CK)	val=0.9	fall=3
++						targ	v(out)	val=0.9	rise=1
+.meas tran pw avg power
+.meas tran pdp=param('pw*delayN')
 .end
