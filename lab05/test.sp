@@ -45,16 +45,16 @@ c2 out2 gnd k
 c3 out3 gnd k
 c4 out4 gnd k
 
-.meas	tran	delay1	trig	v(a)		val=0.9	rise=2
-+				targ	v(out1)	val=0.9	rise=4
-
-.meas	tran	delay2	trig	v(a)		val=0.9	rise=2
-+				targ	v(out2)	val=0.9	rise=4
-
+.meas	tran	delay1	trig	v(CK)		val=0.9	rise=4
++				targ	v(out1)	val=0.9	rise=2
+.meas	tran	delay2	trig	v(CK)		val=0.9	rise=4
++				targ	v(out2)	val=0.9	rise=2
+.meas	tran	delay3	trig	v(CK)		val=0.9	rise=4
++				targ	v(out3)	val=0.9	rise=2
+.meas	tran	delay4	trig	v(CK)		val=0.9	rise=4
++				targ	v(out4)	val=0.9	rise=2
 .meas tran pw avg power
-
-.meas tran pdp=param('pw*delay1')
-
+.meas tran pdp=param('pw*delay4')
 .tran		0.1n		60n
 
 .end
