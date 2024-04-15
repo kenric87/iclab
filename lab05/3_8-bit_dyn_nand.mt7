@@ -1,0 +1,8 @@
+$DATA1 SOURCE='HSPICE' VERSION='J-2014.09-2 64-BIT'
+.TITLE '*'
+ delay0           delay1           delay2           delay3          
+ delay4           delay5           delay6           delay7          
+ pw               temper           alter#          
+  4.262e-09        1.638e-08        1.654e-08        1.673e-08      
+  1.694e-08        1.715e-08        1.728e-08        1.732e-08      
+  2.389e-04         25.0000        8               

@@ -4,10 +4,22 @@
 .lib  'cic018.l' tt
 .unprot
 .global vdd gnd
+<<<<<<< HEAD
 vvdd vdd 0 1.6
 vgnd gnd 0 0
 .param k=0.1p
 
+=======
+
+.param k=1.6
+.param kk='k/2'
+.param j=200n
+.param jj='(j/2)-0.1n'
+.param jjj='2*j'
+
+vvdd vdd 0 k
+vgnd gnd 0 0
+>>>>>>> 29e88830a9ab847e4851f4c48de62eef93b01583
 
 .subckt  fulladder  a b ci co s
 mp0	1	a	vdd	vdd	p_18	l=0.18u	w=9u
@@ -45,6 +57,7 @@ mp13	s	net2	vdd	vdd	p_18	l=0.18u	w=6u
 mn13	s	net2	gnd 	gnd	n_18	l=0.18u	w=3u
 .ends
 
+<<<<<<< HEAD
 
 *記得降電壓
 V0	a0	0	1.6v
@@ -56,6 +69,17 @@ V5	a5	0	1.6v
 V6	a6	0	1.6v
 V7	a7	0	1.6v
 
+=======
+*記得降電壓
+V0	a0	0	k
+V1	a1	0	k
+V2	a2	0	k
+V3	a3	0	k
+V4	a4	0	k
+V5	a5	0	k
+V6	a6	0	k
+V7	a7	0	k
+>>>>>>> 29e88830a9ab847e4851f4c48de62eef93b01583
 V8	b0	0	0
 V9	b1	0	0
 V10	b2	0	0
@@ -64,9 +88,13 @@ V12	b4	0	0
 V13	b5	0	0
 V14	b6	0	0
 V15	b7	0	0
+<<<<<<< HEAD
 Vc	ci	0	pulse(1.6	0  1n  0.1n  0.1n  9.9n    200n)
 
 
+=======
+Vc	ci	0	pulse(k	0  1n  0.1n  0.1n  jj    j)
+>>>>>>> 29e88830a9ab847e4851f4c48de62eef93b01583
 
 *主電路
 xfulladder0	a0	b0	ci	c0	s0	fulladder
@@ -94,6 +122,7 @@ cs5	s5	gnd	0.1p
 cs6	s6	gnd	0.1p
 cs7	s7	gnd	0.1p
 
+<<<<<<< HEAD
 
 
 .meas	tran	delayN	trig	v(ci)	val=0.8	rise=2
@@ -105,3 +134,12 @@ cs7	s7	gnd	0.1p
 
 .tran	0.05n	400n
 .end
+=======
+.meas	tran	delayN	trig	v(ci)	val=kk	rise=2
++				targ	v(c7)	val=kk	rise=2
+.meas tran pw avg power
+.meas tran pdp=param('pw*delayN')
+
+.tran	0.05n	jjj
+.end
+>>>>>>> 29e88830a9ab847e4851f4c48de62eef93b01583

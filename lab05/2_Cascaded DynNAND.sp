@@ -63,16 +63,16 @@ c4 out4 gnd 0.1p
 .meas tran pdp=param('pw*delay4')
 
 .tran		0.1n		60n	 $(sweep	k 	0.05p  1p   0.05p)
-.alter $have buffer
-xnand1	a	b	CK	out1	vdd	gnd	nand
-xnand2	c	out11	CK	out2	vdd	gnd	nand
-xnand3	d	out21	CK	out3	vdd	gnd	nand
-xnand4	e	out31	CK	out4	vdd	gnd	nand
-xbuf1	out1	out11	vdd	gnd	buf
-xbuf2	out2	out21	vdd	gnd	buf
-xbuf3	out3	out31	vdd	gnd	buf
-c1	out1	gnd	0.1p
-c2	out2	gnd	0.1p
-c3	out3	gnd	0.1p
-c4	out4	gnd	0.1p
+* .alter $have buffer
+* xnand1	a	b	CK	out1	vdd	gnd	nand
+* xnand2	c	out11	CK	out2	vdd	gnd	nand
+* xnand3	d	out21	CK	out3	vdd	gnd	nand
+* xnand4	e	out31	CK	out4	vdd	gnd	nand
+* xbuf1	out1	out11	vdd	gnd	buf
+* xbuf2	out2	out21	vdd	gnd	buf
+* xbuf3	out3	out31	vdd	gnd	buf
+* c1	out1	gnd	0.1p
+* c2	out2	gnd	0.1p
+* c3	out3	gnd	0.1p
+* c4	out4	gnd	0.1p
 .end
