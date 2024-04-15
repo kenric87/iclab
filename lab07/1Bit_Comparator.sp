@@ -28,8 +28,8 @@ xinv1  1	out	inv
 .ends
 
 .subckt	nor	a	b	out
-mp0	1	a	vdd	vdd	p_18	l=0.18u	w=4u
-mp1	out	b	1	vdd	p_18	l=0.18u	w=4u
+mp0	1	a	vdd	vdd	p_18	l=0.18u	w=5u
+mp1	out	b	1	vdd	p_18	l=0.18u	w=5u
 mn0	out	a	gnd	gnd	n_18	l=0.18u	w=1u
 mn1	out	b	gnd	gnd	n_18	l=0.18u	w=1u
 .ends
@@ -47,8 +47,8 @@ cl1	out1	gnd	0.1p
 cl2	out2	gnd	0.1p
 cl3	out3	gnd	0.1p
 
-.meas	tran	delayN	trig	v(a)	val=0.9	rise=2
-+		targ	v(out)	val=0.9	fall=2
+.meas	tran	delayN	trig	v(a)		val=0.9	rise=2
++				targ	v(out2)	val=0.9	rise=1
 
 .meas tran pw avg power
 

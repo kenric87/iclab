@@ -27,8 +27,8 @@ xinv1  1	out	inv
 .ends
 
 .subckt	nor	a	b	out
-mp0	1	a	vdd	vdd	p_18	l=0.18u	w=4u
-mp1	out	b	1	vdd	p_18	l=0.18u	w=4u
+mp0	1	a	vdd	vdd	p_18	l=0.18u	w=5u
+mp1	out	b	1	vdd	p_18	l=0.18u	w=5u
 mn0	out	a	gnd	gnd	n_18	l=0.18u	w=1u
 mn1	out	b	gnd	gnd	n_18	l=0.18u	w=1u
 .ends
@@ -39,14 +39,14 @@ xinv1  1	out	inv
 .ends
 
 
-Va0	a0	0	pulse(1.8	0  1n  0.1n  0.1n  2.4n   5n)
-Vb0	b0	0	pulse(1.8	0  1n  0.1n  0.1n  4.9n  10n)
+Va0	a0	0	0
+Vb0	b0	0	0
 Va1	a1	0	pulse(1.8	0  1n  0.1n  0.1n  4.9n  10n)
-Vb1	b1	0	pulse(1.8	0  1n  0.1n  0.1n  4.9n  10n)
-Va2	a2	0	pulse(1.8	0  1n  0.1n  0.1n  2.4n   5n)
-Vb2	b2	0	pulse(1.8	0  1n  0.1n  0.1n  9.9n  20n)
-Va3	a3	0	pulse(1.8	0  1n  0.1n  0.1n  9.9n  20n)
-Vb3	b3	0	pulse(1.8	0  1n  0.1n  0.1n  9.9n  20n)
+Vb1	b1	0	0
+Va2	a2	0	0
+Vb2	b2	0	0
+Va3	a3	0	0
+Vb3	b3	0	0
 
 
 .subckt	com2b	a1	a0	b1	b0	9	10	11
@@ -82,12 +82,12 @@ cl3	out3	gnd	0.1p
 
 
 
-.meas	tran	delayN	trig	v(b0)		val=0.9	rise=3
-+			targ	v(out1)	val=0.9	rise=4
+.meas	tran	delayN	trig	v(a1)		val=0.9	rise=2
++				targ	v(out3)	val=0.9	rise=2
 
 .meas tran pw avg power
 
 .meas tran pdp=param('pw*delayN')
 
-.tran	0.1n	40n	$(swee	k 	0.05p  1p   0.05p)
+.tran	0.1n	40n
 .end
