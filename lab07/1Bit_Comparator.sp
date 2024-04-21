@@ -54,5 +54,5 @@ cl3	out3	gnd	0.1p
 
 .meas tran pdp=param('pw*delayN')
 
-.tran	0.1n	40n	$(swee	k 	0.05p  1p   0.05p)
+.tran	0.1n	40n
 .end
