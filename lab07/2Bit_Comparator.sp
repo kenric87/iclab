@@ -39,10 +39,10 @@ xinv1  1	out	inv
 .ends
 
 
-Va0	a0	0	1.8
-Vb0	b0	0	1.8
+Va0	a0	0	0
+Vb0	b0	0	0
 Va1	a1	0	pulse(1.8	0  1n  0.1n  0.1n  4.9n  10n)
-Vb1	b1	0	1.8
+Vb1	b1	0	0
 
 *
 xinv1	a1	a1_	inv
@@ -68,7 +68,7 @@ cl3	11	gnd	0.1p
 
 
 .meas	tran	delayN	trig	v(a1)	val=0.9	rise=2
-+				targ	v(10)	val=0.9	rise=2
++				targ	v(10)	val=0.9	fall=2
 
 .meas tran pw avg power
 

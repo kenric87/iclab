@@ -41,20 +41,20 @@ xinv1  1	out	inv
 
 Va0	a0	0	0
 Vb0	b0	0	0
-Va1	a1	0	pulse(1.8	0  1n  0.1n  0.1n  4.9n  10n)
+Va1	a1	0	0
 Vb1	b1	0	0
 Va2	a2	0	0
 Vb2	b2	0	0
-Va3	a3	0	0
+Va3	a3	0	pulse(1.8	0  1n  0.1n  0.1n  4.9n  10n)
 Vb3	b3	0	0
-Va4	a4	0	0
-Vb4	b4	0	0
-Va5	a5	0	0
-Vb5	b5	0	0
-Va6	a6	0	0
-Vb6	b6	0	0
-Va7	a7	0	0
-Vb7	b7	0	0
+Va4	a4	0	1.8
+Vb4	b4	0	1.8
+Va5	a5	0	1.8
+Vb5	b5	0	1.8
+Va6	a6	0	1.8
+Vb6	b6	0	1.8
+Va7	a7	0	pulse(1.8	0  1n  0.1n  0.1n  4.9n  10n)
+Vb7	b7	0	1.8
 
 .subckt	com2b	a1	a0	b1	b0	9	10	11
 xinv1	a1	a1_	inv
@@ -99,7 +99,7 @@ cl3	out3	gnd	0.1p
 
 
 
-.meas	tran	delayN	trig	v(a1)		val=0.9	rise=3
+.meas	tran	delayN	trig	v(a3)		val=0.9	rise=3
 +				targ	v(out3)	val=0.9	rise=3
 
 .meas tran pw avg power
