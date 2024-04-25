@@ -9,7 +9,7 @@ vgnd gnd 0 0
 .param k=0.1p
 
 
-.subckt  fulladder  a b ci co s
+.subckt  fulladder  a b ci c0 s
 mp4	net1	gnd	vdd	vdd	p_18	l=0.18u	w=6u
 
 mn0	net1	ci	3	gnd	n_18	l=0.18u	w=3u
@@ -18,8 +18,8 @@ mn2	3	b	gnd	gnd	n_18	l=0.18u	w=1.5u
 mn3	net1	a	4	gnd	n_18	l=0.18u	w=3u
 mn4	4	b	gnd	gnd	n_18	l=0.18u	w=3u
 
-mp5	co	net1	vdd 	vdd	p_18	l=0.18u	w=6u
-mn5	co	net1	gnd	gnd	n_18	l=0.18u	w=3u
+mp5	c0	net1	vdd 	vdd	p_18	l=0.18u	w=6u
+mn5	c0	net1	gnd	gnd	n_18	l=0.18u	w=3u
 
 mp6	5	gnd	vdd	vdd	p_18	l=0.18u	w=2u
 mp9	net2	net1	5	vdd	p_18	l=0.18u	w=6u
@@ -52,7 +52,7 @@ x2	1	out	invde
 V0	a0	0	0
 V1	b0	0	0
 Vc	ci	0	pulse(1.8	0  1n  0.1n  0.1n  9.9n    20n)
-Vck	CK	0	pulse(1.8	0  1n  0.1n  0.1n  4.9n    10n)
+
 
 *主電路
 xfulladder0	a0	b0	ci	c0	s0	fulladder
