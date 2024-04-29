@@ -1,4 +1,5 @@
 *pseudo-nMOS Full-adder
+*功能有點不行，但小部分delay OK
 .option post=2
 .prot 
 .lib  'cic018.l' tt

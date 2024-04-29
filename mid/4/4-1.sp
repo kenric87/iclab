@@ -1,4 +1,5 @@
 *pseudo-nMOS Full-adder
+*這個功能OK，delay 在看S的時候OK
 .option post=2
 .prot 
 .lib  'cic018.l' tt
@@ -6,11 +7,11 @@
 .global vdd gnd
 vvdd vdd 0 1.8
 vgnd gnd 0 0
-.param k=0.1p
+.param k=10u
 
 
 .subckt  fulladder  a b ci c0 s
-mp4	net1	gnd	vdd	vdd	p_18	l=0.18u	w=2u
+mp4	net1	gnd	vdd	vdd	p_18	l=0.18u	w=2.2u
 
 mn0	net1	ci	3	gnd	n_18	l=0.18u	w=6u
 mn1	3	a	gnd	gnd	n_18	l=0.18u	w=6u
@@ -22,10 +23,9 @@ mp5	c0	net1	vdd 	vdd	p_18	l=0.18u	w=2u
 mn5	c0	net1	gnd	gnd	n_18	l=0.18u	w=6u
 
 
-mp6	5	gnd	vdd	vdd	p_18	l=0.18u	w=2u
-mp9	net2	net1	5	vdd	p_18	l=0.18u	w=2u
-mp12	net2	gnd	5	vdd	p_18	l=0.18u	w=2u
-
+mp6	5	gnd	vdd	vdd	p_18	l=0.18u	w=2.2u
+mp9	net2	net1	5	vdd	p_18	l=0.18u	w=2.2u
+mp12	net2	gnd	5	vdd	p_18	l=0.18u	w=2.2u
 
 mn6	net2	net1	8	gnd	n_18	l=0.18u	w=6u
 mn7	8	a	gnd	gnd	n_18	l=0.18u	w=6u
@@ -36,13 +36,13 @@ mn10	net2	ci	9	gnd	n_18	l=0.18u	w=6u
 mn11	9	a	10	gnd	n_18	l=0.18u	w=6u
 mn12	10	b	gnd	gnd	n_18	l=0.18u	w=6u
 
-mp13	s	net2	vdd	vdd	p_18	l=0.18u	w=20u
-mn13	s	net2	gnd 	gnd	n_18	l=0.18u	w=4.5u
+mp13	s	net2	vdd	vdd	p_18	l=0.18u	w=10u
+mn13	s	net2	gnd 	gnd	n_18	l=0.18u	w=5u
 .ends
 
 .subckt  invde  in  out
-mp0	out	in	vdd	vdd	p_18	l=0.4u	w=20u
-mn0	out	in	0	0	n_18	l=0.42u	w=4.5u
+mp0	out	in	vdd	vdd	p_18	l=0.4u	w=12.2u
+mn0	out	in	0	0	n_18	l=0.42u	w=6u
 .ends
 
 .subckt  delay  in  out
@@ -70,5 +70,5 @@ c2	s00	0	1p
 
 .meas tran pw avg power
 .meas tran pdp=param('pw*delay1')
-.tran	0.05n	400n
+.tran	0.05n	400n $(sweep k 5u 15u 0.05u)
 .end
