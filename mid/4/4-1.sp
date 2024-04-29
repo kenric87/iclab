@@ -1,5 +1,5 @@
 *pseudo-nMOS Full-adder
-*這個功能OK，delay 在看S的時候OK
+*這個功能OK，delay 在看S的時候OK，但還沒開始測abc都變的delay
 .option post=2
 .prot 
 .lib  'cic018.l' tt
@@ -70,5 +70,5 @@ c2	s00	0	1p
 
 .meas tran pw avg power
 .meas tran pdp=param('pw*delay1')
-.tran	0.05n	400n $(sweep k 5u 15u 0.05u)
+.tran	0.05n	400n
 .end
