@@ -47,9 +47,9 @@ mn13	s	net2	gnd 	gnd	n_18	l=0.18u	w=3u
 
 
 *記得降電壓
-V0	a0	0	0
-V1	b0	0	0
-Vc	ci	0	pulse(1.8	0  1n  0.1n  0.1n  9.9n    20n)
+V0	a0	0	pulse(1.8	0	1n	0.1n	0.1n	9.9n	20n)
+V1	b0	0	pulse(1.8	0	1n	0.1n	0.1n	19.9n	40n)
+Vc	ci	0	pulse(1.8	0	1n	0.1n	0.1n	39.9n	80n)
 
 
 
