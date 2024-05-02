@@ -1,6 +1,6 @@
 *pseudo-nMOS Full-adder
 *這個功能OK，delay 在看S的時候OK，但還沒開始測abc都變的delay
-*C功能不完整
+*C功能完整(1點點怪，但不影響了)
 .option post=2
 .prot 
 .lib  'cic018.l' tt
@@ -20,18 +20,18 @@ mn2	3	b	gnd	gnd	n_18	l=0.18u	w=6u
 mn3	net1	a	4	gnd	n_18	l=0.35u	w=2.1u
 mn4	4	b	gnd	gnd	n_18	l=0.18u	w=6u
 
-mp5	c0	net1	vdd 	vdd	p_18	l=0.18u	w=10u
-mn5	c0	net1	gnd	gnd	n_18	l=0.18u	w=5u
+mp5	c0	net1	vdd 	vdd	p_18	l=0.18u	w=7u
+mn5	c0	net1	gnd	gnd	n_18	l=0.18u	w=3.5u
 
 
 mp6	5	gnd	vdd	vdd	p_18	l=0.18u	w=2.3u
 mp9	net2	net1	5	vdd	p_18	l=0.18u	w=2.3u
 mp12	net2	gnd	5	vdd	p_18	l=0.18u	w=2.3u
 
-mn6	net2	net1	8	gnd	n_18	l=0.18u	w=6u
-mn7	8	a	gnd	gnd	n_18	l=0.18u	w=7u
+mn6	net2	net1	8	gnd	n_18	l=0.18u	w=6.1u
+mn7	8	a	gnd	gnd	n_18	l=0.18u	w=6.1u
 mn8	8	b	gnd	gnd	n_18	l=0.18u	w=6u
-mn9	8	ci	gnd	gnd	n_18	l=0.18u	w=20.05u
+mn9	8	ci	gnd	gnd	n_18	l=0.18u	w=22u
 
 mn10	net2	ci	9	gnd	n_18	l=0.18u	w=10u
 mn11	9	a	10	gnd	n_18	l=0.18u	w=5u
