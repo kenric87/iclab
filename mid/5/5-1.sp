@@ -1,4 +1,5 @@
 *Full adder
+*沒有用完，發現輸出波型不對，因此直接用5-2
 .option post=2
 .prot 
 .lib  'cic018.l' tt
@@ -51,6 +52,15 @@ mp13	s	net2	vdd	vdd	p_18	l=0.18u	w=6u
 mn13	s	net2	gnd 	gnd	n_18	l=0.18u	w=3u
 .ends
 
+.subckt  invde  in  out
+mp0	out	in	vdd	vdd	p_18	l=0.24u	w=7.05u
+mn0	out	in	0	0	n_18	l=0.25u	w=3.5u
+.ends
+
+.subckt  delay  in  out
+x1	in	1	invde
+x2	1	out	invde
+.ends
 
 *記得降電壓
 Vclk	CK	0	pulse(1.8	0	1n	0.1n	0.1n	9.9n	20n)
@@ -58,17 +68,23 @@ V0	a0	0	pulse(1.8	0	1n	0.1n	0.1n	19.9n	40n)
 V1	b0	0	pulse(1.8	0	1n	0.1n	0.1n	39.9n	80n)
 Vc	ci	0	pulse(1.8	0	1n	0.1n	0.1n	79.9n	160n)
 
-
-
 *主電路
 xfulladder0	a0	b0	ci	CK	c0	s0	fulladder
 c1	c0	0	1p
 c2	s0	0	1p
 
-.meas	tran	delayN	trig	v(ci)	val=0.9	rise=2
-+				targ	v(s0)	val=0.9	rise=2
+.meas	tran	delay1	trig	v(CK)	val=0.9	rise=4
++				targ	v(c0)	val=0.9	rise=1
+.meas	tran	delay2	trig	v(CK)	val=0.9	fall=5
++				targ	v(c0)	val=0.9	fall=2
+.meas	tran	delay3	trig	v(CK)	val=0.9	rise=6
++				targ	v(c0)	val=0.9	rise=2
+.meas	tran	delay4	trig	v(CK)	val=0.9	fall=9
++				targ	v(c0)	val=0.9	fall=3
+.meas	tran	delay1	trig	v(CK)	val=0.9	rise=4
++				targ	v(s0)	val=0.9	rise=1
 
 .meas tran pw avg power
-.meas tran pdp=param('pw*delayN')
+.meas tran pdp=param('pw*delay1')
 .tran	0.05n	200n
 .end
