@@ -1,5 +1,7 @@
 *Full adder
 *5-2:連同inverter也有加dynamic
+*幹忘了調0.5 上升下降
+
 .option post=2
 .prot 
 .lib  'cic018.l' tt
