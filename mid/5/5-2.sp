@@ -11,18 +11,18 @@ vgnd gnd 0 0
 
 
 .subckt  fulladder  a b ci CK co s
-mp0	net1	CK	vdd	vdd	p_18	l=0.18u	w=6u
+mp0	net1	CK	vdd	vdd	p_18	l=0.18u	w=5u
 
-mn0	net1	ci	3	gnd	n_18	l=0.18u	w=3u
-mn1	3	a	gnd1	gnd	n_18	l=0.18u	w=1.5u
-mn2	3	b	gnd1	gnd	n_18	l=0.18u	w=1.5u
-mn3	net1	a	4	gnd	n_18	l=0.18u	w=3u
-mn4	4	b	gnd1	gnd	n_18	l=0.18u	w=3u
-mn21	gnd1	CK	gnd	gnd	n_18	l=0.18u	w=1u
+mn0	net1	ci	3	gnd	n_18	l=0.18u	w=30u
+mn1	3	a	gnd1	gnd	n_18	l=0.18u	w=30u
+mn2	3	b	gnd1	gnd	n_18	l=0.18u	w=30u
+mn3	net1	a	4	gnd	n_18	l=0.18u	w=30u
+mn4	4	b	gnd1	gnd	n_18	l=0.18u	w=30u
+mn21	gnd1	CK	gnd	gnd	n_18	l=0.18u	w=7u
 
-mp5	co	CK	vdd 	vdd	p_18	l=0.18u	w=6u
-mn5	co	net1	gnd3	gnd	n_18	l=0.18u	w=3u
-mn25	gnd3	CK	gnd	gnd	n_18	l=0.18u	w=3u
+mp5	co	CK	vdd 	vdd	p_18	l=0.18u	w=4u
+mn5	co	net1	gnd3	gnd	n_18	l=0.18u	w=3.2u
+mn25	gnd3	CK	gnd	gnd	n_18	l=0.6u	w=4.5u
 
 mp9	net2	CK	vdd	vdd	p_18	l=0.18u	w=6u
 
@@ -32,14 +32,14 @@ mn7	8	a	gnd2	gnd	n_18	l=0.18u	w=1u
 mn8	8	b	gnd2	gnd	n_18	l=0.18u	w=1u
 mn9	8	ci	gnd2	gnd	n_18	l=0.18u	w=1u
 
-mn10	net2	ci	9	gnd	n_18	l=0.18u	w=3u
-mn11	9	a	10	gnd	n_18	l=0.18u	w=3u
-mn12	10	b	gnd2	gnd	n_18	l=0.18u	w=3u
+mn10	net2	ci	9	gnd	n_18	l=0.18u	w=30u
+mn11	9	a	10	gnd	n_18	l=0.18u	w=30u
+mn12	10	b	gnd2	gnd	n_18	l=0.18u	w=30u
 mn22	gnd2	CK	gnd	gnd	n_18	l=0.18u	w=1u
 
-mp13	s	CK	vdd	vdd	p_18	l=0.18u	w=6u
-mn13	s	net2	gnd4 	gnd	n_18	l=0.18u	w=3u
-mn26	gnd4	CK	gnd 	gnd	n_18	l=0.18u	w=3u
+mp13	s	CK	vdd	vdd	p_18	l=0.18u	w=3.9u
+mn13	s	net2	gnd4 	gnd	n_18	l=0.18u	w=2u
+mn26	gnd4	CK	gnd 	gnd	n_18	l=0.18u	w=2.9u
 .ends
 
 .subckt  invde  in  out
@@ -64,16 +64,42 @@ xfulladder0	a0	b0	ci	CK	c0	s0	fulladder
 c1	c0	0	1p
 c2	s0	0	1p
 
-.meas	tran	delay1	trig	v(CK)	val=0.9	rise=4
+.meas	tran	delay1	trig	v(CK)	val=0.9	rise=1
++				targ	v(c0)	val=0.9	fall=1
+.meas	tran	delay2	trig	v(CK)	val=0.9	fall=2
 +				targ	v(c0)	val=0.9	rise=1
-.meas	tran	delay2	trig	v(CK)	val=0.9	fall=5
+.meas	tran	delay3	trig	v(CK)	val=0.9	rise=2
 +				targ	v(c0)	val=0.9	fall=2
-.meas	tran	delay3	trig	v(CK)	val=0.9	rise=6
+.meas	tran	delay4	trig	v(CK)	val=0.9	fall=3
 +				targ	v(c0)	val=0.9	rise=2
-.meas	tran	delay4	trig	v(CK)	val=0.9	fall=9
+.meas	tran	delay5	trig	v(CK)	val=0.9	rise=3
 +				targ	v(c0)	val=0.9	fall=3
-.meas	tran	delay5	trig	v(CK)	val=0.9	rise=4
+.meas	tran	delay6	trig	v(CK)	val=0.9	fall=4
++				targ	v(c0)	val=0.9	rise=3
+.meas	tran	delay7	trig	v(CK)	val=0.9	rise=5
++				targ	v(c0)	val=0.9	fall=4
+.meas	tran	delay8	trig	v(CK)	val=0.9	fall=6
++				targ	v(c0)	val=0.9	rise=4
+.meas	tran	delay9	trig	v(CK)	val=0.9	rise=5
++				targ	v(c0)	val=0.9	fall=4
+*沒有delay10
+*沒有delay10
+.meas	tran	delay11	trig	v(CK)	val=0.9	rise=1
++				targ	v(s0)	val=0.9	fall=1
+.meas	tran	delay12	trig	v(CK)	val=0.9	fall=2
 +				targ	v(s0)	val=0.9	rise=1
+.meas	tran	delay13	trig	v(CK)	val=0.9	rise=4
++				targ	v(s0)	val=0.9	fall=2
+.meas	tran	delay14	trig	v(CK)	val=0.9	fall=5
++				targ	v(s0)	val=0.9	rise=2
+.meas	tran	delay15	trig	v(CK)	val=0.9	rise=6
++				targ	v(s0)	val=0.9	fall=3
+.meas	tran	delay16	trig	v(CK)	val=0.9	fall=7
++				targ	v(s0)	val=0.9	rise=3
+.meas	tran	delay17	trig	v(CK)	val=0.9	rise=7
++				targ	v(s0)	val=0.9	fall=4
+.meas	tran	delay18	trig	v(CK)	val=0.9	fall=8
++				targ	v(s0)	val=0.9	rise=4
 
 .meas tran pw avg power
 .meas tran pdp=param('pw*delay1')
