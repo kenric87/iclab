@@ -35,7 +35,7 @@ mn1	1	CK	gnd	gnd	n_18	l=0.18u	w=1u
 mp0	out	CK	vdd	vdd	p_18	l=0.5u	w=2u
 mn0	out	a	net	gnd	n_18	l=1u		w=3u	
 mn1	net	b	gnd1	gnd	n_18	l=1u		w=3u
-mn2	gnd1	CK	gnd	gnd	n_18	l=1u		w=3u
+mn2	gnd1	CK	gnd	gnd	n_18	l=1u		w=2u
 .ends
 
 .subckt	and	a	b	CK	out
@@ -44,9 +44,9 @@ xinv1	1	CK	out	inv_DY
 .ends
 
 .subckt	nor	a	b	CK	out
-mp0	out	CK	vdd	vdd	p_18	l=0.18u	w=5u
-mn0	out	a	gnd2	gnd	n_18	l=0.18u	w=2u
-mn1	out	b	gnd2	gnd	n_18	l=0.18u	w=2u
+mp0	out	CK	vdd	vdd	p_18	l=0.18u	w=2u
+mn0	out	a	gnd2	gnd	n_18	l=0.18u	w=5u
+mn1	out	b	gnd2	gnd	n_18	l=0.18u	w=5u
 mn2	gnd2	CK	gnd	gnd	n_18	l=0.18u	w=2u
 .ends
 
