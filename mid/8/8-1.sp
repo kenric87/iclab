@@ -1,5 +1,6 @@
 * A=B, A>B, and A<B
 *using dynamic CMOS
+*已完成
 .option	post=2
 .prot 
 .lib	'cic018.l'	tt
@@ -10,14 +11,14 @@ vgnd	gnd	0	0
 .param	k=1u
 
 .subckt	inv	in	out
-mp0	out	in	vdd	vdd	p_18	l=0.18u	w=2u
-mn0	out	in	0	0	n_18	l=0.18u	w=2u
+mp0	out	in	vdd	vdd	p_18	l=0.18u	w=5u
+mn0	out	in	0	0	n_18	l=0.18u	w=5u
 .ends
 
 .subckt	inv_DY	in	CK	out
-mp0	out	CK	vdd	vdd	p_18	l=0.18u	w=1u
-mn0	out	in	1	gnd	n_18	l=0.18u	w=1u
-mn1	1	CK	gnd	gnd	n_18	l=0.18u	w=1u
+mp0	out	CK	vdd	vdd	p_18	l=0.18u	w=2.1u
+mn0	out	in	1	gnd	n_18	l=0.18u	w=1.2u
+mn1	1	CK	gnd	gnd	n_18	l=0.18u	w=1.2u
 .ends
 
 * .subckt	inv_delay1	in	out
@@ -32,10 +33,10 @@ mn1	1	CK	gnd	gnd	n_18	l=0.18u	w=1u
 
 
 .subckt	nand_bac	a	b	CK	out 
-mp0	out	CK	vdd	vdd	p_18	l=0.5u	w=2u
-mn0	out	a	net	gnd	n_18	l=1u		w=3u	
-mn1	net	b	gnd1	gnd	n_18	l=1u		w=3u
-mn2	gnd1	CK	gnd	gnd	n_18	l=1u		w=2u
+mp0	out	CK	vdd	vdd	p_18	l=0.5u	w=1.3u
+mn0	out	a	net	gnd	n_18	l=0.4u	w=3u	
+mn1	net	b	gnd1	gnd	n_18	l=0.4u	w=3u
+mn2	gnd1	CK	gnd	gnd	n_18	l=0.4u	w=2u
 .ends
 
 .subckt	and	a	b	CK	out
@@ -44,10 +45,10 @@ xinv1	1	CK	out	inv_DY
 .ends
 
 .subckt	nor	a	b	CK	out
-mp0	out	CK	vdd	vdd	p_18	l=0.18u	w=2u
-mn0	out	a	gnd2	gnd	n_18	l=0.18u	w=5u
-mn1	out	b	gnd2	gnd	n_18	l=0.18u	w=5u
-mn2	gnd2	CK	gnd	gnd	n_18	l=0.18u	w=2u
+mp0	out	CK	vdd	vdd	p_18	l=0.32u	w=4.5u
+mn0	out	a	gnd2	gnd	n_18	l=0.32u	w=1.4u
+mn1	out	b	gnd2	gnd	n_18	l=0.32u	w=1.5u
+mn2	gnd2	CK	gnd	gnd	n_18	l=0.32u	w=2u
 .ends
 
 VCK	CK	0	pulse(1.8	0	0.1n	0.5n	0.5n	4.5n		10n)
@@ -80,14 +81,14 @@ cl3	out3	gnd	0.5p
 +					targ	v(out1)	val=0.9	rise=4
 
 
-* .meas	tran	delay7	trig	v(ck)	val=0.9	rise=2
-* +					targ	v(out2)	val=0.9	fall=1
-* .meas	tran	delay8	trig	v(ck)	val=0.9	fall=3
-* +					targ	v(out2)	val=0.9	rise=2
-* .meas	tran	delay9	trig	v(ck)	val=0.9	rise=3
-* +					targ	v(out2)	val=0.9	fall=2
-* .meas	tran	delay10	trig	v(ck)	val=0.9	fall=4
-* +					targ	v(out2)	val=0.9	rise=3
+.meas	tran	delay7	trig	v(ck)	val=0.9	rise=2
++					targ	v(out2)	val=0.9	fall=1
+.meas	tran	delay8	trig	v(ck)	val=0.9	fall=3
++					targ	v(out2)	val=0.9	rise=1
+.meas	tran	delay9	trig	v(ck)	val=0.9	rise=3
++					targ	v(out2)	val=0.9	fall=2
+.meas	tran	delay10	trig	v(ck)	val=0.9	fall=4
++					targ	v(out2)	val=0.9	rise=2
 
 * .meas	tran	delay11	trig	v(ck)	val=0.9	rise=1
 * +					targ	v(out3)	val=0.9	fall=1
