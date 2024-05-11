@@ -1,5 +1,6 @@
 *Comparator
 *pass-transistor
+*完成
 .option	post=2
 .prot 
 .lib	'cic018.l'	tt
@@ -15,8 +16,8 @@ mn0	out	in	0	0	n_18	l=1u		w=4.6u
 .ends
 
 .subckt	invout1	in	out
-mp0	out	in	vdd	vdd	p_18	l=0.18u	w=5u
-mn0	out	in	0	0	n_18	l=0.18u	w=5u
+mp0	out	in	vdd	vdd	p_18	l=0.18u	w=17u
+mn0	out	in	0	0	n_18	l=0.18u	w=0.25u
 .ends
 
 .subckt	invout3	in	out
@@ -35,8 +36,8 @@ mn1	3	4	5	gnd	n_18	l=0.34u	w=3.5u
 .ends
 
 .subckt	ouou3	1 2 3 4 5
-mn0	1	2	5	gnd	n_18	l=0.18u	w=80u
-mn1	3	4	5	gnd	n_18	l=0.18u	w=25u
+mn0	1	2	5	gnd	n_18	l=0.18u	w=6u
+mn1	3	4	5	gnd	n_18	l=0.18u	w=20u
 .ends
 
 *主電路
@@ -58,7 +59,6 @@ Vb	B	0	pulse(1.8	0	0.1n	0.5n	0.5n	19.5n	40n)
 .meas	tran	delay2	trig	v(a)		val=0.9	rise=2
 +					targ	v(out1)	val=0.9	fall=1
 
-
 .meas	tran	delay3	trig	v(a)		val=0.9	rise=1
 +					targ	v(out3)	val=0.9	rise=1
 .meas	tran	delay4	trig	v(a)		val=0.9	fall=2
@@ -66,7 +66,7 @@ Vb	B	0	pulse(1.8	0	0.1n	0.5n	0.5n	19.5n	40n)
 
 .meas	tran	delay5	trig	v(a)		val=0.9	rise=1
 +					targ	v(out2)	val=0.9	fall=1
-.meas	tran	delay6	trig	v(a)		val=0.9	rise=1
+.meas	tran	delay6	trig	v(a)		val=0.9	rise=2
 +					targ	v(out2)	val=0.9	rise=1
 
 
