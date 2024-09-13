@@ -1,0 +1,1054 @@
+* File: FA_8bit.pex.netlist
+* Created: Fri Jun  7 21:47:36 2024
+* Program "Calibre xRC"
+* Version "v2017.4_19.14"
+* 
+.include "FA_8bit.pex.netlist.pex"
+.subckt FA_8bit  VDD C1 A0 B0 B1 A1 C0 C2 GND C3 A2 B2 B3 A3 C4 C5 A4 B4 B5 A5
++ C6 C7 A6 B6 B7 A7 S1 S0 S3 S2 S5 S4 S7 COUT S6
+* 
+* S6	S6
+* COUT	COUT
+* S7	S7
+* S4	S4
+* S5	S5
+* S2	S2
+* S3	S3
+* S0	S0
+* S1	S1
+* A7	A7
+* B7	B7
+* B6	B6
+* A6	A6
+* C7	C7
+* C6	C6
+* A5	A5
+* B5	B5
+* B4	B4
+* A4	A4
+* C5	C5
+* C4	C4
+* A3	A3
+* B3	B3
+* B2	B2
+* A2	A2
+* C3	C3
+* GND	GND
+* C2	C2
+* C0	C0
+* A1	A1
+* B1	B1
+* B0	B0
+* A0	A0
+* C1	C1
+* VDD	VDD
+mxFA1b1/xor2/mn3 N_XFA1B1/XOR2/N4_xFA1b1/xor2/mn3_d N_C1_xFA1b1/xor2/mn3_g
++ N_GND_xFA1b1/xor2/mn3_s N_GND_xFA1b1/xor2/mn3_b N_18 L=1.8e-07 W=5e-07
++ AD=1.45e-13 AS=2.45e-13 PD=5.8e-07 PS=1.48e-06
+mxFA1b0/xor1/xinv1/mn0 N_XFA1B0/XOR1/A__xFA1b0/xor1/xinv1/mn0_d
++ N_A0_xFA1b0/xor1/xinv1/mn0_g N_GND_xFA1b0/xor1/xinv1/mn0_s
++ N_GND_xFA1b1/xor2/mn3_b N_18 L=1.8e-07 W=5e-07 AD=2.45e-13 AS=2.45e-13
++ PD=1.48e-06 PS=1.48e-06
+mxFA1b0/xnand2/mn0 N_XFA1B0/N3_xFA1b0/xnand2/mn0_d N_A0_xFA1b0/xnand2/mn0_g
++ N_XFA1B0/XNAND2/N1_xFA1b0/xnand2/mn0_s N_GND_xFA1b1/xor2/mn3_b N_18 L=1.8e-07
++ W=5e-07 AD=2.45e-13 AS=1.35e-13 PD=1.48e-06 PS=5.4e-07
+mxFA1b1/xor2/mn2 N_S1_xFA1b1/xor2/mn2_d N_XFA1B1/N1_xFA1b1/xor2/mn2_g
++ N_XFA1B1/XOR2/N4_xFA1b1/xor2/mn2_s N_GND_xFA1b1/xor2/mn3_b N_18 L=1.8e-07
++ W=5e-07 AD=2.45e-13 AS=1.45e-13 PD=1.48e-06 PS=5.8e-07
+mxFA1b0/xnand2/mn1 N_XFA1B0/XNAND2/N1_xFA1b0/xnand2/mn1_d
++ N_B0_xFA1b0/xnand2/mn1_g N_GND_xFA1b0/xnand2/mn1_s N_GND_xFA1b1/xor2/mn3_b
++ N_18 L=1.8e-07 W=5e-07 AD=1.35e-13 AS=2.45e-13 PD=5.4e-07 PS=1.48e-06
+mxFA1b0/xor1/xinv2/mn0 N_XFA1B0/XOR1/B__xFA1b0/xor1/xinv2/mn0_d
++ N_B0_xFA1b0/xor1/xinv2/mn0_g N_GND_xFA1b0/xor1/xinv2/mn0_s
++ N_GND_xFA1b1/xor2/mn3_b N_18 L=1.8e-07 W=5e-07 AD=2.45e-13 AS=2.45e-13
++ PD=1.48e-06 PS=1.48e-06
+mxFA1b1/xor2/mn0 N_S1_xFA1b1/xor2/mn0_d N_XFA1B1/XOR2/A__xFA1b1/xor2/mn0_g
++ N_XFA1B1/XOR2/N3_xFA1b1/xor2/mn0_s N_GND_xFA1b1/xor2/mn3_b N_18 L=1.8e-07
++ W=5e-07 AD=2.45e-13 AS=1.45e-13 PD=1.48e-06 PS=5.8e-07
+mxFA1b0/xnand1/mn0 N_XFA1B0/N2_xFA1b0/xnand1/mn0_d
++ N_XFA1B0/N1_xFA1b0/xnand1/mn0_g N_XFA1B0/XNAND1/N1_xFA1b0/xnand1/mn0_s
++ N_GND_xFA1b1/xor2/mn3_b N_18 L=1.8e-07 W=5e-07 AD=2.45e-13 AS=1.35e-13
++ PD=1.48e-06 PS=5.4e-07
+mxFA1b1/xor2/mn1 N_XFA1B1/XOR2/N3_xFA1b1/xor2/mn1_d
++ N_XFA1B1/XOR2/B__xFA1b1/xor2/mn1_g N_GND_xFA1b1/xor2/mn1_s
++ N_GND_xFA1b1/xor2/mn3_b N_18 L=1.8e-07 W=5e-07 AD=1.45e-13 AS=2.45e-13
++ PD=5.8e-07 PS=1.48e-06
+mxFA1b0/xnand1/mn1 N_XFA1B0/XNAND1/N1_xFA1b0/xnand1/mn1_d
++ N_C0_xFA1b0/xnand1/mn1_g N_GND_xFA1b0/xnand1/mn1_s N_GND_xFA1b1/xor2/mn3_b
++ N_18 L=1.8e-07 W=5e-07 AD=1.35e-13 AS=2.45e-13 PD=5.4e-07 PS=1.48e-06
+mxFA1b0/xor1/mn1 N_XFA1B0/XOR1/N3_xFA1b0/xor1/mn1_d
++ N_XFA1B0/XOR1/B__xFA1b0/xor1/mn1_g N_GND_xFA1b0/xor1/mn1_s
++ N_GND_xFA1b1/xor2/mn3_b N_18 L=1.8e-07 W=5e-07 AD=1.45e-13 AS=2.45e-13
++ PD=5.8e-07 PS=1.48e-06
+mxFA1b0/xor1/mn0 N_XFA1B0/N1_xFA1b0/xor1/mn0_d
++ N_XFA1B0/XOR1/A__xFA1b0/xor1/mn0_g N_XFA1B0/XOR1/N3_xFA1b0/xor1/mn0_s
++ N_GND_xFA1b1/xor2/mn3_b N_18 L=1.8e-07 W=5e-07 AD=2.45e-13 AS=1.45e-13
++ PD=1.48e-06 PS=5.8e-07
+mxFA1b1/xor2/xinv2/mn0 N_XFA1B1/XOR2/B__xFA1b1/xor2/xinv2/mn0_d
++ N_C1_xFA1b1/xor2/xinv2/mn0_g N_GND_xFA1b1/xor2/xinv2/mn0_s
++ N_GND_xFA1b1/xor2/mn3_b N_18 L=1.8e-07 W=5e-07 AD=2.45e-13 AS=2.45e-13
++ PD=1.48e-06 PS=1.48e-06
+mxFA1b0/xnand3/mn1 N_C1_xFA1b0/xnand3/mn1_d N_XFA1B0/N3_xFA1b0/xnand3/mn1_g
++ N_XFA1B0/XNAND3/N1_xFA1b0/xnand3/mn1_s N_GND_xFA1b1/xor2/mn3_b N_18 L=1.8e-07
++ W=5e-07 AD=2.45e-13 AS=1.35e-13 PD=1.48e-06 PS=5.4e-07
+mxFA1b0/xnand3/mn0 N_XFA1B0/XNAND3/N1_xFA1b0/xnand3/mn0_d
++ N_XFA1B0/N2_xFA1b0/xnand3/mn0_g N_GND_xFA1b0/xnand3/mn0_s
++ N_GND_xFA1b1/xor2/mn3_b N_18 L=1.8e-07 W=5e-07 AD=1.35e-13 AS=2.45e-13
++ PD=5.4e-07 PS=1.48e-06
+mxFA1b0/xor1/mn2 N_XFA1B0/N1_xFA1b0/xor1/mn2_d N_A0_xFA1b0/xor1/mn2_g
++ N_XFA1B0/XOR1/N4_xFA1b0/xor1/mn2_s N_GND_xFA1b1/xor2/mn3_b N_18 L=1.8e-07
++ W=5e-07 AD=2.45e-13 AS=1.45e-13 PD=1.48e-06 PS=5.8e-07
+mxFA1b1/xor2/xinv1/mn0 N_XFA1B1/XOR2/A__xFA1b1/xor2/xinv1/mn0_d
++ N_XFA1B1/N1_xFA1b1/xor2/xinv1/mn0_g N_GND_xFA1b1/xor2/xinv1/mn0_s
++ N_GND_xFA1b1/xor2/mn3_b N_18 L=1.8e-07 W=5e-07 AD=2.45e-13 AS=2.45e-13
++ PD=1.48e-06 PS=1.48e-06
+mxFA1b0/xor1/mn3 N_XFA1B0/XOR1/N4_xFA1b0/xor1/mn3_d N_B0_xFA1b0/xor1/mn3_g
++ N_GND_xFA1b0/xor1/mn3_s N_GND_xFA1b1/xor2/mn3_b N_18 L=1.8e-07 W=5e-07
++ AD=1.45e-13 AS=2.45e-13 PD=5.8e-07 PS=1.48e-06
+mxFA1b1/xor1/mn3 N_XFA1B1/XOR1/N4_xFA1b1/xor1/mn3_d N_B1_xFA1b1/xor1/mn3_g
++ N_GND_xFA1b1/xor1/mn3_s N_GND_xFA1b1/xor2/mn3_b N_18 L=1.8e-07 W=5e-07
++ AD=1.45e-13 AS=2.45e-13 PD=5.8e-07 PS=1.48e-06
+mxFA1b0/xor2/xinv1/mn0 N_XFA1B0/XOR2/A__xFA1b0/xor2/xinv1/mn0_d
++ N_XFA1B0/N1_xFA1b0/xor2/xinv1/mn0_g N_GND_xFA1b0/xor2/xinv1/mn0_s
++ N_GND_xFA1b1/xor2/mn3_b N_18 L=1.8e-07 W=5e-07 AD=2.45e-13 AS=2.45e-13
++ PD=1.48e-06 PS=1.48e-06
+mxFA1b1/xor1/mn2 N_XFA1B1/N1_xFA1b1/xor1/mn2_d N_A1_xFA1b1/xor1/mn2_g
++ N_XFA1B1/XOR1/N4_xFA1b1/xor1/mn2_s N_GND_xFA1b1/xor2/mn3_b N_18 L=1.8e-07
++ W=5e-07 AD=2.45e-13 AS=1.45e-13 PD=1.48e-06 PS=5.8e-07
+mxFA1b1/xnand3/mn0 N_XFA1B1/XNAND3/N1_xFA1b1/xnand3/mn0_d
++ N_XFA1B1/N2_xFA1b1/xnand3/mn0_g N_GND_xFA1b1/xnand3/mn0_s
++ N_GND_xFA1b1/xor2/mn3_b N_18 L=1.8e-07 W=5e-07 AD=1.35e-13 AS=2.45e-13
++ PD=5.4e-07 PS=1.48e-06
+mxFA1b1/xnand3/mn1 N_C2_xFA1b1/xnand3/mn1_d N_XFA1B1/N3_xFA1b1/xnand3/mn1_g
++ N_XFA1B1/XNAND3/N1_xFA1b1/xnand3/mn1_s N_GND_xFA1b1/xor2/mn3_b N_18 L=1.8e-07
++ W=5e-07 AD=2.45e-13 AS=1.35e-13 PD=1.48e-06 PS=5.4e-07
+mxFA1b0/xor2/xinv2/mn0 N_XFA1B0/XOR2/B__xFA1b0/xor2/xinv2/mn0_d
++ N_C0_xFA1b0/xor2/xinv2/mn0_g N_GND_xFA1b0/xor2/xinv2/mn0_s
++ N_GND_xFA1b1/xor2/mn3_b N_18 L=1.8e-07 W=5e-07 AD=2.45e-13 AS=2.45e-13
++ PD=1.48e-06 PS=1.48e-06
+mxFA1b1/xor1/mn0 N_XFA1B1/N1_xFA1b1/xor1/mn0_d
++ N_XFA1B1/XOR1/A__xFA1b1/xor1/mn0_g N_XFA1B1/XOR1/N3_xFA1b1/xor1/mn0_s
++ N_GND_xFA1b1/xor2/mn3_b N_18 L=1.8e-07 W=5e-07 AD=2.45e-13 AS=1.45e-13
++ PD=1.48e-06 PS=5.8e-07
+mxFA1b1/xor1/mn1 N_XFA1B1/XOR1/N3_xFA1b1/xor1/mn1_d
++ N_XFA1B1/XOR1/B__xFA1b1/xor1/mn1_g N_GND_xFA1b1/xor1/mn1_s
++ N_GND_xFA1b1/xor2/mn3_b N_18 L=1.8e-07 W=5e-07 AD=1.45e-13 AS=2.45e-13
++ PD=5.8e-07 PS=1.48e-06
+mxFA1b1/xnand1/mn1 N_XFA1B1/XNAND1/N1_xFA1b1/xnand1/mn1_d
++ N_C1_xFA1b1/xnand1/mn1_g N_GND_xFA1b1/xnand1/mn1_s N_GND_xFA1b1/xor2/mn3_b
++ N_18 L=1.8e-07 W=5e-07 AD=1.35e-13 AS=2.45e-13 PD=5.4e-07 PS=1.48e-06
+mxFA1b0/xor2/mn1 N_XFA1B0/XOR2/N3_xFA1b0/xor2/mn1_d
++ N_XFA1B0/XOR2/B__xFA1b0/xor2/mn1_g N_GND_xFA1b0/xor2/mn1_s
++ N_GND_xFA1b1/xor2/mn3_b N_18 L=1.8e-07 W=5e-07 AD=1.45e-13 AS=2.45e-13
++ PD=5.8e-07 PS=1.48e-06
+mxFA1b1/xnand1/mn0 N_XFA1B1/N2_xFA1b1/xnand1/mn0_d
++ N_XFA1B1/N1_xFA1b1/xnand1/mn0_g N_XFA1B1/XNAND1/N1_xFA1b1/xnand1/mn0_s
++ N_GND_xFA1b1/xor2/mn3_b N_18 L=1.8e-07 W=5e-07 AD=2.45e-13 AS=1.35e-13
++ PD=1.48e-06 PS=5.4e-07
+mxFA1b0/xor2/mn0 N_S0_xFA1b0/xor2/mn0_d N_XFA1B0/XOR2/A__xFA1b0/xor2/mn0_g
++ N_XFA1B0/XOR2/N3_xFA1b0/xor2/mn0_s N_GND_xFA1b1/xor2/mn3_b N_18 L=1.8e-07
++ W=5e-07 AD=2.45e-13 AS=1.45e-13 PD=1.48e-06 PS=5.8e-07
+mxFA1b1/xor1/xinv2/mn0 N_XFA1B1/XOR1/B__xFA1b1/xor1/xinv2/mn0_d
++ N_B1_xFA1b1/xor1/xinv2/mn0_g N_GND_xFA1b1/xor1/xinv2/mn0_s
++ N_GND_xFA1b1/xor2/mn3_b N_18 L=1.8e-07 W=5e-07 AD=2.45e-13 AS=2.45e-13
++ PD=1.48e-06 PS=1.48e-06
+mxFA1b1/xnand2/mn1 N_XFA1B1/XNAND2/N1_xFA1b1/xnand2/mn1_d
++ N_B1_xFA1b1/xnand2/mn1_g N_GND_xFA1b1/xnand2/mn1_s N_GND_xFA1b1/xor2/mn3_b
++ N_18 L=1.8e-07 W=5e-07 AD=1.35e-13 AS=2.45e-13 PD=5.4e-07 PS=1.48e-06
+mxFA1b0/xor2/mn2 N_S0_xFA1b0/xor2/mn2_d N_XFA1B0/N1_xFA1b0/xor2/mn2_g
++ N_XFA1B0/XOR2/N4_xFA1b0/xor2/mn2_s N_GND_xFA1b1/xor2/mn3_b N_18 L=1.8e-07
++ W=5e-07 AD=2.45e-13 AS=1.45e-13 PD=1.48e-06 PS=5.8e-07
+mxFA1b1/xnand2/mn0 N_XFA1B1/N3_xFA1b1/xnand2/mn0_d N_A1_xFA1b1/xnand2/mn0_g
++ N_XFA1B1/XNAND2/N1_xFA1b1/xnand2/mn0_s N_GND_xFA1b1/xor2/mn3_b N_18 L=1.8e-07
++ W=5e-07 AD=2.45e-13 AS=1.35e-13 PD=1.48e-06 PS=5.4e-07
+mxFA1b1/xor1/xinv1/mn0 N_XFA1B1/XOR1/A__xFA1b1/xor1/xinv1/mn0_d
++ N_A1_xFA1b1/xor1/xinv1/mn0_g N_GND_xFA1b1/xor1/xinv1/mn0_s
++ N_GND_xFA1b1/xor2/mn3_b N_18 L=1.8e-07 W=5e-07 AD=2.45e-13 AS=2.45e-13
++ PD=1.48e-06 PS=1.48e-06
+mxFA1b0/xor2/mn3 N_XFA1B0/XOR2/N4_xFA1b0/xor2/mn3_d N_C0_xFA1b0/xor2/mn3_g
++ N_GND_xFA1b0/xor2/mn3_s N_GND_xFA1b1/xor2/mn3_b N_18 L=1.8e-07 W=5e-07
++ AD=1.45e-13 AS=2.45e-13 PD=5.8e-07 PS=1.48e-06
+mxFA1b3/xor2/mn3 N_XFA1B3/XOR2/N4_xFA1b3/xor2/mn3_d N_C3_xFA1b3/xor2/mn3_g
++ N_GND_xFA1b3/xor2/mn3_s N_GND_xFA1b1/xor2/mn3_b N_18 L=1.8e-07 W=5e-07
++ AD=1.45e-13 AS=2.45e-13 PD=5.8e-07 PS=1.48e-06
+mxFA1b2/xor1/xinv1/mn0 N_XFA1B2/XOR1/A__xFA1b2/xor1/xinv1/mn0_d
++ N_A2_xFA1b2/xor1/xinv1/mn0_g N_GND_xFA1b2/xor1/xinv1/mn0_s
++ N_GND_xFA1b1/xor2/mn3_b N_18 L=1.8e-07 W=5e-07 AD=2.45e-13 AS=2.45e-13
++ PD=1.48e-06 PS=1.48e-06
+mxFA1b2/xnand2/mn0 N_XFA1B2/N3_xFA1b2/xnand2/mn0_d N_A2_xFA1b2/xnand2/mn0_g
++ N_XFA1B2/XNAND2/N1_xFA1b2/xnand2/mn0_s N_GND_xFA1b1/xor2/mn3_b N_18 L=1.8e-07
++ W=5e-07 AD=2.45e-13 AS=1.35e-13 PD=1.48e-06 PS=5.4e-07
+mxFA1b3/xor2/mn2 N_S3_xFA1b3/xor2/mn2_d N_XFA1B3/N1_xFA1b3/xor2/mn2_g
++ N_XFA1B3/XOR2/N4_xFA1b3/xor2/mn2_s N_GND_xFA1b1/xor2/mn3_b N_18 L=1.8e-07
++ W=5e-07 AD=2.45e-13 AS=1.45e-13 PD=1.48e-06 PS=5.8e-07
+mxFA1b2/xnand2/mn1 N_XFA1B2/XNAND2/N1_xFA1b2/xnand2/mn1_d
++ N_B2_xFA1b2/xnand2/mn1_g N_GND_xFA1b2/xnand2/mn1_s N_GND_xFA1b1/xor2/mn3_b
++ N_18 L=1.8e-07 W=5e-07 AD=1.35e-13 AS=2.45e-13 PD=5.4e-07 PS=1.48e-06
+mxFA1b2/xor1/xinv2/mn0 N_XFA1B2/XOR1/B__xFA1b2/xor1/xinv2/mn0_d
++ N_B2_xFA1b2/xor1/xinv2/mn0_g N_GND_xFA1b2/xor1/xinv2/mn0_s
++ N_GND_xFA1b1/xor2/mn3_b N_18 L=1.8e-07 W=5e-07 AD=2.45e-13 AS=2.45e-13
++ PD=1.48e-06 PS=1.48e-06
+mxFA1b3/xor2/mn0 N_S3_xFA1b3/xor2/mn0_d N_XFA1B3/XOR2/A__xFA1b3/xor2/mn0_g
++ N_XFA1B3/XOR2/N3_xFA1b3/xor2/mn0_s N_GND_xFA1b1/xor2/mn3_b N_18 L=1.8e-07
++ W=5e-07 AD=2.45e-13 AS=1.45e-13 PD=1.48e-06 PS=5.8e-07
+mxFA1b2/xnand1/mn0 N_XFA1B2/N2_xFA1b2/xnand1/mn0_d
++ N_XFA1B2/N1_xFA1b2/xnand1/mn0_g N_XFA1B2/XNAND1/N1_xFA1b2/xnand1/mn0_s
++ N_GND_xFA1b1/xor2/mn3_b N_18 L=1.8e-07 W=5e-07 AD=2.45e-13 AS=1.35e-13
++ PD=1.48e-06 PS=5.4e-07
+mxFA1b3/xor2/mn1 N_XFA1B3/XOR2/N3_xFA1b3/xor2/mn1_d
++ N_XFA1B3/XOR2/B__xFA1b3/xor2/mn1_g N_GND_xFA1b3/xor2/mn1_s
++ N_GND_xFA1b1/xor2/mn3_b N_18 L=1.8e-07 W=5e-07 AD=1.45e-13 AS=2.45e-13
++ PD=5.8e-07 PS=1.48e-06
+mxFA1b2/xnand1/mn1 N_XFA1B2/XNAND1/N1_xFA1b2/xnand1/mn1_d
++ N_C2_xFA1b2/xnand1/mn1_g N_GND_xFA1b2/xnand1/mn1_s N_GND_xFA1b1/xor2/mn3_b
++ N_18 L=1.8e-07 W=5e-07 AD=1.35e-13 AS=2.45e-13 PD=5.4e-07 PS=1.48e-06
+mxFA1b2/xor1/mn1 N_XFA1B2/XOR1/N3_xFA1b2/xor1/mn1_d
++ N_XFA1B2/XOR1/B__xFA1b2/xor1/mn1_g N_GND_xFA1b2/xor1/mn1_s
++ N_GND_xFA1b1/xor2/mn3_b N_18 L=1.8e-07 W=5e-07 AD=1.45e-13 AS=2.45e-13
++ PD=5.8e-07 PS=1.48e-06
+mxFA1b2/xor1/mn0 N_XFA1B2/N1_xFA1b2/xor1/mn0_d
++ N_XFA1B2/XOR1/A__xFA1b2/xor1/mn0_g N_XFA1B2/XOR1/N3_xFA1b2/xor1/mn0_s
++ N_GND_xFA1b1/xor2/mn3_b N_18 L=1.8e-07 W=5e-07 AD=2.45e-13 AS=1.45e-13
++ PD=1.48e-06 PS=5.8e-07
+mxFA1b3/xor2/xinv2/mn0 N_XFA1B3/XOR2/B__xFA1b3/xor2/xinv2/mn0_d
++ N_C3_xFA1b3/xor2/xinv2/mn0_g N_GND_xFA1b3/xor2/xinv2/mn0_s
++ N_GND_xFA1b1/xor2/mn3_b N_18 L=1.8e-07 W=5e-07 AD=2.45e-13 AS=2.45e-13
++ PD=1.48e-06 PS=1.48e-06
+mxFA1b2/xnand3/mn1 N_C3_xFA1b2/xnand3/mn1_d N_XFA1B2/N3_xFA1b2/xnand3/mn1_g
++ N_XFA1B2/XNAND3/N1_xFA1b2/xnand3/mn1_s N_GND_xFA1b1/xor2/mn3_b N_18 L=1.8e-07
++ W=5e-07 AD=2.45e-13 AS=1.35e-13 PD=1.48e-06 PS=5.4e-07
+mxFA1b2/xnand3/mn0 N_XFA1B2/XNAND3/N1_xFA1b2/xnand3/mn0_d
++ N_XFA1B2/N2_xFA1b2/xnand3/mn0_g N_GND_xFA1b2/xnand3/mn0_s
++ N_GND_xFA1b1/xor2/mn3_b N_18 L=1.8e-07 W=5e-07 AD=1.35e-13 AS=2.45e-13
++ PD=5.4e-07 PS=1.48e-06
+mxFA1b2/xor1/mn2 N_XFA1B2/N1_xFA1b2/xor1/mn2_d N_A2_xFA1b2/xor1/mn2_g
++ N_XFA1B2/XOR1/N4_xFA1b2/xor1/mn2_s N_GND_xFA1b1/xor2/mn3_b N_18 L=1.8e-07
++ W=5e-07 AD=2.45e-13 AS=1.45e-13 PD=1.48e-06 PS=5.8e-07
+mxFA1b3/xor2/xinv1/mn0 N_XFA1B3/XOR2/A__xFA1b3/xor2/xinv1/mn0_d
++ N_XFA1B3/N1_xFA1b3/xor2/xinv1/mn0_g N_GND_xFA1b3/xor2/xinv1/mn0_s
++ N_GND_xFA1b1/xor2/mn3_b N_18 L=1.8e-07 W=5e-07 AD=2.45e-13 AS=2.45e-13
++ PD=1.48e-06 PS=1.48e-06
+mxFA1b2/xor1/mn3 N_XFA1B2/XOR1/N4_xFA1b2/xor1/mn3_d N_B2_xFA1b2/xor1/mn3_g
++ N_GND_xFA1b2/xor1/mn3_s N_GND_xFA1b1/xor2/mn3_b N_18 L=1.8e-07 W=5e-07
++ AD=1.45e-13 AS=2.45e-13 PD=5.8e-07 PS=1.48e-06
+mxFA1b3/xor1/mn3 N_XFA1B3/XOR1/N4_xFA1b3/xor1/mn3_d N_B3_xFA1b3/xor1/mn3_g
++ N_GND_xFA1b3/xor1/mn3_s N_GND_xFA1b1/xor2/mn3_b N_18 L=1.8e-07 W=5e-07
++ AD=1.45e-13 AS=2.45e-13 PD=5.8e-07 PS=1.48e-06
+mxFA1b2/xor2/xinv1/mn0 N_XFA1B2/XOR2/A__xFA1b2/xor2/xinv1/mn0_d
++ N_XFA1B2/N1_xFA1b2/xor2/xinv1/mn0_g N_GND_xFA1b2/xor2/xinv1/mn0_s
++ N_GND_xFA1b1/xor2/mn3_b N_18 L=1.8e-07 W=5e-07 AD=2.45e-13 AS=2.45e-13
++ PD=1.48e-06 PS=1.48e-06
+mxFA1b3/xor1/mn2 N_XFA1B3/N1_xFA1b3/xor1/mn2_d N_A3_xFA1b3/xor1/mn2_g
++ N_XFA1B3/XOR1/N4_xFA1b3/xor1/mn2_s N_GND_xFA1b1/xor2/mn3_b N_18 L=1.8e-07
++ W=5e-07 AD=2.45e-13 AS=1.45e-13 PD=1.48e-06 PS=5.8e-07
+mxFA1b3/xnand3/mn0 N_XFA1B3/XNAND3/N1_xFA1b3/xnand3/mn0_d
++ N_XFA1B3/N2_xFA1b3/xnand3/mn0_g N_GND_xFA1b3/xnand3/mn0_s
++ N_GND_xFA1b1/xor2/mn3_b N_18 L=1.8e-07 W=5e-07 AD=1.35e-13 AS=2.45e-13
++ PD=5.4e-07 PS=1.48e-06
+mxFA1b3/xnand3/mn1 N_C4_xFA1b3/xnand3/mn1_d N_XFA1B3/N3_xFA1b3/xnand3/mn1_g
++ N_XFA1B3/XNAND3/N1_xFA1b3/xnand3/mn1_s N_GND_xFA1b1/xor2/mn3_b N_18 L=1.8e-07
++ W=5e-07 AD=2.45e-13 AS=1.35e-13 PD=1.48e-06 PS=5.4e-07
+mxFA1b2/xor2/xinv2/mn0 N_XFA1B2/XOR2/B__xFA1b2/xor2/xinv2/mn0_d
++ N_C2_xFA1b2/xor2/xinv2/mn0_g N_GND_xFA1b2/xor2/xinv2/mn0_s
++ N_GND_xFA1b1/xor2/mn3_b N_18 L=1.8e-07 W=5e-07 AD=2.45e-13 AS=2.45e-13
++ PD=1.48e-06 PS=1.48e-06
+mxFA1b3/xor1/mn0 N_XFA1B3/N1_xFA1b3/xor1/mn0_d
++ N_XFA1B3/XOR1/A__xFA1b3/xor1/mn0_g N_XFA1B3/XOR1/N3_xFA1b3/xor1/mn0_s
++ N_GND_xFA1b1/xor2/mn3_b N_18 L=1.8e-07 W=5e-07 AD=2.45e-13 AS=1.45e-13
++ PD=1.48e-06 PS=5.8e-07
+mxFA1b3/xor1/mn1 N_XFA1B3/XOR1/N3_xFA1b3/xor1/mn1_d
++ N_XFA1B3/XOR1/B__xFA1b3/xor1/mn1_g N_GND_xFA1b3/xor1/mn1_s
++ N_GND_xFA1b1/xor2/mn3_b N_18 L=1.8e-07 W=5e-07 AD=1.45e-13 AS=2.45e-13
++ PD=5.8e-07 PS=1.48e-06
+mxFA1b3/xnand1/mn1 N_XFA1B3/XNAND1/N1_xFA1b3/xnand1/mn1_d
++ N_C3_xFA1b3/xnand1/mn1_g N_GND_xFA1b3/xnand1/mn1_s N_GND_xFA1b1/xor2/mn3_b
++ N_18 L=1.8e-07 W=5e-07 AD=1.35e-13 AS=2.45e-13 PD=5.4e-07 PS=1.48e-06
+mxFA1b2/xor2/mn1 N_XFA1B2/XOR2/N3_xFA1b2/xor2/mn1_d
++ N_XFA1B2/XOR2/B__xFA1b2/xor2/mn1_g N_GND_xFA1b2/xor2/mn1_s
++ N_GND_xFA1b1/xor2/mn3_b N_18 L=1.8e-07 W=5e-07 AD=1.45e-13 AS=2.45e-13
++ PD=5.8e-07 PS=1.48e-06
+mxFA1b3/xnand1/mn0 N_XFA1B3/N2_xFA1b3/xnand1/mn0_d
++ N_XFA1B3/N1_xFA1b3/xnand1/mn0_g N_XFA1B3/XNAND1/N1_xFA1b3/xnand1/mn0_s
++ N_GND_xFA1b1/xor2/mn3_b N_18 L=1.8e-07 W=5e-07 AD=2.45e-13 AS=1.35e-13
++ PD=1.48e-06 PS=5.4e-07
+mxFA1b2/xor2/mn0 N_S2_xFA1b2/xor2/mn0_d N_XFA1B2/XOR2/A__xFA1b2/xor2/mn0_g
++ N_XFA1B2/XOR2/N3_xFA1b2/xor2/mn0_s N_GND_xFA1b1/xor2/mn3_b N_18 L=1.8e-07
++ W=5e-07 AD=2.45e-13 AS=1.45e-13 PD=1.48e-06 PS=5.8e-07
+mxFA1b3/xor1/xinv2/mn0 N_XFA1B3/XOR1/B__xFA1b3/xor1/xinv2/mn0_d
++ N_B3_xFA1b3/xor1/xinv2/mn0_g N_GND_xFA1b3/xor1/xinv2/mn0_s
++ N_GND_xFA1b1/xor2/mn3_b N_18 L=1.8e-07 W=5e-07 AD=2.45e-13 AS=2.45e-13
++ PD=1.48e-06 PS=1.48e-06
+mxFA1b3/xnand2/mn1 N_XFA1B3/XNAND2/N1_xFA1b3/xnand2/mn1_d
++ N_B3_xFA1b3/xnand2/mn1_g N_GND_xFA1b3/xnand2/mn1_s N_GND_xFA1b1/xor2/mn3_b
++ N_18 L=1.8e-07 W=5e-07 AD=1.35e-13 AS=2.45e-13 PD=5.4e-07 PS=1.48e-06
+mxFA1b2/xor2/mn2 N_S2_xFA1b2/xor2/mn2_d N_XFA1B2/N1_xFA1b2/xor2/mn2_g
++ N_XFA1B2/XOR2/N4_xFA1b2/xor2/mn2_s N_GND_xFA1b1/xor2/mn3_b N_18 L=1.8e-07
++ W=5e-07 AD=2.45e-13 AS=1.45e-13 PD=1.48e-06 PS=5.8e-07
+mxFA1b3/xnand2/mn0 N_XFA1B3/N3_xFA1b3/xnand2/mn0_d N_A3_xFA1b3/xnand2/mn0_g
++ N_XFA1B3/XNAND2/N1_xFA1b3/xnand2/mn0_s N_GND_xFA1b1/xor2/mn3_b N_18 L=1.8e-07
++ W=5e-07 AD=2.45e-13 AS=1.35e-13 PD=1.48e-06 PS=5.4e-07
+mxFA1b3/xor1/xinv1/mn0 N_XFA1B3/XOR1/A__xFA1b3/xor1/xinv1/mn0_d
++ N_A3_xFA1b3/xor1/xinv1/mn0_g N_GND_xFA1b3/xor1/xinv1/mn0_s
++ N_GND_xFA1b1/xor2/mn3_b N_18 L=1.8e-07 W=5e-07 AD=2.45e-13 AS=2.45e-13
++ PD=1.48e-06 PS=1.48e-06
+mxFA1b2/xor2/mn3 N_XFA1B2/XOR2/N4_xFA1b2/xor2/mn3_d N_C2_xFA1b2/xor2/mn3_g
++ N_GND_xFA1b2/xor2/mn3_s N_GND_xFA1b1/xor2/mn3_b N_18 L=1.8e-07 W=5e-07
++ AD=1.45e-13 AS=2.45e-13 PD=5.8e-07 PS=1.48e-06
+mxFA1b5/xor2/mn3 N_XFA1B5/XOR2/N4_xFA1b5/xor2/mn3_d N_C5_xFA1b5/xor2/mn3_g
++ N_GND_xFA1b5/xor2/mn3_s N_GND_xFA1b1/xor2/mn3_b N_18 L=1.8e-07 W=5e-07
++ AD=1.45e-13 AS=2.45e-13 PD=5.8e-07 PS=1.48e-06
+mxFA1b4/xor1/xinv1/mn0 N_XFA1B4/XOR1/A__xFA1b4/xor1/xinv1/mn0_d
++ N_A4_xFA1b4/xor1/xinv1/mn0_g N_GND_xFA1b4/xor1/xinv1/mn0_s
++ N_GND_xFA1b1/xor2/mn3_b N_18 L=1.8e-07 W=5e-07 AD=2.45e-13 AS=2.45e-13
++ PD=1.48e-06 PS=1.48e-06
+mxFA1b4/xnand2/mn0 N_XFA1B4/N3_xFA1b4/xnand2/mn0_d N_A4_xFA1b4/xnand2/mn0_g
++ N_XFA1B4/XNAND2/N1_xFA1b4/xnand2/mn0_s N_GND_xFA1b1/xor2/mn3_b N_18 L=1.8e-07
++ W=5e-07 AD=2.45e-13 AS=1.35e-13 PD=1.48e-06 PS=5.4e-07
+mxFA1b5/xor2/mn2 N_S5_xFA1b5/xor2/mn2_d N_XFA1B5/N1_xFA1b5/xor2/mn2_g
++ N_XFA1B5/XOR2/N4_xFA1b5/xor2/mn2_s N_GND_xFA1b1/xor2/mn3_b N_18 L=1.8e-07
++ W=5e-07 AD=2.45e-13 AS=1.45e-13 PD=1.48e-06 PS=5.8e-07
+mxFA1b4/xnand2/mn1 N_XFA1B4/XNAND2/N1_xFA1b4/xnand2/mn1_d
++ N_B4_xFA1b4/xnand2/mn1_g N_GND_xFA1b4/xnand2/mn1_s N_GND_xFA1b1/xor2/mn3_b
++ N_18 L=1.8e-07 W=5e-07 AD=1.35e-13 AS=2.45e-13 PD=5.4e-07 PS=1.48e-06
+mxFA1b4/xor1/xinv2/mn0 N_XFA1B4/XOR1/B__xFA1b4/xor1/xinv2/mn0_d
++ N_B4_xFA1b4/xor1/xinv2/mn0_g N_GND_xFA1b4/xor1/xinv2/mn0_s
++ N_GND_xFA1b1/xor2/mn3_b N_18 L=1.8e-07 W=5e-07 AD=2.45e-13 AS=2.45e-13
++ PD=1.48e-06 PS=1.48e-06
+mxFA1b5/xor2/mn0 N_S5_xFA1b5/xor2/mn0_d N_XFA1B5/XOR2/A__xFA1b5/xor2/mn0_g
++ N_XFA1B5/XOR2/N3_xFA1b5/xor2/mn0_s N_GND_xFA1b1/xor2/mn3_b N_18 L=1.8e-07
++ W=5e-07 AD=2.45e-13 AS=1.45e-13 PD=1.48e-06 PS=5.8e-07
+mxFA1b4/xnand1/mn0 N_XFA1B4/N2_xFA1b4/xnand1/mn0_d
++ N_XFA1B4/N1_xFA1b4/xnand1/mn0_g N_XFA1B4/XNAND1/N1_xFA1b4/xnand1/mn0_s
++ N_GND_xFA1b1/xor2/mn3_b N_18 L=1.8e-07 W=5e-07 AD=2.45e-13 AS=1.35e-13
++ PD=1.48e-06 PS=5.4e-07
+mxFA1b5/xor2/mn1 N_XFA1B5/XOR2/N3_xFA1b5/xor2/mn1_d
++ N_XFA1B5/XOR2/B__xFA1b5/xor2/mn1_g N_GND_xFA1b5/xor2/mn1_s
++ N_GND_xFA1b1/xor2/mn3_b N_18 L=1.8e-07 W=5e-07 AD=1.45e-13 AS=2.45e-13
++ PD=5.8e-07 PS=1.48e-06
+mxFA1b4/xnand1/mn1 N_XFA1B4/XNAND1/N1_xFA1b4/xnand1/mn1_d
++ N_C4_xFA1b4/xnand1/mn1_g N_GND_xFA1b4/xnand1/mn1_s N_GND_xFA1b1/xor2/mn3_b
++ N_18 L=1.8e-07 W=5e-07 AD=1.35e-13 AS=2.45e-13 PD=5.4e-07 PS=1.48e-06
+mxFA1b4/xor1/mn1 N_XFA1B4/XOR1/N3_xFA1b4/xor1/mn1_d
++ N_XFA1B4/XOR1/B__xFA1b4/xor1/mn1_g N_GND_xFA1b4/xor1/mn1_s
++ N_GND_xFA1b1/xor2/mn3_b N_18 L=1.8e-07 W=5e-07 AD=1.45e-13 AS=2.45e-13
++ PD=5.8e-07 PS=1.48e-06
+mxFA1b4/xor1/mn0 N_XFA1B4/N1_xFA1b4/xor1/mn0_d
++ N_XFA1B4/XOR1/A__xFA1b4/xor1/mn0_g N_XFA1B4/XOR1/N3_xFA1b4/xor1/mn0_s
++ N_GND_xFA1b1/xor2/mn3_b N_18 L=1.8e-07 W=5e-07 AD=2.45e-13 AS=1.45e-13
++ PD=1.48e-06 PS=5.8e-07
+mxFA1b5/xor2/xinv2/mn0 N_XFA1B5/XOR2/B__xFA1b5/xor2/xinv2/mn0_d
++ N_C5_xFA1b5/xor2/xinv2/mn0_g N_GND_xFA1b5/xor2/xinv2/mn0_s
++ N_GND_xFA1b1/xor2/mn3_b N_18 L=1.8e-07 W=5e-07 AD=2.45e-13 AS=2.45e-13
++ PD=1.48e-06 PS=1.48e-06
+mxFA1b4/xnand3/mn1 N_C5_xFA1b4/xnand3/mn1_d N_XFA1B4/N3_xFA1b4/xnand3/mn1_g
++ N_XFA1B4/XNAND3/N1_xFA1b4/xnand3/mn1_s N_GND_xFA1b1/xor2/mn3_b N_18 L=1.8e-07
++ W=5e-07 AD=2.45e-13 AS=1.35e-13 PD=1.48e-06 PS=5.4e-07
+mxFA1b4/xnand3/mn0 N_XFA1B4/XNAND3/N1_xFA1b4/xnand3/mn0_d
++ N_XFA1B4/N2_xFA1b4/xnand3/mn0_g N_GND_xFA1b4/xnand3/mn0_s
++ N_GND_xFA1b1/xor2/mn3_b N_18 L=1.8e-07 W=5e-07 AD=1.35e-13 AS=2.45e-13
++ PD=5.4e-07 PS=1.48e-06
+mxFA1b4/xor1/mn2 N_XFA1B4/N1_xFA1b4/xor1/mn2_d N_A4_xFA1b4/xor1/mn2_g
++ N_XFA1B4/XOR1/N4_xFA1b4/xor1/mn2_s N_GND_xFA1b1/xor2/mn3_b N_18 L=1.8e-07
++ W=5e-07 AD=2.45e-13 AS=1.45e-13 PD=1.48e-06 PS=5.8e-07
+mxFA1b5/xor2/xinv1/mn0 N_XFA1B5/XOR2/A__xFA1b5/xor2/xinv1/mn0_d
++ N_XFA1B5/N1_xFA1b5/xor2/xinv1/mn0_g N_GND_xFA1b5/xor2/xinv1/mn0_s
++ N_GND_xFA1b1/xor2/mn3_b N_18 L=1.8e-07 W=5e-07 AD=2.45e-13 AS=2.45e-13
++ PD=1.48e-06 PS=1.48e-06
+mxFA1b4/xor1/mn3 N_XFA1B4/XOR1/N4_xFA1b4/xor1/mn3_d N_B4_xFA1b4/xor1/mn3_g
++ N_GND_xFA1b4/xor1/mn3_s N_GND_xFA1b1/xor2/mn3_b N_18 L=1.8e-07 W=5e-07
++ AD=1.45e-13 AS=2.45e-13 PD=5.8e-07 PS=1.48e-06
+mxFA1b5/xor1/mn3 N_XFA1B5/XOR1/N4_xFA1b5/xor1/mn3_d N_B5_xFA1b5/xor1/mn3_g
++ N_GND_xFA1b5/xor1/mn3_s N_GND_xFA1b1/xor2/mn3_b N_18 L=1.8e-07 W=5e-07
++ AD=1.45e-13 AS=2.45e-13 PD=5.8e-07 PS=1.48e-06
+mxFA1b4/xor2/xinv1/mn0 N_XFA1B4/XOR2/A__xFA1b4/xor2/xinv1/mn0_d
++ N_XFA1B4/N1_xFA1b4/xor2/xinv1/mn0_g N_GND_xFA1b4/xor2/xinv1/mn0_s
++ N_GND_xFA1b1/xor2/mn3_b N_18 L=1.8e-07 W=5e-07 AD=2.45e-13 AS=2.45e-13
++ PD=1.48e-06 PS=1.48e-06
+mxFA1b5/xor1/mn2 N_XFA1B5/N1_xFA1b5/xor1/mn2_d N_A5_xFA1b5/xor1/mn2_g
++ N_XFA1B5/XOR1/N4_xFA1b5/xor1/mn2_s N_GND_xFA1b1/xor2/mn3_b N_18 L=1.8e-07
++ W=5e-07 AD=2.45e-13 AS=1.45e-13 PD=1.48e-06 PS=5.8e-07
+mxFA1b5/xnand3/mn0 N_XFA1B5/XNAND3/N1_xFA1b5/xnand3/mn0_d
++ N_XFA1B5/N2_xFA1b5/xnand3/mn0_g N_GND_xFA1b5/xnand3/mn0_s
++ N_GND_xFA1b1/xor2/mn3_b N_18 L=1.8e-07 W=5e-07 AD=1.35e-13 AS=2.45e-13
++ PD=5.4e-07 PS=1.48e-06
+mxFA1b5/xnand3/mn1 N_C6_xFA1b5/xnand3/mn1_d N_XFA1B5/N3_xFA1b5/xnand3/mn1_g
++ N_XFA1B5/XNAND3/N1_xFA1b5/xnand3/mn1_s N_GND_xFA1b1/xor2/mn3_b N_18 L=1.8e-07
++ W=5e-07 AD=2.45e-13 AS=1.35e-13 PD=1.48e-06 PS=5.4e-07
+mxFA1b4/xor2/xinv2/mn0 N_XFA1B4/XOR2/B__xFA1b4/xor2/xinv2/mn0_d
++ N_C4_xFA1b4/xor2/xinv2/mn0_g N_GND_xFA1b4/xor2/xinv2/mn0_s
++ N_GND_xFA1b1/xor2/mn3_b N_18 L=1.8e-07 W=5e-07 AD=2.45e-13 AS=2.45e-13
++ PD=1.48e-06 PS=1.48e-06
+mxFA1b5/xor1/mn0 N_XFA1B5/N1_xFA1b5/xor1/mn0_d
++ N_XFA1B5/XOR1/A__xFA1b5/xor1/mn0_g N_XFA1B5/XOR1/N3_xFA1b5/xor1/mn0_s
++ N_GND_xFA1b1/xor2/mn3_b N_18 L=1.8e-07 W=5e-07 AD=2.45e-13 AS=1.45e-13
++ PD=1.48e-06 PS=5.8e-07
+mxFA1b5/xor1/mn1 N_XFA1B5/XOR1/N3_xFA1b5/xor1/mn1_d
++ N_XFA1B5/XOR1/B__xFA1b5/xor1/mn1_g N_GND_xFA1b5/xor1/mn1_s
++ N_GND_xFA1b1/xor2/mn3_b N_18 L=1.8e-07 W=5e-07 AD=1.45e-13 AS=2.45e-13
++ PD=5.8e-07 PS=1.48e-06
+mxFA1b5/xnand1/mn1 N_XFA1B5/XNAND1/N1_xFA1b5/xnand1/mn1_d
++ N_C5_xFA1b5/xnand1/mn1_g N_GND_xFA1b5/xnand1/mn1_s N_GND_xFA1b1/xor2/mn3_b
++ N_18 L=1.8e-07 W=5e-07 AD=1.35e-13 AS=2.45e-13 PD=5.4e-07 PS=1.48e-06
+mxFA1b4/xor2/mn1 N_XFA1B4/XOR2/N3_xFA1b4/xor2/mn1_d
++ N_XFA1B4/XOR2/B__xFA1b4/xor2/mn1_g N_GND_xFA1b4/xor2/mn1_s
++ N_GND_xFA1b1/xor2/mn3_b N_18 L=1.8e-07 W=5e-07 AD=1.45e-13 AS=2.45e-13
++ PD=5.8e-07 PS=1.48e-06
+mxFA1b5/xnand1/mn0 N_XFA1B5/N2_xFA1b5/xnand1/mn0_d
++ N_XFA1B5/N1_xFA1b5/xnand1/mn0_g N_XFA1B5/XNAND1/N1_xFA1b5/xnand1/mn0_s
++ N_GND_xFA1b1/xor2/mn3_b N_18 L=1.8e-07 W=5e-07 AD=2.45e-13 AS=1.35e-13
++ PD=1.48e-06 PS=5.4e-07
+mxFA1b4/xor2/mn0 N_S4_xFA1b4/xor2/mn0_d N_XFA1B4/XOR2/A__xFA1b4/xor2/mn0_g
++ N_XFA1B4/XOR2/N3_xFA1b4/xor2/mn0_s N_GND_xFA1b1/xor2/mn3_b N_18 L=1.8e-07
++ W=5e-07 AD=2.45e-13 AS=1.45e-13 PD=1.48e-06 PS=5.8e-07
+mxFA1b5/xor1/xinv2/mn0 N_XFA1B5/XOR1/B__xFA1b5/xor1/xinv2/mn0_d
++ N_B5_xFA1b5/xor1/xinv2/mn0_g N_GND_xFA1b5/xor1/xinv2/mn0_s
++ N_GND_xFA1b1/xor2/mn3_b N_18 L=1.8e-07 W=5e-07 AD=2.45e-13 AS=2.45e-13
++ PD=1.48e-06 PS=1.48e-06
+mxFA1b5/xnand2/mn1 N_XFA1B5/XNAND2/N1_xFA1b5/xnand2/mn1_d
++ N_B5_xFA1b5/xnand2/mn1_g N_GND_xFA1b5/xnand2/mn1_s N_GND_xFA1b1/xor2/mn3_b
++ N_18 L=1.8e-07 W=5e-07 AD=1.35e-13 AS=2.45e-13 PD=5.4e-07 PS=1.48e-06
+mxFA1b4/xor2/mn2 N_S4_xFA1b4/xor2/mn2_d N_XFA1B4/N1_xFA1b4/xor2/mn2_g
++ N_XFA1B4/XOR2/N4_xFA1b4/xor2/mn2_s N_GND_xFA1b1/xor2/mn3_b N_18 L=1.8e-07
++ W=5e-07 AD=2.45e-13 AS=1.45e-13 PD=1.48e-06 PS=5.8e-07
+mxFA1b5/xnand2/mn0 N_XFA1B5/N3_xFA1b5/xnand2/mn0_d N_A5_xFA1b5/xnand2/mn0_g
++ N_XFA1B5/XNAND2/N1_xFA1b5/xnand2/mn0_s N_GND_xFA1b1/xor2/mn3_b N_18 L=1.8e-07
++ W=5e-07 AD=2.45e-13 AS=1.35e-13 PD=1.48e-06 PS=5.4e-07
+mxFA1b5/xor1/xinv1/mn0 N_XFA1B5/XOR1/A__xFA1b5/xor1/xinv1/mn0_d
++ N_A5_xFA1b5/xor1/xinv1/mn0_g N_GND_xFA1b5/xor1/xinv1/mn0_s
++ N_GND_xFA1b1/xor2/mn3_b N_18 L=1.8e-07 W=5e-07 AD=2.45e-13 AS=2.45e-13
++ PD=1.48e-06 PS=1.48e-06
+mxFA1b4/xor2/mn3 N_XFA1B4/XOR2/N4_xFA1b4/xor2/mn3_d N_C4_xFA1b4/xor2/mn3_g
++ N_GND_xFA1b4/xor2/mn3_s N_GND_xFA1b1/xor2/mn3_b N_18 L=1.8e-07 W=5e-07
++ AD=1.45e-13 AS=2.45e-13 PD=5.8e-07 PS=1.48e-06
+mxFA1b7/xor2/mn3 N_XFA1B7/XOR2/N4_xFA1b7/xor2/mn3_d N_C7_xFA1b7/xor2/mn3_g
++ N_GND_xFA1b7/xor2/mn3_s N_GND_xFA1b1/xor2/mn3_b N_18 L=1.8e-07 W=5e-07
++ AD=1.45e-13 AS=2.45e-13 PD=5.8e-07 PS=1.48e-06
+mxFA1b6/xor1/xinv1/mn0 N_XFA1B6/XOR1/A__xFA1b6/xor1/xinv1/mn0_d
++ N_A6_xFA1b6/xor1/xinv1/mn0_g N_GND_xFA1b6/xor1/xinv1/mn0_s
++ N_GND_xFA1b1/xor2/mn3_b N_18 L=1.8e-07 W=5e-07 AD=2.45e-13 AS=2.45e-13
++ PD=1.48e-06 PS=1.48e-06
+mxFA1b6/xnand2/mn0 N_XFA1B6/N3_xFA1b6/xnand2/mn0_d N_A6_xFA1b6/xnand2/mn0_g
++ N_XFA1B6/XNAND2/N1_xFA1b6/xnand2/mn0_s N_GND_xFA1b1/xor2/mn3_b N_18 L=1.8e-07
++ W=5e-07 AD=2.45e-13 AS=1.35e-13 PD=1.48e-06 PS=5.4e-07
+mxFA1b7/xor2/mn2 N_S7_xFA1b7/xor2/mn2_d N_XFA1B7/N1_xFA1b7/xor2/mn2_g
++ N_XFA1B7/XOR2/N4_xFA1b7/xor2/mn2_s N_GND_xFA1b1/xor2/mn3_b N_18 L=1.8e-07
++ W=5e-07 AD=2.45e-13 AS=1.45e-13 PD=1.48e-06 PS=5.8e-07
+mxFA1b6/xnand2/mn1 N_XFA1B6/XNAND2/N1_xFA1b6/xnand2/mn1_d
++ N_B6_xFA1b6/xnand2/mn1_g N_GND_xFA1b6/xnand2/mn1_s N_GND_xFA1b1/xor2/mn3_b
++ N_18 L=1.8e-07 W=5e-07 AD=1.35e-13 AS=2.45e-13 PD=5.4e-07 PS=1.48e-06
+mxFA1b6/xor1/xinv2/mn0 N_XFA1B6/XOR1/B__xFA1b6/xor1/xinv2/mn0_d
++ N_B6_xFA1b6/xor1/xinv2/mn0_g N_GND_xFA1b6/xor1/xinv2/mn0_s
++ N_GND_xFA1b1/xor2/mn3_b N_18 L=1.8e-07 W=5e-07 AD=2.45e-13 AS=2.45e-13
++ PD=1.48e-06 PS=1.48e-06
+mxFA1b7/xor2/mn0 N_S7_xFA1b7/xor2/mn0_d N_XFA1B7/XOR2/A__xFA1b7/xor2/mn0_g
++ N_XFA1B7/XOR2/N3_xFA1b7/xor2/mn0_s N_GND_xFA1b1/xor2/mn3_b N_18 L=1.8e-07
++ W=5e-07 AD=2.45e-13 AS=1.45e-13 PD=1.48e-06 PS=5.8e-07
+mxFA1b6/xnand1/mn0 N_XFA1B6/N2_xFA1b6/xnand1/mn0_d
++ N_XFA1B6/N1_xFA1b6/xnand1/mn0_g N_XFA1B6/XNAND1/N1_xFA1b6/xnand1/mn0_s
++ N_GND_xFA1b1/xor2/mn3_b N_18 L=1.8e-07 W=5e-07 AD=2.45e-13 AS=1.35e-13
++ PD=1.48e-06 PS=5.4e-07
+mxFA1b7/xor2/mn1 N_XFA1B7/XOR2/N3_xFA1b7/xor2/mn1_d
++ N_XFA1B7/XOR2/B__xFA1b7/xor2/mn1_g N_GND_xFA1b7/xor2/mn1_s
++ N_GND_xFA1b1/xor2/mn3_b N_18 L=1.8e-07 W=5e-07 AD=1.45e-13 AS=2.45e-13
++ PD=5.8e-07 PS=1.48e-06
+mxFA1b6/xnand1/mn1 N_XFA1B6/XNAND1/N1_xFA1b6/xnand1/mn1_d
++ N_C6_xFA1b6/xnand1/mn1_g N_GND_xFA1b6/xnand1/mn1_s N_GND_xFA1b1/xor2/mn3_b
++ N_18 L=1.8e-07 W=5e-07 AD=1.35e-13 AS=2.45e-13 PD=5.4e-07 PS=1.48e-06
+mxFA1b6/xor1/mn1 N_XFA1B6/XOR1/N3_xFA1b6/xor1/mn1_d
++ N_XFA1B6/XOR1/B__xFA1b6/xor1/mn1_g N_GND_xFA1b6/xor1/mn1_s
++ N_GND_xFA1b1/xor2/mn3_b N_18 L=1.8e-07 W=5e-07 AD=1.45e-13 AS=2.45e-13
++ PD=5.8e-07 PS=1.48e-06
+mxFA1b6/xor1/mn0 N_XFA1B6/N1_xFA1b6/xor1/mn0_d
++ N_XFA1B6/XOR1/A__xFA1b6/xor1/mn0_g N_XFA1B6/XOR1/N3_xFA1b6/xor1/mn0_s
++ N_GND_xFA1b1/xor2/mn3_b N_18 L=1.8e-07 W=5e-07 AD=2.45e-13 AS=1.45e-13
++ PD=1.48e-06 PS=5.8e-07
+mxFA1b7/xor2/xinv2/mn0 N_XFA1B7/XOR2/B__xFA1b7/xor2/xinv2/mn0_d
++ N_C7_xFA1b7/xor2/xinv2/mn0_g N_GND_xFA1b7/xor2/xinv2/mn0_s
++ N_GND_xFA1b1/xor2/mn3_b N_18 L=1.8e-07 W=5e-07 AD=2.45e-13 AS=2.45e-13
++ PD=1.48e-06 PS=1.48e-06
+mxFA1b6/xnand3/mn1 N_C7_xFA1b6/xnand3/mn1_d N_XFA1B6/N3_xFA1b6/xnand3/mn1_g
++ N_XFA1B6/XNAND3/N1_xFA1b6/xnand3/mn1_s N_GND_xFA1b1/xor2/mn3_b N_18 L=1.8e-07
++ W=5e-07 AD=2.45e-13 AS=1.35e-13 PD=1.48e-06 PS=5.4e-07
+mxFA1b6/xnand3/mn0 N_XFA1B6/XNAND3/N1_xFA1b6/xnand3/mn0_d
++ N_XFA1B6/N2_xFA1b6/xnand3/mn0_g N_GND_xFA1b6/xnand3/mn0_s
++ N_GND_xFA1b1/xor2/mn3_b N_18 L=1.8e-07 W=5e-07 AD=1.35e-13 AS=2.45e-13
++ PD=5.4e-07 PS=1.48e-06
+mxFA1b6/xor1/mn2 N_XFA1B6/N1_xFA1b6/xor1/mn2_d N_A6_xFA1b6/xor1/mn2_g
++ N_XFA1B6/XOR1/N4_xFA1b6/xor1/mn2_s N_GND_xFA1b1/xor2/mn3_b N_18 L=1.8e-07
++ W=5e-07 AD=2.45e-13 AS=1.45e-13 PD=1.48e-06 PS=5.8e-07
+mxFA1b7/xor2/xinv1/mn0 N_XFA1B7/XOR2/A__xFA1b7/xor2/xinv1/mn0_d
++ N_XFA1B7/N1_xFA1b7/xor2/xinv1/mn0_g N_GND_xFA1b7/xor2/xinv1/mn0_s
++ N_GND_xFA1b1/xor2/mn3_b N_18 L=1.8e-07 W=5e-07 AD=2.45e-13 AS=2.45e-13
++ PD=1.48e-06 PS=1.48e-06
+mxFA1b6/xor1/mn3 N_XFA1B6/XOR1/N4_xFA1b6/xor1/mn3_d N_B6_xFA1b6/xor1/mn3_g
++ N_GND_xFA1b6/xor1/mn3_s N_GND_xFA1b1/xor2/mn3_b N_18 L=1.8e-07 W=5e-07
++ AD=1.45e-13 AS=2.45e-13 PD=5.8e-07 PS=1.48e-06
+mxFA1b7/xor1/mn3 N_XFA1B7/XOR1/N4_xFA1b7/xor1/mn3_d N_B7_xFA1b7/xor1/mn3_g
++ N_GND_xFA1b7/xor1/mn3_s N_GND_xFA1b1/xor2/mn3_b N_18 L=1.8e-07 W=5e-07
++ AD=1.45e-13 AS=2.45e-13 PD=5.8e-07 PS=1.48e-06
+mxFA1b6/xor2/xinv1/mn0 N_XFA1B6/XOR2/A__xFA1b6/xor2/xinv1/mn0_d
++ N_XFA1B6/N1_xFA1b6/xor2/xinv1/mn0_g N_GND_xFA1b6/xor2/xinv1/mn0_s
++ N_GND_xFA1b1/xor2/mn3_b N_18 L=1.8e-07 W=5e-07 AD=2.45e-13 AS=2.45e-13
++ PD=1.48e-06 PS=1.48e-06
+mxFA1b7/xor1/mn2 N_XFA1B7/N1_xFA1b7/xor1/mn2_d N_A7_xFA1b7/xor1/mn2_g
++ N_XFA1B7/XOR1/N4_xFA1b7/xor1/mn2_s N_GND_xFA1b1/xor2/mn3_b N_18 L=1.8e-07
++ W=5e-07 AD=2.45e-13 AS=1.45e-13 PD=1.48e-06 PS=5.8e-07
+mxFA1b7/xnand3/mn0 N_XFA1B7/XNAND3/N1_xFA1b7/xnand3/mn0_d
++ N_XFA1B7/N2_xFA1b7/xnand3/mn0_g N_GND_xFA1b7/xnand3/mn0_s
++ N_GND_xFA1b1/xor2/mn3_b N_18 L=1.8e-07 W=5e-07 AD=1.35e-13 AS=2.45e-13
++ PD=5.4e-07 PS=1.48e-06
+mxFA1b7/xnand3/mn1 N_COUT_xFA1b7/xnand3/mn1_d N_XFA1B7/N3_xFA1b7/xnand3/mn1_g
++ N_XFA1B7/XNAND3/N1_xFA1b7/xnand3/mn1_s N_GND_xFA1b1/xor2/mn3_b N_18 L=1.8e-07
++ W=5e-07 AD=2.45e-13 AS=1.35e-13 PD=1.48e-06 PS=5.4e-07
+mxFA1b6/xor2/xinv2/mn0 N_XFA1B6/XOR2/B__xFA1b6/xor2/xinv2/mn0_d
++ N_C6_xFA1b6/xor2/xinv2/mn0_g N_GND_xFA1b6/xor2/xinv2/mn0_s
++ N_GND_xFA1b1/xor2/mn3_b N_18 L=1.8e-07 W=5e-07 AD=2.45e-13 AS=2.45e-13
++ PD=1.48e-06 PS=1.48e-06
+mxFA1b7/xor1/mn0 N_XFA1B7/N1_xFA1b7/xor1/mn0_d
++ N_XFA1B7/XOR1/A__xFA1b7/xor1/mn0_g N_XFA1B7/XOR1/N3_xFA1b7/xor1/mn0_s
++ N_GND_xFA1b1/xor2/mn3_b N_18 L=1.8e-07 W=5e-07 AD=2.45e-13 AS=1.45e-13
++ PD=1.48e-06 PS=5.8e-07
+mxFA1b7/xor1/mn1 N_XFA1B7/XOR1/N3_xFA1b7/xor1/mn1_d
++ N_XFA1B7/XOR1/B__xFA1b7/xor1/mn1_g N_GND_xFA1b7/xor1/mn1_s
++ N_GND_xFA1b1/xor2/mn3_b N_18 L=1.8e-07 W=5e-07 AD=1.45e-13 AS=2.45e-13
++ PD=5.8e-07 PS=1.48e-06
+mxFA1b7/xnand1/mn1 N_XFA1B7/XNAND1/N1_xFA1b7/xnand1/mn1_d
++ N_C7_xFA1b7/xnand1/mn1_g N_GND_xFA1b7/xnand1/mn1_s N_GND_xFA1b1/xor2/mn3_b
++ N_18 L=1.8e-07 W=5e-07 AD=1.35e-13 AS=2.45e-13 PD=5.4e-07 PS=1.48e-06
+mxFA1b6/xor2/mn1 N_XFA1B6/XOR2/N3_xFA1b6/xor2/mn1_d
++ N_XFA1B6/XOR2/B__xFA1b6/xor2/mn1_g N_GND_xFA1b6/xor2/mn1_s
++ N_GND_xFA1b1/xor2/mn3_b N_18 L=1.8e-07 W=5e-07 AD=1.45e-13 AS=2.45e-13
++ PD=5.8e-07 PS=1.48e-06
+mxFA1b7/xnand1/mn0 N_XFA1B7/N2_xFA1b7/xnand1/mn0_d
++ N_XFA1B7/N1_xFA1b7/xnand1/mn0_g N_XFA1B7/XNAND1/N1_xFA1b7/xnand1/mn0_s
++ N_GND_xFA1b1/xor2/mn3_b N_18 L=1.8e-07 W=5e-07 AD=2.45e-13 AS=1.35e-13
++ PD=1.48e-06 PS=5.4e-07
+mxFA1b6/xor2/mn0 N_S6_xFA1b6/xor2/mn0_d N_XFA1B6/XOR2/A__xFA1b6/xor2/mn0_g
++ N_XFA1B6/XOR2/N3_xFA1b6/xor2/mn0_s N_GND_xFA1b1/xor2/mn3_b N_18 L=1.8e-07
++ W=5e-07 AD=2.45e-13 AS=1.45e-13 PD=1.48e-06 PS=5.8e-07
+mxFA1b7/xor1/xinv2/mn0 N_XFA1B7/XOR1/B__xFA1b7/xor1/xinv2/mn0_d
++ N_B7_xFA1b7/xor1/xinv2/mn0_g N_GND_xFA1b7/xor1/xinv2/mn0_s
++ N_GND_xFA1b1/xor2/mn3_b N_18 L=1.8e-07 W=5e-07 AD=2.45e-13 AS=2.45e-13
++ PD=1.48e-06 PS=1.48e-06
+mxFA1b7/xnand2/mn1 N_XFA1B7/XNAND2/N1_xFA1b7/xnand2/mn1_d
++ N_B7_xFA1b7/xnand2/mn1_g N_GND_xFA1b7/xnand2/mn1_s N_GND_xFA1b1/xor2/mn3_b
++ N_18 L=1.8e-07 W=5e-07 AD=1.35e-13 AS=2.45e-13 PD=5.4e-07 PS=1.48e-06
+mxFA1b6/xor2/mn2 N_S6_xFA1b6/xor2/mn2_d N_XFA1B6/N1_xFA1b6/xor2/mn2_g
++ N_XFA1B6/XOR2/N4_xFA1b6/xor2/mn2_s N_GND_xFA1b1/xor2/mn3_b N_18 L=1.8e-07
++ W=5e-07 AD=2.45e-13 AS=1.45e-13 PD=1.48e-06 PS=5.8e-07
+mxFA1b7/xnand2/mn0 N_XFA1B7/N3_xFA1b7/xnand2/mn0_d N_A7_xFA1b7/xnand2/mn0_g
++ N_XFA1B7/XNAND2/N1_xFA1b7/xnand2/mn0_s N_GND_xFA1b1/xor2/mn3_b N_18 L=1.8e-07
++ W=5e-07 AD=2.45e-13 AS=1.35e-13 PD=1.48e-06 PS=5.4e-07
+mxFA1b7/xor1/xinv1/mn0 N_XFA1B7/XOR1/A__xFA1b7/xor1/xinv1/mn0_d
++ N_A7_xFA1b7/xor1/xinv1/mn0_g N_GND_xFA1b7/xor1/xinv1/mn0_s
++ N_GND_xFA1b1/xor2/mn3_b N_18 L=1.8e-07 W=5e-07 AD=2.45e-13 AS=2.45e-13
++ PD=1.48e-06 PS=1.48e-06
+mxFA1b6/xor2/mn3 N_XFA1B6/XOR2/N4_xFA1b6/xor2/mn3_d N_C6_xFA1b6/xor2/mn3_g
++ N_GND_xFA1b6/xor2/mn3_s N_GND_xFA1b1/xor2/mn3_b N_18 L=1.8e-07 W=5e-07
++ AD=1.45e-13 AS=2.45e-13 PD=5.8e-07 PS=1.48e-06
+mxFA1b1/xor2/mp2 N_XFA1B1/XOR2/N2_xFA1b1/xor2/mp2_d
++ N_XFA1B1/XOR2/A__xFA1b1/xor2/mp2_g N_VDD_xFA1b1/xor2/mp2_s
++ N_VDD_xFA1b1/xor2/mp2_b P_18 L=1.8e-07 W=1e-06 AD=2.9e-13 AS=4.9e-13
++ PD=5.8e-07 PS=1.98e-06
+mxFA1b0/xnand2/mp0 N_XFA1B0/N3_xFA1b0/xnand2/mp0_d N_A0_xFA1b0/xnand2/mp0_g
++ N_VDD_xFA1b0/xnand2/mp0_s N_VDD_xFA1b0/xnand2/mp0_b P_18 L=1.8e-07 W=5e-07
++ AD=2.45e-13 AS=1.35e-13 PD=1.48e-06 PS=5.4e-07
+mxFA1b0/xor1/xinv1/mp0 N_XFA1B0/XOR1/A__xFA1b0/xor1/xinv1/mp0_d
++ N_A0_xFA1b0/xor1/xinv1/mp0_g N_VDD_xFA1b0/xor1/xinv1/mp0_s
++ N_VDD_xFA1b0/xor1/xinv1/mp0_b P_18 L=1.8e-07 W=1e-06 AD=4.9e-13 AS=4.9e-13
++ PD=1.98e-06 PS=1.98e-06
+mxFA1b1/xor2/mp3 N_S1_xFA1b1/xor2/mp3_d N_C1_xFA1b1/xor2/mp3_g
++ N_XFA1B1/XOR2/N2_xFA1b1/xor2/mp3_s N_VDD_xFA1b1/xor2/mp2_b P_18 L=1.8e-07
++ W=1e-06 AD=4.9e-13 AS=2.9e-13 PD=1.98e-06 PS=5.8e-07
+mxFA1b0/xnand2/mp1 N_XFA1B0/N3_xFA1b0/xnand2/mp1_d N_B0_xFA1b0/xnand2/mp1_g
++ N_VDD_xFA1b0/xnand2/mp1_s N_VDD_xFA1b0/xnand2/mp0_b P_18 L=1.8e-07 W=5e-07
++ AD=2.5e-13 AS=1.35e-13 PD=1.5e-06 PS=5.4e-07
+mxFA1b0/xor1/xinv2/mp0 N_XFA1B0/XOR1/B__xFA1b0/xor1/xinv2/mp0_d
++ N_B0_xFA1b0/xor1/xinv2/mp0_g N_VDD_xFA1b0/xor1/xinv2/mp0_s
++ N_VDD_xFA1b0/xor1/xinv1/mp0_b P_18 L=1.8e-07 W=1e-06 AD=4.9e-13 AS=4.9e-13
++ PD=1.98e-06 PS=1.98e-06
+mxFA1b1/xor2/mp1 N_S1_xFA1b1/xor2/mp1_d N_XFA1B1/XOR2/B__xFA1b1/xor2/mp1_g
++ N_XFA1B1/XOR2/N1_xFA1b1/xor2/mp1_s N_VDD_xFA1b1/xor2/mp2_b P_18 L=1.8e-07
++ W=1e-06 AD=4.9e-13 AS=2.9e-13 PD=1.98e-06 PS=5.8e-07
+mxFA1b0/xnand1/mp0 N_XFA1B0/N2_xFA1b0/xnand1/mp0_d
++ N_XFA1B0/N1_xFA1b0/xnand1/mp0_g N_VDD_xFA1b0/xnand1/mp0_s
++ N_VDD_xFA1b0/xnand2/mp0_b P_18 L=1.8e-07 W=5e-07 AD=2.45e-13 AS=1.35e-13
++ PD=1.48e-06 PS=5.4e-07
+mxFA1b1/xor2/mp0 N_XFA1B1/XOR2/N1_xFA1b1/xor2/mp0_d
++ N_XFA1B1/N1_xFA1b1/xor2/mp0_g N_VDD_xFA1b1/xor2/mp0_s N_VDD_xFA1b1/xor2/mp2_b
++ P_18 L=1.8e-07 W=1e-06 AD=2.9e-13 AS=4.9e-13 PD=5.8e-07 PS=1.98e-06
+mxFA1b0/xnand1/mp1 N_XFA1B0/N2_xFA1b0/xnand1/mp1_d N_C0_xFA1b0/xnand1/mp1_g
++ N_VDD_xFA1b0/xnand1/mp1_s N_VDD_xFA1b0/xnand2/mp0_b P_18 L=1.8e-07 W=5e-07
++ AD=2.5e-13 AS=1.35e-13 PD=1.5e-06 PS=5.4e-07
+mxFA1b0/xor1/mp0 N_XFA1B0/XOR1/N1_xFA1b0/xor1/mp0_d N_A0_xFA1b0/xor1/mp0_g
++ N_VDD_xFA1b0/xor1/mp0_s N_VDD_xFA1b0/xor1/xinv1/mp0_b P_18 L=1.8e-07 W=1e-06
++ AD=2.9e-13 AS=4.9e-13 PD=5.8e-07 PS=1.98e-06
+mxFA1b0/xor1/mp1 N_XFA1B0/N1_xFA1b0/xor1/mp1_d
++ N_XFA1B0/XOR1/B__xFA1b0/xor1/mp1_g N_XFA1B0/XOR1/N1_xFA1b0/xor1/mp1_s
++ N_VDD_xFA1b0/xor1/xinv1/mp0_b P_18 L=1.8e-07 W=1e-06 AD=4.9e-13 AS=2.9e-13
++ PD=1.98e-06 PS=5.8e-07
+mxFA1b1/xor2/xinv2/mp0 N_XFA1B1/XOR2/B__xFA1b1/xor2/xinv2/mp0_d
++ N_C1_xFA1b1/xor2/xinv2/mp0_g N_VDD_xFA1b1/xor2/xinv2/mp0_s
++ N_VDD_xFA1b1/xor2/mp2_b P_18 L=1.8e-07 W=1e-06 AD=4.9e-13 AS=4.9e-13
++ PD=1.98e-06 PS=1.98e-06
+mxFA1b0/xnand3/mp1 N_C1_xFA1b0/xnand3/mp1_d N_XFA1B0/N3_xFA1b0/xnand3/mp1_g
++ N_VDD_xFA1b0/xnand3/mp1_s N_VDD_xFA1b0/xnand2/mp0_b P_18 L=1.8e-07 W=5e-07
++ AD=2.45e-13 AS=1.35e-13 PD=1.48e-06 PS=5.4e-07
+mxFA1b0/xnand3/mp0 N_C1_xFA1b0/xnand3/mp0_d N_XFA1B0/N2_xFA1b0/xnand3/mp0_g
++ N_VDD_xFA1b0/xnand3/mp0_s N_VDD_xFA1b0/xnand2/mp0_b P_18 L=1.8e-07 W=5e-07
++ AD=2.5e-13 AS=1.35e-13 PD=1.5e-06 PS=5.4e-07
+mxFA1b0/xor1/mp3 N_XFA1B0/N1_xFA1b0/xor1/mp3_d N_B0_xFA1b0/xor1/mp3_g
++ N_XFA1B0/XOR1/N2_xFA1b0/xor1/mp3_s N_VDD_xFA1b0/xor1/xinv1/mp0_b P_18
++ L=1.8e-07 W=1e-06 AD=4.9e-13 AS=2.9e-13 PD=1.98e-06 PS=5.8e-07
+mxFA1b1/xor2/xinv1/mp0 N_XFA1B1/XOR2/A__xFA1b1/xor2/xinv1/mp0_d
++ N_XFA1B1/N1_xFA1b1/xor2/xinv1/mp0_g N_VDD_xFA1b1/xor2/xinv1/mp0_s
++ N_VDD_xFA1b1/xor2/mp2_b P_18 L=1.8e-07 W=1e-06 AD=4.9e-13 AS=4.9e-13
++ PD=1.98e-06 PS=1.98e-06
+mxFA1b0/xor1/mp2 N_XFA1B0/XOR1/N2_xFA1b0/xor1/mp2_d
++ N_XFA1B0/XOR1/A__xFA1b0/xor1/mp2_g N_VDD_xFA1b0/xor1/mp2_s
++ N_VDD_xFA1b0/xor1/xinv1/mp0_b P_18 L=1.8e-07 W=1e-06 AD=2.9e-13 AS=4.9e-13
++ PD=5.8e-07 PS=1.98e-06
+mxFA1b1/xor1/mp2 N_XFA1B1/XOR1/N2_xFA1b1/xor1/mp2_d
++ N_XFA1B1/XOR1/A__xFA1b1/xor1/mp2_g N_VDD_xFA1b1/xor1/mp2_s
++ N_VDD_xFA1b1/xor2/mp2_b P_18 L=1.8e-07 W=1e-06 AD=2.9e-13 AS=4.9e-13
++ PD=5.8e-07 PS=1.98e-06
+mxFA1b0/xor2/xinv1/mp0 N_XFA1B0/XOR2/A__xFA1b0/xor2/xinv1/mp0_d
++ N_XFA1B0/N1_xFA1b0/xor2/xinv1/mp0_g N_VDD_xFA1b0/xor2/xinv1/mp0_s
++ N_VDD_xFA1b0/xor1/xinv1/mp0_b P_18 L=1.8e-07 W=1e-06 AD=4.9e-13 AS=4.9e-13
++ PD=1.98e-06 PS=1.98e-06
+mxFA1b1/xor1/mp3 N_XFA1B1/N1_xFA1b1/xor1/mp3_d N_B1_xFA1b1/xor1/mp3_g
++ N_XFA1B1/XOR1/N2_xFA1b1/xor1/mp3_s N_VDD_xFA1b1/xor2/mp2_b P_18 L=1.8e-07
++ W=1e-06 AD=4.9e-13 AS=2.9e-13 PD=1.98e-06 PS=5.8e-07
+mxFA1b1/xnand3/mp0 N_C2_xFA1b1/xnand3/mp0_d N_XFA1B1/N2_xFA1b1/xnand3/mp0_g
++ N_VDD_xFA1b1/xnand3/mp0_s N_VDD_xFA1b1/xnand3/mp0_b P_18 L=1.8e-07 W=5e-07
++ AD=2.5e-13 AS=1.35e-13 PD=1.5e-06 PS=5.4e-07
+mxFA1b1/xnand3/mp1 N_C2_xFA1b1/xnand3/mp1_d N_XFA1B1/N3_xFA1b1/xnand3/mp1_g
++ N_VDD_xFA1b1/xnand3/mp1_s N_VDD_xFA1b1/xnand3/mp0_b P_18 L=1.8e-07 W=5e-07
++ AD=2.45e-13 AS=1.35e-13 PD=1.48e-06 PS=5.4e-07
+mxFA1b0/xor2/xinv2/mp0 N_XFA1B0/XOR2/B__xFA1b0/xor2/xinv2/mp0_d
++ N_C0_xFA1b0/xor2/xinv2/mp0_g N_VDD_xFA1b0/xor2/xinv2/mp0_s
++ N_VDD_xFA1b0/xor1/xinv1/mp0_b P_18 L=1.8e-07 W=1e-06 AD=4.9e-13 AS=4.9e-13
++ PD=1.98e-06 PS=1.98e-06
+mxFA1b1/xor1/mp1 N_XFA1B1/N1_xFA1b1/xor1/mp1_d
++ N_XFA1B1/XOR1/B__xFA1b1/xor1/mp1_g N_XFA1B1/XOR1/N1_xFA1b1/xor1/mp1_s
++ N_VDD_xFA1b1/xor2/mp2_b P_18 L=1.8e-07 W=1e-06 AD=4.9e-13 AS=2.9e-13
++ PD=1.98e-06 PS=5.8e-07
+mxFA1b1/xor1/mp0 N_XFA1B1/XOR1/N1_xFA1b1/xor1/mp0_d N_A1_xFA1b1/xor1/mp0_g
++ N_VDD_xFA1b1/xor1/mp0_s N_VDD_xFA1b1/xor2/mp2_b P_18 L=1.8e-07 W=1e-06
++ AD=2.9e-13 AS=4.9e-13 PD=5.8e-07 PS=1.98e-06
+mxFA1b1/xnand1/mp1 N_XFA1B1/N2_xFA1b1/xnand1/mp1_d N_C1_xFA1b1/xnand1/mp1_g
++ N_VDD_xFA1b1/xnand1/mp1_s N_VDD_xFA1b1/xnand3/mp0_b P_18 L=1.8e-07 W=5e-07
++ AD=2.5e-13 AS=1.35e-13 PD=1.5e-06 PS=5.4e-07
+mxFA1b0/xor2/mp0 N_XFA1B0/XOR2/N1_xFA1b0/xor2/mp0_d
++ N_XFA1B0/N1_xFA1b0/xor2/mp0_g N_VDD_xFA1b0/xor2/mp0_s
++ N_VDD_xFA1b0/xor1/xinv1/mp0_b P_18 L=1.8e-07 W=1e-06 AD=2.9e-13 AS=4.9e-13
++ PD=5.8e-07 PS=1.98e-06
+mxFA1b1/xnand1/mp0 N_XFA1B1/N2_xFA1b1/xnand1/mp0_d
++ N_XFA1B1/N1_xFA1b1/xnand1/mp0_g N_VDD_xFA1b1/xnand1/mp0_s
++ N_VDD_xFA1b1/xnand3/mp0_b P_18 L=1.8e-07 W=5e-07 AD=2.45e-13 AS=1.35e-13
++ PD=1.48e-06 PS=5.4e-07
+mxFA1b0/xor2/mp1 N_S0_xFA1b0/xor2/mp1_d N_XFA1B0/XOR2/B__xFA1b0/xor2/mp1_g
++ N_XFA1B0/XOR2/N1_xFA1b0/xor2/mp1_s N_VDD_xFA1b0/xor1/xinv1/mp0_b P_18
++ L=1.8e-07 W=1e-06 AD=4.9e-13 AS=2.9e-13 PD=1.98e-06 PS=5.8e-07
+mxFA1b1/xor1/xinv2/mp0 N_XFA1B1/XOR1/B__xFA1b1/xor1/xinv2/mp0_d
++ N_B1_xFA1b1/xor1/xinv2/mp0_g N_VDD_xFA1b1/xor1/xinv2/mp0_s
++ N_VDD_xFA1b1/xor2/mp2_b P_18 L=1.8e-07 W=1e-06 AD=4.9e-13 AS=4.9e-13
++ PD=1.98e-06 PS=1.98e-06
+mxFA1b1/xnand2/mp1 N_XFA1B1/N3_xFA1b1/xnand2/mp1_d N_B1_xFA1b1/xnand2/mp1_g
++ N_VDD_xFA1b1/xnand2/mp1_s N_VDD_xFA1b1/xnand3/mp0_b P_18 L=1.8e-07 W=5e-07
++ AD=2.5e-13 AS=1.35e-13 PD=1.5e-06 PS=5.4e-07
+mxFA1b0/xor2/mp3 N_S0_xFA1b0/xor2/mp3_d N_C0_xFA1b0/xor2/mp3_g
++ N_XFA1B0/XOR2/N2_xFA1b0/xor2/mp3_s N_VDD_xFA1b0/xor1/xinv1/mp0_b P_18
++ L=1.8e-07 W=1e-06 AD=4.9e-13 AS=2.9e-13 PD=1.98e-06 PS=5.8e-07
+mxFA1b1/xor1/xinv1/mp0 N_XFA1B1/XOR1/A__xFA1b1/xor1/xinv1/mp0_d
++ N_A1_xFA1b1/xor1/xinv1/mp0_g N_VDD_xFA1b1/xor1/xinv1/mp0_s
++ N_VDD_xFA1b1/xor2/mp2_b P_18 L=1.8e-07 W=1e-06 AD=4.9e-13 AS=4.9e-13
++ PD=1.98e-06 PS=1.98e-06
+mxFA1b1/xnand2/mp0 N_XFA1B1/N3_xFA1b1/xnand2/mp0_d N_A1_xFA1b1/xnand2/mp0_g
++ N_VDD_xFA1b1/xnand2/mp0_s N_VDD_xFA1b1/xnand3/mp0_b P_18 L=1.8e-07 W=5e-07
++ AD=2.45e-13 AS=1.35e-13 PD=1.48e-06 PS=5.4e-07
+mxFA1b0/xor2/mp2 N_XFA1B0/XOR2/N2_xFA1b0/xor2/mp2_d
++ N_XFA1B0/XOR2/A__xFA1b0/xor2/mp2_g N_VDD_xFA1b0/xor2/mp2_s
++ N_VDD_xFA1b0/xor1/xinv1/mp0_b P_18 L=1.8e-07 W=1e-06 AD=2.9e-13 AS=4.9e-13
++ PD=5.8e-07 PS=1.98e-06
+mxFA1b3/xor2/mp2 N_XFA1B3/XOR2/N2_xFA1b3/xor2/mp2_d
++ N_XFA1B3/XOR2/A__xFA1b3/xor2/mp2_g N_VDD_xFA1b3/xor2/mp2_s
++ N_VDD_xFA1b1/xor2/mp2_b P_18 L=1.8e-07 W=1e-06 AD=2.9e-13 AS=4.9e-13
++ PD=5.8e-07 PS=1.98e-06
+mxFA1b2/xnand2/mp0 N_XFA1B2/N3_xFA1b2/xnand2/mp0_d N_A2_xFA1b2/xnand2/mp0_g
++ N_VDD_xFA1b2/xnand2/mp0_s N_VDD_xFA1b2/xnand2/mp0_b P_18 L=1.8e-07 W=5e-07
++ AD=2.45e-13 AS=1.35e-13 PD=1.48e-06 PS=5.4e-07
+mxFA1b2/xor1/xinv1/mp0 N_XFA1B2/XOR1/A__xFA1b2/xor1/xinv1/mp0_d
++ N_A2_xFA1b2/xor1/xinv1/mp0_g N_VDD_xFA1b2/xor1/xinv1/mp0_s
++ N_VDD_xFA1b0/xor1/xinv1/mp0_b P_18 L=1.8e-07 W=1e-06 AD=4.9e-13 AS=4.9e-13
++ PD=1.98e-06 PS=1.98e-06
+mxFA1b3/xor2/mp3 N_S3_xFA1b3/xor2/mp3_d N_C3_xFA1b3/xor2/mp3_g
++ N_XFA1B3/XOR2/N2_xFA1b3/xor2/mp3_s N_VDD_xFA1b1/xor2/mp2_b P_18 L=1.8e-07
++ W=1e-06 AD=4.9e-13 AS=2.9e-13 PD=1.98e-06 PS=5.8e-07
+mxFA1b2/xnand2/mp1 N_XFA1B2/N3_xFA1b2/xnand2/mp1_d N_B2_xFA1b2/xnand2/mp1_g
++ N_VDD_xFA1b2/xnand2/mp1_s N_VDD_xFA1b2/xnand2/mp0_b P_18 L=1.8e-07 W=5e-07
++ AD=2.5e-13 AS=1.35e-13 PD=1.5e-06 PS=5.4e-07
+mxFA1b2/xor1/xinv2/mp0 N_XFA1B2/XOR1/B__xFA1b2/xor1/xinv2/mp0_d
++ N_B2_xFA1b2/xor1/xinv2/mp0_g N_VDD_xFA1b2/xor1/xinv2/mp0_s
++ N_VDD_xFA1b0/xor1/xinv1/mp0_b P_18 L=1.8e-07 W=1e-06 AD=4.9e-13 AS=4.9e-13
++ PD=1.98e-06 PS=1.98e-06
+mxFA1b3/xor2/mp1 N_S3_xFA1b3/xor2/mp1_d N_XFA1B3/XOR2/B__xFA1b3/xor2/mp1_g
++ N_XFA1B3/XOR2/N1_xFA1b3/xor2/mp1_s N_VDD_xFA1b1/xor2/mp2_b P_18 L=1.8e-07
++ W=1e-06 AD=4.9e-13 AS=2.9e-13 PD=1.98e-06 PS=5.8e-07
+mxFA1b2/xnand1/mp0 N_XFA1B2/N2_xFA1b2/xnand1/mp0_d
++ N_XFA1B2/N1_xFA1b2/xnand1/mp0_g N_VDD_xFA1b2/xnand1/mp0_s
++ N_VDD_xFA1b2/xnand2/mp0_b P_18 L=1.8e-07 W=5e-07 AD=2.45e-13 AS=1.35e-13
++ PD=1.48e-06 PS=5.4e-07
+mxFA1b3/xor2/mp0 N_XFA1B3/XOR2/N1_xFA1b3/xor2/mp0_d
++ N_XFA1B3/N1_xFA1b3/xor2/mp0_g N_VDD_xFA1b3/xor2/mp0_s N_VDD_xFA1b1/xor2/mp2_b
++ P_18 L=1.8e-07 W=1e-06 AD=2.9e-13 AS=4.9e-13 PD=5.8e-07 PS=1.98e-06
+mxFA1b2/xnand1/mp1 N_XFA1B2/N2_xFA1b2/xnand1/mp1_d N_C2_xFA1b2/xnand1/mp1_g
++ N_VDD_xFA1b2/xnand1/mp1_s N_VDD_xFA1b2/xnand2/mp0_b P_18 L=1.8e-07 W=5e-07
++ AD=2.5e-13 AS=1.35e-13 PD=1.5e-06 PS=5.4e-07
+mxFA1b2/xor1/mp0 N_XFA1B2/XOR1/N1_xFA1b2/xor1/mp0_d N_A2_xFA1b2/xor1/mp0_g
++ N_VDD_xFA1b2/xor1/mp0_s N_VDD_xFA1b0/xor1/xinv1/mp0_b P_18 L=1.8e-07 W=1e-06
++ AD=2.9e-13 AS=4.9e-13 PD=5.8e-07 PS=1.98e-06
+mxFA1b2/xor1/mp1 N_XFA1B2/N1_xFA1b2/xor1/mp1_d
++ N_XFA1B2/XOR1/B__xFA1b2/xor1/mp1_g N_XFA1B2/XOR1/N1_xFA1b2/xor1/mp1_s
++ N_VDD_xFA1b0/xor1/xinv1/mp0_b P_18 L=1.8e-07 W=1e-06 AD=4.9e-13 AS=2.9e-13
++ PD=1.98e-06 PS=5.8e-07
+mxFA1b3/xor2/xinv2/mp0 N_XFA1B3/XOR2/B__xFA1b3/xor2/xinv2/mp0_d
++ N_C3_xFA1b3/xor2/xinv2/mp0_g N_VDD_xFA1b3/xor2/xinv2/mp0_s
++ N_VDD_xFA1b1/xor2/mp2_b P_18 L=1.8e-07 W=1e-06 AD=4.9e-13 AS=4.9e-13
++ PD=1.98e-06 PS=1.98e-06
+mxFA1b2/xnand3/mp1 N_C3_xFA1b2/xnand3/mp1_d N_XFA1B2/N3_xFA1b2/xnand3/mp1_g
++ N_VDD_xFA1b2/xnand3/mp1_s N_VDD_xFA1b2/xnand2/mp0_b P_18 L=1.8e-07 W=5e-07
++ AD=2.45e-13 AS=1.35e-13 PD=1.48e-06 PS=5.4e-07
+mxFA1b2/xnand3/mp0 N_C3_xFA1b2/xnand3/mp0_d N_XFA1B2/N2_xFA1b2/xnand3/mp0_g
++ N_VDD_xFA1b2/xnand3/mp0_s N_VDD_xFA1b2/xnand2/mp0_b P_18 L=1.8e-07 W=5e-07
++ AD=2.5e-13 AS=1.35e-13 PD=1.5e-06 PS=5.4e-07
+mxFA1b2/xor1/mp3 N_XFA1B2/N1_xFA1b2/xor1/mp3_d N_B2_xFA1b2/xor1/mp3_g
++ N_XFA1B2/XOR1/N2_xFA1b2/xor1/mp3_s N_VDD_xFA1b0/xor1/xinv1/mp0_b P_18
++ L=1.8e-07 W=1e-06 AD=4.9e-13 AS=2.9e-13 PD=1.98e-06 PS=5.8e-07
+mxFA1b3/xor2/xinv1/mp0 N_XFA1B3/XOR2/A__xFA1b3/xor2/xinv1/mp0_d
++ N_XFA1B3/N1_xFA1b3/xor2/xinv1/mp0_g N_VDD_xFA1b3/xor2/xinv1/mp0_s
++ N_VDD_xFA1b1/xor2/mp2_b P_18 L=1.8e-07 W=1e-06 AD=4.9e-13 AS=4.9e-13
++ PD=1.98e-06 PS=1.98e-06
+mxFA1b2/xor1/mp2 N_XFA1B2/XOR1/N2_xFA1b2/xor1/mp2_d
++ N_XFA1B2/XOR1/A__xFA1b2/xor1/mp2_g N_VDD_xFA1b2/xor1/mp2_s
++ N_VDD_xFA1b0/xor1/xinv1/mp0_b P_18 L=1.8e-07 W=1e-06 AD=2.9e-13 AS=4.9e-13
++ PD=5.8e-07 PS=1.98e-06
+mxFA1b3/xor1/mp2 N_XFA1B3/XOR1/N2_xFA1b3/xor1/mp2_d
++ N_XFA1B3/XOR1/A__xFA1b3/xor1/mp2_g N_VDD_xFA1b3/xor1/mp2_s
++ N_VDD_xFA1b1/xor2/mp2_b P_18 L=1.8e-07 W=1e-06 AD=2.9e-13 AS=4.9e-13
++ PD=5.8e-07 PS=1.98e-06
+mxFA1b2/xor2/xinv1/mp0 N_XFA1B2/XOR2/A__xFA1b2/xor2/xinv1/mp0_d
++ N_XFA1B2/N1_xFA1b2/xor2/xinv1/mp0_g N_VDD_xFA1b2/xor2/xinv1/mp0_s
++ N_VDD_xFA1b0/xor1/xinv1/mp0_b P_18 L=1.8e-07 W=1e-06 AD=4.9e-13 AS=4.9e-13
++ PD=1.98e-06 PS=1.98e-06
+mxFA1b3/xor1/mp3 N_XFA1B3/N1_xFA1b3/xor1/mp3_d N_B3_xFA1b3/xor1/mp3_g
++ N_XFA1B3/XOR1/N2_xFA1b3/xor1/mp3_s N_VDD_xFA1b1/xor2/mp2_b P_18 L=1.8e-07
++ W=1e-06 AD=4.9e-13 AS=2.9e-13 PD=1.98e-06 PS=5.8e-07
+mxFA1b3/xnand3/mp0 N_C4_xFA1b3/xnand3/mp0_d N_XFA1B3/N2_xFA1b3/xnand3/mp0_g
++ N_VDD_xFA1b3/xnand3/mp0_s N_VDD_xFA1b3/xnand3/mp0_b P_18 L=1.8e-07 W=5e-07
++ AD=2.5e-13 AS=1.35e-13 PD=1.5e-06 PS=5.4e-07
+mxFA1b3/xnand3/mp1 N_C4_xFA1b3/xnand3/mp1_d N_XFA1B3/N3_xFA1b3/xnand3/mp1_g
++ N_VDD_xFA1b3/xnand3/mp1_s N_VDD_xFA1b3/xnand3/mp0_b P_18 L=1.8e-07 W=5e-07
++ AD=2.45e-13 AS=1.35e-13 PD=1.48e-06 PS=5.4e-07
+mxFA1b2/xor2/xinv2/mp0 N_XFA1B2/XOR2/B__xFA1b2/xor2/xinv2/mp0_d
++ N_C2_xFA1b2/xor2/xinv2/mp0_g N_VDD_xFA1b2/xor2/xinv2/mp0_s
++ N_VDD_xFA1b0/xor1/xinv1/mp0_b P_18 L=1.8e-07 W=1e-06 AD=4.9e-13 AS=4.9e-13
++ PD=1.98e-06 PS=1.98e-06
+mxFA1b3/xor1/mp1 N_XFA1B3/N1_xFA1b3/xor1/mp1_d
++ N_XFA1B3/XOR1/B__xFA1b3/xor1/mp1_g N_XFA1B3/XOR1/N1_xFA1b3/xor1/mp1_s
++ N_VDD_xFA1b1/xor2/mp2_b P_18 L=1.8e-07 W=1e-06 AD=4.9e-13 AS=2.9e-13
++ PD=1.98e-06 PS=5.8e-07
+mxFA1b3/xor1/mp0 N_XFA1B3/XOR1/N1_xFA1b3/xor1/mp0_d N_A3_xFA1b3/xor1/mp0_g
++ N_VDD_xFA1b3/xor1/mp0_s N_VDD_xFA1b1/xor2/mp2_b P_18 L=1.8e-07 W=1e-06
++ AD=2.9e-13 AS=4.9e-13 PD=5.8e-07 PS=1.98e-06
+mxFA1b3/xnand1/mp1 N_XFA1B3/N2_xFA1b3/xnand1/mp1_d N_C3_xFA1b3/xnand1/mp1_g
++ N_VDD_xFA1b3/xnand1/mp1_s N_VDD_xFA1b3/xnand3/mp0_b P_18 L=1.8e-07 W=5e-07
++ AD=2.5e-13 AS=1.35e-13 PD=1.5e-06 PS=5.4e-07
+mxFA1b2/xor2/mp0 N_XFA1B2/XOR2/N1_xFA1b2/xor2/mp0_d
++ N_XFA1B2/N1_xFA1b2/xor2/mp0_g N_VDD_xFA1b2/xor2/mp0_s
++ N_VDD_xFA1b0/xor1/xinv1/mp0_b P_18 L=1.8e-07 W=1e-06 AD=2.9e-13 AS=4.9e-13
++ PD=5.8e-07 PS=1.98e-06
+mxFA1b3/xnand1/mp0 N_XFA1B3/N2_xFA1b3/xnand1/mp0_d
++ N_XFA1B3/N1_xFA1b3/xnand1/mp0_g N_VDD_xFA1b3/xnand1/mp0_s
++ N_VDD_xFA1b3/xnand3/mp0_b P_18 L=1.8e-07 W=5e-07 AD=2.45e-13 AS=1.35e-13
++ PD=1.48e-06 PS=5.4e-07
+mxFA1b2/xor2/mp1 N_S2_xFA1b2/xor2/mp1_d N_XFA1B2/XOR2/B__xFA1b2/xor2/mp1_g
++ N_XFA1B2/XOR2/N1_xFA1b2/xor2/mp1_s N_VDD_xFA1b0/xor1/xinv1/mp0_b P_18
++ L=1.8e-07 W=1e-06 AD=4.9e-13 AS=2.9e-13 PD=1.98e-06 PS=5.8e-07
+mxFA1b3/xor1/xinv2/mp0 N_XFA1B3/XOR1/B__xFA1b3/xor1/xinv2/mp0_d
++ N_B3_xFA1b3/xor1/xinv2/mp0_g N_VDD_xFA1b3/xor1/xinv2/mp0_s
++ N_VDD_xFA1b1/xor2/mp2_b P_18 L=1.8e-07 W=1e-06 AD=4.9e-13 AS=4.9e-13
++ PD=1.98e-06 PS=1.98e-06
+mxFA1b3/xnand2/mp1 N_XFA1B3/N3_xFA1b3/xnand2/mp1_d N_B3_xFA1b3/xnand2/mp1_g
++ N_VDD_xFA1b3/xnand2/mp1_s N_VDD_xFA1b3/xnand3/mp0_b P_18 L=1.8e-07 W=5e-07
++ AD=2.5e-13 AS=1.35e-13 PD=1.5e-06 PS=5.4e-07
+mxFA1b2/xor2/mp3 N_S2_xFA1b2/xor2/mp3_d N_C2_xFA1b2/xor2/mp3_g
++ N_XFA1B2/XOR2/N2_xFA1b2/xor2/mp3_s N_VDD_xFA1b0/xor1/xinv1/mp0_b P_18
++ L=1.8e-07 W=1e-06 AD=4.9e-13 AS=2.9e-13 PD=1.98e-06 PS=5.8e-07
+mxFA1b3/xor1/xinv1/mp0 N_XFA1B3/XOR1/A__xFA1b3/xor1/xinv1/mp0_d
++ N_A3_xFA1b3/xor1/xinv1/mp0_g N_VDD_xFA1b3/xor1/xinv1/mp0_s
++ N_VDD_xFA1b1/xor2/mp2_b P_18 L=1.8e-07 W=1e-06 AD=4.9e-13 AS=4.9e-13
++ PD=1.98e-06 PS=1.98e-06
+mxFA1b3/xnand2/mp0 N_XFA1B3/N3_xFA1b3/xnand2/mp0_d N_A3_xFA1b3/xnand2/mp0_g
++ N_VDD_xFA1b3/xnand2/mp0_s N_VDD_xFA1b3/xnand3/mp0_b P_18 L=1.8e-07 W=5e-07
++ AD=2.45e-13 AS=1.35e-13 PD=1.48e-06 PS=5.4e-07
+mxFA1b2/xor2/mp2 N_XFA1B2/XOR2/N2_xFA1b2/xor2/mp2_d
++ N_XFA1B2/XOR2/A__xFA1b2/xor2/mp2_g N_VDD_xFA1b2/xor2/mp2_s
++ N_VDD_xFA1b0/xor1/xinv1/mp0_b P_18 L=1.8e-07 W=1e-06 AD=2.9e-13 AS=4.9e-13
++ PD=5.8e-07 PS=1.98e-06
+mxFA1b5/xor2/mp2 N_XFA1B5/XOR2/N2_xFA1b5/xor2/mp2_d
++ N_XFA1B5/XOR2/A__xFA1b5/xor2/mp2_g N_VDD_xFA1b5/xor2/mp2_s
++ N_VDD_xFA1b1/xor2/mp2_b P_18 L=1.8e-07 W=1e-06 AD=2.9e-13 AS=4.9e-13
++ PD=5.8e-07 PS=1.98e-06
+mxFA1b4/xnand2/mp0 N_XFA1B4/N3_xFA1b4/xnand2/mp0_d N_A4_xFA1b4/xnand2/mp0_g
++ N_VDD_xFA1b4/xnand2/mp0_s N_VDD_xFA1b4/xnand2/mp0_b P_18 L=1.8e-07 W=5e-07
++ AD=2.45e-13 AS=1.35e-13 PD=1.48e-06 PS=5.4e-07
+mxFA1b4/xor1/xinv1/mp0 N_XFA1B4/XOR1/A__xFA1b4/xor1/xinv1/mp0_d
++ N_A4_xFA1b4/xor1/xinv1/mp0_g N_VDD_xFA1b4/xor1/xinv1/mp0_s
++ N_VDD_xFA1b0/xor1/xinv1/mp0_b P_18 L=1.8e-07 W=1e-06 AD=4.9e-13 AS=4.9e-13
++ PD=1.98e-06 PS=1.98e-06
+mxFA1b5/xor2/mp3 N_S5_xFA1b5/xor2/mp3_d N_C5_xFA1b5/xor2/mp3_g
++ N_XFA1B5/XOR2/N2_xFA1b5/xor2/mp3_s N_VDD_xFA1b1/xor2/mp2_b P_18 L=1.8e-07
++ W=1e-06 AD=4.9e-13 AS=2.9e-13 PD=1.98e-06 PS=5.8e-07
+mxFA1b4/xnand2/mp1 N_XFA1B4/N3_xFA1b4/xnand2/mp1_d N_B4_xFA1b4/xnand2/mp1_g
++ N_VDD_xFA1b4/xnand2/mp1_s N_VDD_xFA1b4/xnand2/mp0_b P_18 L=1.8e-07 W=5e-07
++ AD=2.5e-13 AS=1.35e-13 PD=1.5e-06 PS=5.4e-07
+mxFA1b4/xor1/xinv2/mp0 N_XFA1B4/XOR1/B__xFA1b4/xor1/xinv2/mp0_d
++ N_B4_xFA1b4/xor1/xinv2/mp0_g N_VDD_xFA1b4/xor1/xinv2/mp0_s
++ N_VDD_xFA1b0/xor1/xinv1/mp0_b P_18 L=1.8e-07 W=1e-06 AD=4.9e-13 AS=4.9e-13
++ PD=1.98e-06 PS=1.98e-06
+mxFA1b5/xor2/mp1 N_S5_xFA1b5/xor2/mp1_d N_XFA1B5/XOR2/B__xFA1b5/xor2/mp1_g
++ N_XFA1B5/XOR2/N1_xFA1b5/xor2/mp1_s N_VDD_xFA1b1/xor2/mp2_b P_18 L=1.8e-07
++ W=1e-06 AD=4.9e-13 AS=2.9e-13 PD=1.98e-06 PS=5.8e-07
+mxFA1b4/xnand1/mp0 N_XFA1B4/N2_xFA1b4/xnand1/mp0_d
++ N_XFA1B4/N1_xFA1b4/xnand1/mp0_g N_VDD_xFA1b4/xnand1/mp0_s
++ N_VDD_xFA1b4/xnand2/mp0_b P_18 L=1.8e-07 W=5e-07 AD=2.45e-13 AS=1.35e-13
++ PD=1.48e-06 PS=5.4e-07
+mxFA1b5/xor2/mp0 N_XFA1B5/XOR2/N1_xFA1b5/xor2/mp0_d
++ N_XFA1B5/N1_xFA1b5/xor2/mp0_g N_VDD_xFA1b5/xor2/mp0_s N_VDD_xFA1b1/xor2/mp2_b
++ P_18 L=1.8e-07 W=1e-06 AD=2.9e-13 AS=4.9e-13 PD=5.8e-07 PS=1.98e-06
+mxFA1b4/xnand1/mp1 N_XFA1B4/N2_xFA1b4/xnand1/mp1_d N_C4_xFA1b4/xnand1/mp1_g
++ N_VDD_xFA1b4/xnand1/mp1_s N_VDD_xFA1b4/xnand2/mp0_b P_18 L=1.8e-07 W=5e-07
++ AD=2.5e-13 AS=1.35e-13 PD=1.5e-06 PS=5.4e-07
+mxFA1b4/xor1/mp0 N_XFA1B4/XOR1/N1_xFA1b4/xor1/mp0_d N_A4_xFA1b4/xor1/mp0_g
++ N_VDD_xFA1b4/xor1/mp0_s N_VDD_xFA1b0/xor1/xinv1/mp0_b P_18 L=1.8e-07 W=1e-06
++ AD=2.9e-13 AS=4.9e-13 PD=5.8e-07 PS=1.98e-06
+mxFA1b4/xor1/mp1 N_XFA1B4/N1_xFA1b4/xor1/mp1_d
++ N_XFA1B4/XOR1/B__xFA1b4/xor1/mp1_g N_XFA1B4/XOR1/N1_xFA1b4/xor1/mp1_s
++ N_VDD_xFA1b0/xor1/xinv1/mp0_b P_18 L=1.8e-07 W=1e-06 AD=4.9e-13 AS=2.9e-13
++ PD=1.98e-06 PS=5.8e-07
+mxFA1b5/xor2/xinv2/mp0 N_XFA1B5/XOR2/B__xFA1b5/xor2/xinv2/mp0_d
++ N_C5_xFA1b5/xor2/xinv2/mp0_g N_VDD_xFA1b5/xor2/xinv2/mp0_s
++ N_VDD_xFA1b1/xor2/mp2_b P_18 L=1.8e-07 W=1e-06 AD=4.9e-13 AS=4.9e-13
++ PD=1.98e-06 PS=1.98e-06
+mxFA1b4/xnand3/mp1 N_C5_xFA1b4/xnand3/mp1_d N_XFA1B4/N3_xFA1b4/xnand3/mp1_g
++ N_VDD_xFA1b4/xnand3/mp1_s N_VDD_xFA1b4/xnand2/mp0_b P_18 L=1.8e-07 W=5e-07
++ AD=2.45e-13 AS=1.35e-13 PD=1.48e-06 PS=5.4e-07
+mxFA1b4/xnand3/mp0 N_C5_xFA1b4/xnand3/mp0_d N_XFA1B4/N2_xFA1b4/xnand3/mp0_g
++ N_VDD_xFA1b4/xnand3/mp0_s N_VDD_xFA1b4/xnand2/mp0_b P_18 L=1.8e-07 W=5e-07
++ AD=2.5e-13 AS=1.35e-13 PD=1.5e-06 PS=5.4e-07
+mxFA1b4/xor1/mp3 N_XFA1B4/N1_xFA1b4/xor1/mp3_d N_B4_xFA1b4/xor1/mp3_g
++ N_XFA1B4/XOR1/N2_xFA1b4/xor1/mp3_s N_VDD_xFA1b0/xor1/xinv1/mp0_b P_18
++ L=1.8e-07 W=1e-06 AD=4.9e-13 AS=2.9e-13 PD=1.98e-06 PS=5.8e-07
+mxFA1b5/xor2/xinv1/mp0 N_XFA1B5/XOR2/A__xFA1b5/xor2/xinv1/mp0_d
++ N_XFA1B5/N1_xFA1b5/xor2/xinv1/mp0_g N_VDD_xFA1b5/xor2/xinv1/mp0_s
++ N_VDD_xFA1b1/xor2/mp2_b P_18 L=1.8e-07 W=1e-06 AD=4.9e-13 AS=4.9e-13
++ PD=1.98e-06 PS=1.98e-06
+mxFA1b4/xor1/mp2 N_XFA1B4/XOR1/N2_xFA1b4/xor1/mp2_d
++ N_XFA1B4/XOR1/A__xFA1b4/xor1/mp2_g N_VDD_xFA1b4/xor1/mp2_s
++ N_VDD_xFA1b0/xor1/xinv1/mp0_b P_18 L=1.8e-07 W=1e-06 AD=2.9e-13 AS=4.9e-13
++ PD=5.8e-07 PS=1.98e-06
+mxFA1b5/xor1/mp2 N_XFA1B5/XOR1/N2_xFA1b5/xor1/mp2_d
++ N_XFA1B5/XOR1/A__xFA1b5/xor1/mp2_g N_VDD_xFA1b5/xor1/mp2_s
++ N_VDD_xFA1b1/xor2/mp2_b P_18 L=1.8e-07 W=1e-06 AD=2.9e-13 AS=4.9e-13
++ PD=5.8e-07 PS=1.98e-06
+mxFA1b4/xor2/xinv1/mp0 N_XFA1B4/XOR2/A__xFA1b4/xor2/xinv1/mp0_d
++ N_XFA1B4/N1_xFA1b4/xor2/xinv1/mp0_g N_VDD_xFA1b4/xor2/xinv1/mp0_s
++ N_VDD_xFA1b0/xor1/xinv1/mp0_b P_18 L=1.8e-07 W=1e-06 AD=4.9e-13 AS=4.9e-13
++ PD=1.98e-06 PS=1.98e-06
+mxFA1b5/xor1/mp3 N_XFA1B5/N1_xFA1b5/xor1/mp3_d N_B5_xFA1b5/xor1/mp3_g
++ N_XFA1B5/XOR1/N2_xFA1b5/xor1/mp3_s N_VDD_xFA1b1/xor2/mp2_b P_18 L=1.8e-07
++ W=1e-06 AD=4.9e-13 AS=2.9e-13 PD=1.98e-06 PS=5.8e-07
+mxFA1b5/xnand3/mp0 N_C6_xFA1b5/xnand3/mp0_d N_XFA1B5/N2_xFA1b5/xnand3/mp0_g
++ N_VDD_xFA1b5/xnand3/mp0_s N_VDD_xFA1b5/xnand3/mp0_b P_18 L=1.8e-07 W=5e-07
++ AD=2.5e-13 AS=1.35e-13 PD=1.5e-06 PS=5.4e-07
+mxFA1b5/xnand3/mp1 N_C6_xFA1b5/xnand3/mp1_d N_XFA1B5/N3_xFA1b5/xnand3/mp1_g
++ N_VDD_xFA1b5/xnand3/mp1_s N_VDD_xFA1b5/xnand3/mp0_b P_18 L=1.8e-07 W=5e-07
++ AD=2.45e-13 AS=1.35e-13 PD=1.48e-06 PS=5.4e-07
+mxFA1b4/xor2/xinv2/mp0 N_XFA1B4/XOR2/B__xFA1b4/xor2/xinv2/mp0_d
++ N_C4_xFA1b4/xor2/xinv2/mp0_g N_VDD_xFA1b4/xor2/xinv2/mp0_s
++ N_VDD_xFA1b0/xor1/xinv1/mp0_b P_18 L=1.8e-07 W=1e-06 AD=4.9e-13 AS=4.9e-13
++ PD=1.98e-06 PS=1.98e-06
+mxFA1b5/xor1/mp1 N_XFA1B5/N1_xFA1b5/xor1/mp1_d
++ N_XFA1B5/XOR1/B__xFA1b5/xor1/mp1_g N_XFA1B5/XOR1/N1_xFA1b5/xor1/mp1_s
++ N_VDD_xFA1b1/xor2/mp2_b P_18 L=1.8e-07 W=1e-06 AD=4.9e-13 AS=2.9e-13
++ PD=1.98e-06 PS=5.8e-07
+mxFA1b5/xor1/mp0 N_XFA1B5/XOR1/N1_xFA1b5/xor1/mp0_d N_A5_xFA1b5/xor1/mp0_g
++ N_VDD_xFA1b5/xor1/mp0_s N_VDD_xFA1b1/xor2/mp2_b P_18 L=1.8e-07 W=1e-06
++ AD=2.9e-13 AS=4.9e-13 PD=5.8e-07 PS=1.98e-06
+mxFA1b5/xnand1/mp1 N_XFA1B5/N2_xFA1b5/xnand1/mp1_d N_C5_xFA1b5/xnand1/mp1_g
++ N_VDD_xFA1b5/xnand1/mp1_s N_VDD_xFA1b5/xnand3/mp0_b P_18 L=1.8e-07 W=5e-07
++ AD=2.5e-13 AS=1.35e-13 PD=1.5e-06 PS=5.4e-07
+mxFA1b4/xor2/mp0 N_XFA1B4/XOR2/N1_xFA1b4/xor2/mp0_d
++ N_XFA1B4/N1_xFA1b4/xor2/mp0_g N_VDD_xFA1b4/xor2/mp0_s
++ N_VDD_xFA1b0/xor1/xinv1/mp0_b P_18 L=1.8e-07 W=1e-06 AD=2.9e-13 AS=4.9e-13
++ PD=5.8e-07 PS=1.98e-06
+mxFA1b5/xnand1/mp0 N_XFA1B5/N2_xFA1b5/xnand1/mp0_d
++ N_XFA1B5/N1_xFA1b5/xnand1/mp0_g N_VDD_xFA1b5/xnand1/mp0_s
++ N_VDD_xFA1b5/xnand3/mp0_b P_18 L=1.8e-07 W=5e-07 AD=2.45e-13 AS=1.35e-13
++ PD=1.48e-06 PS=5.4e-07
+mxFA1b4/xor2/mp1 N_S4_xFA1b4/xor2/mp1_d N_XFA1B4/XOR2/B__xFA1b4/xor2/mp1_g
++ N_XFA1B4/XOR2/N1_xFA1b4/xor2/mp1_s N_VDD_xFA1b0/xor1/xinv1/mp0_b P_18
++ L=1.8e-07 W=1e-06 AD=4.9e-13 AS=2.9e-13 PD=1.98e-06 PS=5.8e-07
+mxFA1b5/xor1/xinv2/mp0 N_XFA1B5/XOR1/B__xFA1b5/xor1/xinv2/mp0_d
++ N_B5_xFA1b5/xor1/xinv2/mp0_g N_VDD_xFA1b5/xor1/xinv2/mp0_s
++ N_VDD_xFA1b1/xor2/mp2_b P_18 L=1.8e-07 W=1e-06 AD=4.9e-13 AS=4.9e-13
++ PD=1.98e-06 PS=1.98e-06
+mxFA1b5/xnand2/mp1 N_XFA1B5/N3_xFA1b5/xnand2/mp1_d N_B5_xFA1b5/xnand2/mp1_g
++ N_VDD_xFA1b5/xnand2/mp1_s N_VDD_xFA1b5/xnand3/mp0_b P_18 L=1.8e-07 W=5e-07
++ AD=2.5e-13 AS=1.35e-13 PD=1.5e-06 PS=5.4e-07
+mxFA1b4/xor2/mp3 N_S4_xFA1b4/xor2/mp3_d N_C4_xFA1b4/xor2/mp3_g
++ N_XFA1B4/XOR2/N2_xFA1b4/xor2/mp3_s N_VDD_xFA1b0/xor1/xinv1/mp0_b P_18
++ L=1.8e-07 W=1e-06 AD=4.9e-13 AS=2.9e-13 PD=1.98e-06 PS=5.8e-07
+mxFA1b5/xor1/xinv1/mp0 N_XFA1B5/XOR1/A__xFA1b5/xor1/xinv1/mp0_d
++ N_A5_xFA1b5/xor1/xinv1/mp0_g N_VDD_xFA1b5/xor1/xinv1/mp0_s
++ N_VDD_xFA1b1/xor2/mp2_b P_18 L=1.8e-07 W=1e-06 AD=4.9e-13 AS=4.9e-13
++ PD=1.98e-06 PS=1.98e-06
+mxFA1b5/xnand2/mp0 N_XFA1B5/N3_xFA1b5/xnand2/mp0_d N_A5_xFA1b5/xnand2/mp0_g
++ N_VDD_xFA1b5/xnand2/mp0_s N_VDD_xFA1b5/xnand3/mp0_b P_18 L=1.8e-07 W=5e-07
++ AD=2.45e-13 AS=1.35e-13 PD=1.48e-06 PS=5.4e-07
+mxFA1b4/xor2/mp2 N_XFA1B4/XOR2/N2_xFA1b4/xor2/mp2_d
++ N_XFA1B4/XOR2/A__xFA1b4/xor2/mp2_g N_VDD_xFA1b4/xor2/mp2_s
++ N_VDD_xFA1b0/xor1/xinv1/mp0_b P_18 L=1.8e-07 W=1e-06 AD=2.9e-13 AS=4.9e-13
++ PD=5.8e-07 PS=1.98e-06
+mxFA1b7/xor2/mp2 N_XFA1B7/XOR2/N2_xFA1b7/xor2/mp2_d
++ N_XFA1B7/XOR2/A__xFA1b7/xor2/mp2_g N_VDD_xFA1b7/xor2/mp2_s
++ N_VDD_xFA1b1/xor2/mp2_b P_18 L=1.8e-07 W=1e-06 AD=2.9e-13 AS=4.9e-13
++ PD=5.8e-07 PS=1.98e-06
+mxFA1b6/xnand2/mp0 N_XFA1B6/N3_xFA1b6/xnand2/mp0_d N_A6_xFA1b6/xnand2/mp0_g
++ N_VDD_xFA1b6/xnand2/mp0_s N_VDD_xFA1b6/xnand2/mp0_b P_18 L=1.8e-07 W=5e-07
++ AD=2.45e-13 AS=1.35e-13 PD=1.48e-06 PS=5.4e-07
+mxFA1b6/xor1/xinv1/mp0 N_XFA1B6/XOR1/A__xFA1b6/xor1/xinv1/mp0_d
++ N_A6_xFA1b6/xor1/xinv1/mp0_g N_VDD_xFA1b6/xor1/xinv1/mp0_s
++ N_VDD_xFA1b0/xor1/xinv1/mp0_b P_18 L=1.8e-07 W=1e-06 AD=4.9e-13 AS=4.9e-13
++ PD=1.98e-06 PS=1.98e-06
+mxFA1b7/xor2/mp3 N_S7_xFA1b7/xor2/mp3_d N_C7_xFA1b7/xor2/mp3_g
++ N_XFA1B7/XOR2/N2_xFA1b7/xor2/mp3_s N_VDD_xFA1b1/xor2/mp2_b P_18 L=1.8e-07
++ W=1e-06 AD=4.9e-13 AS=2.9e-13 PD=1.98e-06 PS=5.8e-07
+mxFA1b6/xnand2/mp1 N_XFA1B6/N3_xFA1b6/xnand2/mp1_d N_B6_xFA1b6/xnand2/mp1_g
++ N_VDD_xFA1b6/xnand2/mp1_s N_VDD_xFA1b6/xnand2/mp0_b P_18 L=1.8e-07 W=5e-07
++ AD=2.5e-13 AS=1.35e-13 PD=1.5e-06 PS=5.4e-07
+mxFA1b6/xor1/xinv2/mp0 N_XFA1B6/XOR1/B__xFA1b6/xor1/xinv2/mp0_d
++ N_B6_xFA1b6/xor1/xinv2/mp0_g N_VDD_xFA1b6/xor1/xinv2/mp0_s
++ N_VDD_xFA1b0/xor1/xinv1/mp0_b P_18 L=1.8e-07 W=1e-06 AD=4.9e-13 AS=4.9e-13
++ PD=1.98e-06 PS=1.98e-06
+mxFA1b7/xor2/mp1 N_S7_xFA1b7/xor2/mp1_d N_XFA1B7/XOR2/B__xFA1b7/xor2/mp1_g
++ N_XFA1B7/XOR2/N1_xFA1b7/xor2/mp1_s N_VDD_xFA1b1/xor2/mp2_b P_18 L=1.8e-07
++ W=1e-06 AD=4.9e-13 AS=2.9e-13 PD=1.98e-06 PS=5.8e-07
+mxFA1b6/xnand1/mp0 N_XFA1B6/N2_xFA1b6/xnand1/mp0_d
++ N_XFA1B6/N1_xFA1b6/xnand1/mp0_g N_VDD_xFA1b6/xnand1/mp0_s
++ N_VDD_xFA1b6/xnand2/mp0_b P_18 L=1.8e-07 W=5e-07 AD=2.45e-13 AS=1.35e-13
++ PD=1.48e-06 PS=5.4e-07
+mxFA1b7/xor2/mp0 N_XFA1B7/XOR2/N1_xFA1b7/xor2/mp0_d
++ N_XFA1B7/N1_xFA1b7/xor2/mp0_g N_VDD_xFA1b7/xor2/mp0_s N_VDD_xFA1b1/xor2/mp2_b
++ P_18 L=1.8e-07 W=1e-06 AD=2.9e-13 AS=4.9e-13 PD=5.8e-07 PS=1.98e-06
+mxFA1b6/xnand1/mp1 N_XFA1B6/N2_xFA1b6/xnand1/mp1_d N_C6_xFA1b6/xnand1/mp1_g
++ N_VDD_xFA1b6/xnand1/mp1_s N_VDD_xFA1b6/xnand2/mp0_b P_18 L=1.8e-07 W=5e-07
++ AD=2.5e-13 AS=1.35e-13 PD=1.5e-06 PS=5.4e-07
+mxFA1b6/xor1/mp0 N_XFA1B6/XOR1/N1_xFA1b6/xor1/mp0_d N_A6_xFA1b6/xor1/mp0_g
++ N_VDD_xFA1b6/xor1/mp0_s N_VDD_xFA1b0/xor1/xinv1/mp0_b P_18 L=1.8e-07 W=1e-06
++ AD=2.9e-13 AS=4.9e-13 PD=5.8e-07 PS=1.98e-06
+mxFA1b6/xor1/mp1 N_XFA1B6/N1_xFA1b6/xor1/mp1_d
++ N_XFA1B6/XOR1/B__xFA1b6/xor1/mp1_g N_XFA1B6/XOR1/N1_xFA1b6/xor1/mp1_s
++ N_VDD_xFA1b0/xor1/xinv1/mp0_b P_18 L=1.8e-07 W=1e-06 AD=4.9e-13 AS=2.9e-13
++ PD=1.98e-06 PS=5.8e-07
+mxFA1b7/xor2/xinv2/mp0 N_XFA1B7/XOR2/B__xFA1b7/xor2/xinv2/mp0_d
++ N_C7_xFA1b7/xor2/xinv2/mp0_g N_VDD_xFA1b7/xor2/xinv2/mp0_s
++ N_VDD_xFA1b1/xor2/mp2_b P_18 L=1.8e-07 W=1e-06 AD=4.9e-13 AS=4.9e-13
++ PD=1.98e-06 PS=1.98e-06
+mxFA1b6/xnand3/mp1 N_C7_xFA1b6/xnand3/mp1_d N_XFA1B6/N3_xFA1b6/xnand3/mp1_g
++ N_VDD_xFA1b6/xnand3/mp1_s N_VDD_xFA1b6/xnand2/mp0_b P_18 L=1.8e-07 W=5e-07
++ AD=2.45e-13 AS=1.35e-13 PD=1.48e-06 PS=5.4e-07
+mxFA1b6/xnand3/mp0 N_C7_xFA1b6/xnand3/mp0_d N_XFA1B6/N2_xFA1b6/xnand3/mp0_g
++ N_VDD_xFA1b6/xnand3/mp0_s N_VDD_xFA1b6/xnand2/mp0_b P_18 L=1.8e-07 W=5e-07
++ AD=2.5e-13 AS=1.35e-13 PD=1.5e-06 PS=5.4e-07
+mxFA1b6/xor1/mp3 N_XFA1B6/N1_xFA1b6/xor1/mp3_d N_B6_xFA1b6/xor1/mp3_g
++ N_XFA1B6/XOR1/N2_xFA1b6/xor1/mp3_s N_VDD_xFA1b0/xor1/xinv1/mp0_b P_18
++ L=1.8e-07 W=1e-06 AD=4.9e-13 AS=2.9e-13 PD=1.98e-06 PS=5.8e-07
+mxFA1b7/xor2/xinv1/mp0 N_XFA1B7/XOR2/A__xFA1b7/xor2/xinv1/mp0_d
++ N_XFA1B7/N1_xFA1b7/xor2/xinv1/mp0_g N_VDD_xFA1b7/xor2/xinv1/mp0_s
++ N_VDD_xFA1b1/xor2/mp2_b P_18 L=1.8e-07 W=1e-06 AD=4.9e-13 AS=4.9e-13
++ PD=1.98e-06 PS=1.98e-06
+mxFA1b6/xor1/mp2 N_XFA1B6/XOR1/N2_xFA1b6/xor1/mp2_d
++ N_XFA1B6/XOR1/A__xFA1b6/xor1/mp2_g N_VDD_xFA1b6/xor1/mp2_s
++ N_VDD_xFA1b0/xor1/xinv1/mp0_b P_18 L=1.8e-07 W=1e-06 AD=2.9e-13 AS=4.9e-13
++ PD=5.8e-07 PS=1.98e-06
+mxFA1b7/xor1/mp2 N_XFA1B7/XOR1/N2_xFA1b7/xor1/mp2_d
++ N_XFA1B7/XOR1/A__xFA1b7/xor1/mp2_g N_VDD_xFA1b7/xor1/mp2_s
++ N_VDD_xFA1b1/xor2/mp2_b P_18 L=1.8e-07 W=1e-06 AD=2.9e-13 AS=4.9e-13
++ PD=5.8e-07 PS=1.98e-06
+mxFA1b6/xor2/xinv1/mp0 N_XFA1B6/XOR2/A__xFA1b6/xor2/xinv1/mp0_d
++ N_XFA1B6/N1_xFA1b6/xor2/xinv1/mp0_g N_VDD_xFA1b6/xor2/xinv1/mp0_s
++ N_VDD_xFA1b0/xor1/xinv1/mp0_b P_18 L=1.8e-07 W=1e-06 AD=4.9e-13 AS=4.9e-13
++ PD=1.98e-06 PS=1.98e-06
+mxFA1b7/xor1/mp3 N_XFA1B7/N1_xFA1b7/xor1/mp3_d N_B7_xFA1b7/xor1/mp3_g
++ N_XFA1B7/XOR1/N2_xFA1b7/xor1/mp3_s N_VDD_xFA1b1/xor2/mp2_b P_18 L=1.8e-07
++ W=1e-06 AD=4.9e-13 AS=2.9e-13 PD=1.98e-06 PS=5.8e-07
+mxFA1b7/xnand3/mp0 N_COUT_xFA1b7/xnand3/mp0_d N_XFA1B7/N2_xFA1b7/xnand3/mp0_g
++ N_VDD_xFA1b7/xnand3/mp0_s N_VDD_xFA1b7/xnand3/mp0_b P_18 L=1.8e-07 W=5e-07
++ AD=2.5e-13 AS=1.35e-13 PD=1.5e-06 PS=5.4e-07
+mxFA1b7/xnand3/mp1 N_COUT_xFA1b7/xnand3/mp1_d N_XFA1B7/N3_xFA1b7/xnand3/mp1_g
++ N_VDD_xFA1b7/xnand3/mp1_s N_VDD_xFA1b7/xnand3/mp0_b P_18 L=1.8e-07 W=5e-07
++ AD=2.45e-13 AS=1.35e-13 PD=1.48e-06 PS=5.4e-07
+mxFA1b6/xor2/xinv2/mp0 N_XFA1B6/XOR2/B__xFA1b6/xor2/xinv2/mp0_d
++ N_C6_xFA1b6/xor2/xinv2/mp0_g N_VDD_xFA1b6/xor2/xinv2/mp0_s
++ N_VDD_xFA1b0/xor1/xinv1/mp0_b P_18 L=1.8e-07 W=1e-06 AD=4.9e-13 AS=4.9e-13
++ PD=1.98e-06 PS=1.98e-06
+mxFA1b7/xor1/mp1 N_XFA1B7/N1_xFA1b7/xor1/mp1_d
++ N_XFA1B7/XOR1/B__xFA1b7/xor1/mp1_g N_XFA1B7/XOR1/N1_xFA1b7/xor1/mp1_s
++ N_VDD_xFA1b1/xor2/mp2_b P_18 L=1.8e-07 W=1e-06 AD=4.9e-13 AS=2.9e-13
++ PD=1.98e-06 PS=5.8e-07
+mxFA1b7/xor1/mp0 N_XFA1B7/XOR1/N1_xFA1b7/xor1/mp0_d N_A7_xFA1b7/xor1/mp0_g
++ N_VDD_xFA1b7/xor1/mp0_s N_VDD_xFA1b1/xor2/mp2_b P_18 L=1.8e-07 W=1e-06
++ AD=2.9e-13 AS=4.9e-13 PD=5.8e-07 PS=1.98e-06
+mxFA1b7/xnand1/mp1 N_XFA1B7/N2_xFA1b7/xnand1/mp1_d N_C7_xFA1b7/xnand1/mp1_g
++ N_VDD_xFA1b7/xnand1/mp1_s N_VDD_xFA1b7/xnand3/mp0_b P_18 L=1.8e-07 W=5e-07
++ AD=2.5e-13 AS=1.35e-13 PD=1.5e-06 PS=5.4e-07
+mxFA1b6/xor2/mp0 N_XFA1B6/XOR2/N1_xFA1b6/xor2/mp0_d
++ N_XFA1B6/N1_xFA1b6/xor2/mp0_g N_VDD_xFA1b6/xor2/mp0_s
++ N_VDD_xFA1b0/xor1/xinv1/mp0_b P_18 L=1.8e-07 W=1e-06 AD=2.9e-13 AS=4.9e-13
++ PD=5.8e-07 PS=1.98e-06
+mxFA1b7/xnand1/mp0 N_XFA1B7/N2_xFA1b7/xnand1/mp0_d
++ N_XFA1B7/N1_xFA1b7/xnand1/mp0_g N_VDD_xFA1b7/xnand1/mp0_s
++ N_VDD_xFA1b7/xnand3/mp0_b P_18 L=1.8e-07 W=5e-07 AD=2.45e-13 AS=1.35e-13
++ PD=1.48e-06 PS=5.4e-07
+mxFA1b6/xor2/mp1 N_S6_xFA1b6/xor2/mp1_d N_XFA1B6/XOR2/B__xFA1b6/xor2/mp1_g
++ N_XFA1B6/XOR2/N1_xFA1b6/xor2/mp1_s N_VDD_xFA1b0/xor1/xinv1/mp0_b P_18
++ L=1.8e-07 W=1e-06 AD=4.9e-13 AS=2.9e-13 PD=1.98e-06 PS=5.8e-07
+mxFA1b7/xor1/xinv2/mp0 N_XFA1B7/XOR1/B__xFA1b7/xor1/xinv2/mp0_d
++ N_B7_xFA1b7/xor1/xinv2/mp0_g N_VDD_xFA1b7/xor1/xinv2/mp0_s
++ N_VDD_xFA1b1/xor2/mp2_b P_18 L=1.8e-07 W=1e-06 AD=4.9e-13 AS=4.9e-13
++ PD=1.98e-06 PS=1.98e-06
+mxFA1b7/xnand2/mp1 N_XFA1B7/N3_xFA1b7/xnand2/mp1_d N_B7_xFA1b7/xnand2/mp1_g
++ N_VDD_xFA1b7/xnand2/mp1_s N_VDD_xFA1b7/xnand3/mp0_b P_18 L=1.8e-07 W=5e-07
++ AD=2.5e-13 AS=1.35e-13 PD=1.5e-06 PS=5.4e-07
+mxFA1b6/xor2/mp3 N_S6_xFA1b6/xor2/mp3_d N_C6_xFA1b6/xor2/mp3_g
++ N_XFA1B6/XOR2/N2_xFA1b6/xor2/mp3_s N_VDD_xFA1b0/xor1/xinv1/mp0_b P_18
++ L=1.8e-07 W=1e-06 AD=4.9e-13 AS=2.9e-13 PD=1.98e-06 PS=5.8e-07
+mxFA1b7/xor1/xinv1/mp0 N_XFA1B7/XOR1/A__xFA1b7/xor1/xinv1/mp0_d
++ N_A7_xFA1b7/xor1/xinv1/mp0_g N_VDD_xFA1b7/xor1/xinv1/mp0_s
++ N_VDD_xFA1b1/xor2/mp2_b P_18 L=1.8e-07 W=1e-06 AD=4.9e-13 AS=4.9e-13
++ PD=1.98e-06 PS=1.98e-06
+mxFA1b7/xnand2/mp0 N_XFA1B7/N3_xFA1b7/xnand2/mp0_d N_A7_xFA1b7/xnand2/mp0_g
++ N_VDD_xFA1b7/xnand2/mp0_s N_VDD_xFA1b7/xnand3/mp0_b P_18 L=1.8e-07 W=5e-07
++ AD=2.45e-13 AS=1.35e-13 PD=1.48e-06 PS=5.4e-07
+mxFA1b6/xor2/mp2 N_XFA1B6/XOR2/N2_xFA1b6/xor2/mp2_d
++ N_XFA1B6/XOR2/A__xFA1b6/xor2/mp2_g N_VDD_xFA1b6/xor2/mp2_s
++ N_VDD_xFA1b0/xor1/xinv1/mp0_b P_18 L=1.8e-07 W=1e-06 AD=2.9e-13 AS=4.9e-13
++ PD=5.8e-07 PS=1.98e-06
+*
+.include "FA_8bit.pex.netlist.FA_8BIT.pxi"
+*
+.ends
+*
+*
